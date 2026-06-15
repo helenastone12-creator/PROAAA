@@ -29,7 +29,7 @@
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
 
       <nav class="nav-links" aria-label="Navigation principale">
-        <!-- Crédits dropdown -->
+        <!-- Crédits mega-menu -->
         <div class="dropdown">
           <button class="dropdown-trigger nav-link" aria-expanded="false" aria-haspopup="true">
             <span data-i18n="nav.credits">Crédits</span>
@@ -37,12 +37,34 @@
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </button>
-          <div class="dropdown-menu" role="menu">
-            <a href="/prets-personnels" role="menuitem" data-i18n="nav.credits.personal">Prêt personnel</a>
-            <a href="/prets-personnels/credit-auto" role="menuitem" data-i18n="nav.credits.auto">Crédit auto</a>
-            <a href="/prets-personnels/credit-travaux" role="menuitem" data-i18n="nav.credits.work">Crédit travaux</a>
-            <a href="/prets-personnels/pret-eco-responsable" role="menuitem" data-i18n="nav.credits.eco">Crédit vert</a>
-            <a href="/prets-personnels/credit-moto" role="menuitem" data-i18n="nav.credits.moto">Crédit moto</a>
+          <div class="dropdown-menu dropdown-mega" role="menu">
+            <div class="mega-col">
+              <p class="mega-col-title">Prêts personnels</p>
+              <a href="/prets-personnels/credit-auto" role="menuitem">Prêt personnel auto</a>
+              <a href="/prets-personnels/credit-moto" role="menuitem">Prêt personnel moto</a>
+              <a href="/prets-personnels/credit-travaux" role="menuitem">Prêt personnel travaux</a>
+              <a href="/prets-personnels/credit-projet" role="menuitem">Prêt personnel projet</a>
+              <a href="/prets-personnels/pret-eco-responsable" role="menuitem">Prêt éco-responsable</a>
+              <a href="/prets-personnels" class="mega-cta" role="menuitem">Nos prêts persos →</a>
+            </div>
+            <div class="mega-col">
+              <p class="mega-col-title">Projets</p>
+              <a href="/prets-personnels/credit-travaux/credit-terrasse" role="menuitem">Crédit terrasse</a>
+              <a href="/prets-personnels/credit-projet/credit-vacances" role="menuitem">Crédit vacances</a>
+              <a href="/prets-personnels/credit-travaux/credit-chauffage" role="menuitem">Crédit chauffage</a>
+              <a href="/prets-personnels/credit-auto/credit-voiture-electrique" role="menuitem">Crédit voiture électrique</a>
+              <a href="/prets-personnels/credit-travaux/credit-isolation" role="menuitem">Crédit isolation</a>
+              <a href="/prets-personnels/credit-projet" class="mega-cta" role="menuitem">Votre projet →</a>
+            </div>
+            <div class="mega-col">
+              <p class="mega-col-title">Information</p>
+              <a href="/prets-personnels/simulation-credit-auto" role="menuitem">Simulation crédit voiture</a>
+              <a href="/prets-personnels/simulation-credit-travaux" role="menuitem">Simulation crédit travaux</a>
+              <a href="/prets-personnels/simulation-credit-projet" role="menuitem">Simulation crédit projet</a>
+              <a href="/prets-personnels/simulation-credit-mariage" role="menuitem">Simulation crédit mariage</a>
+              <a href="/prets-personnels/simulation-credit-moto" role="menuitem">Simulation crédit moto</a>
+              <a href="/conseils" class="mega-cta" role="menuitem">Nos guides du crédit →</a>
+            </div>
           </div>
         </div>
 
@@ -77,10 +99,10 @@
               <input
                 class="sim-input"
                 type="number"
-                min="500"
-                max="75000"
+                min="5500"
+                max="60000"
                 data-i18n-placeholder="hero.input.placeholder"
-                placeholder="Saisir un montant entre..."
+                placeholder="Saisir un montant entre 5 500 € et 60 000 €"
                 aria-label="Montant du crédit"
               >
               <button class="btn btn-primary sim-btn" data-i18n="hero.cta">

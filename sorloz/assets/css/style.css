@@ -122,6 +122,29 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .dropdown-menu a:hover { background: var(--pink-bg); }
 
+/* mega-menu */
+.dropdown-mega {
+  min-width: 680px; left: 50%; transform: translateX(-50%) translateY(-8px);
+  padding: 20px; display: flex; gap: 0;
+}
+.dropdown-mega.open { transform: translateX(-50%) translateY(0); opacity: 1; visibility: visible; }
+.mega-col {
+  flex: 1; padding: 0 16px;
+  border-right: 1px solid var(--border);
+}
+.mega-col:last-child { border-right: none; }
+.mega-col-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--text-light);
+  margin-bottom: 10px; padding: 0 4px;
+}
+.mega-col a { padding: 7px 4px; border-radius: 4px; font-size: 13px; }
+.mega-col a:hover { background: var(--pink-bg); padding-left: 8px; }
+.mega-cta {
+  margin-top: 10px; color: var(--red) !important;
+  font-weight: 600 !important; font-size: 13px !important;
+}
+
 .nav-right {
   display: flex; align-items: center; gap: 8px; margin-left: auto; flex-shrink: 0;
 }

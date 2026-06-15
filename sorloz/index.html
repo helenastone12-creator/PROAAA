@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="#" class="logo" aria-label="SOrloz - Accueil">
+      <a href="/" class="logo" aria-label="SOrloz - Accueil">
         S<span>O</span>rloz
       </a>
 
@@ -38,24 +38,24 @@
             </svg>
           </button>
           <div class="dropdown-menu" role="menu">
-            <a href="./prets-personnels" role="menuitem" data-i18n="nav.credits.personal">Prêt personnel</a>
-            <a href="./credit-auto" role="menuitem" data-i18n="nav.credits.auto">Crédit auto</a>
-            <a href="./credit-travaux" role="menuitem" data-i18n="nav.credits.work">Crédit travaux</a>
-            <a href="./credit-vert" role="menuitem" data-i18n="nav.credits.eco">Crédit vert</a>
-            <a href="./credit-moto" role="menuitem" data-i18n="nav.credits.moto">Crédit moto</a>
+            <a href="/prets-personnels" role="menuitem" data-i18n="nav.credits.personal">Prêt personnel</a>
+            <a href="/prets-personnels/credit-auto" role="menuitem" data-i18n="nav.credits.auto">Crédit auto</a>
+            <a href="/prets-personnels/credit-travaux" role="menuitem" data-i18n="nav.credits.work">Crédit travaux</a>
+            <a href="/prets-personnels/pret-eco-responsable" role="menuitem" data-i18n="nav.credits.eco">Crédit vert</a>
+            <a href="/prets-personnels/credit-moto" role="menuitem" data-i18n="nav.credits.moto">Crédit moto</a>
           </div>
         </div>
 
-        <a href="./assurances" class="nav-link" data-i18n="nav.insurance">Assurances</a>
-        <a href="./nos-conseils" class="nav-link" data-i18n="nav.advice">Nos conseils</a>
+        <a href="/assurance/nos-assurances-de-prets" class="nav-link" data-i18n="nav.insurance">Assurances</a>
+        <a href="/conseils" class="nav-link" data-i18n="nav.advice">Nos conseils</a>
       </nav>
 
       <div class="nav-right">
         <!-- Language switcher -->
         <div id="lang-switcher-wrap" role="group" aria-label="Sélection de la langue"></div>
 
-        <a href="./aide-contact" class="btn btn-outline" data-i18n="nav.help">Aide et contact</a>
-        <a href="./espace-client" class="btn btn-primary" data-i18n="nav.client">Espace client</a>
+        <a href="/contact" class="btn btn-outline" data-i18n="nav.help">Aide et contact</a>
+        <a href="/espace-client" class="btn btn-primary" data-i18n="nav.client">Espace client</a>
       </div>
 
     </div>
@@ -517,7 +517,7 @@
         <div class="footer-grid">
 
           <div class="footer-brand-col">
-            <a href="#" class="footer-logo" aria-label="SOrloz - Accueil">S<span>O</span>rloz</a>
+            <a href="/" class="footer-logo" aria-label="SOrloz - Accueil">S<span>O</span>rloz</a>
             <div class="footer-social" aria-label="Réseaux sociaux">
               <a href="#" class="social-link" aria-label="Facebook">f</a>
               <a href="#" class="social-link" aria-label="LinkedIn">in</a>
@@ -527,74 +527,71 @@
           <div class="footer-col">
             <h3 class="footer-col-title" data-i18n="footer.personal">Prêts personnels</h3>
             <ul class="footer-links">
-              <li><a href="./credit-vacances" data-i18n="footer.personal.vacation">Crédit vacances</a></li>
-              <li><a href="./credit-demenagement" data-i18n="footer.personal.moving">Crédit déménagement</a></li>
-              <li><a href="./credit-loisirs" data-i18n="footer.personal.leisure">Crédit loisirs</a></li>
-              <li><a href="./credit-divorce" data-i18n="footer.personal.divorce">Crédit divorce</a></li>
-              <li><a href="./credit-retraite" data-i18n="footer.personal.retirement">Crédit retraite</a></li>
-              <li><a href="./credit-naissance" data-i18n="footer.personal.birth">Crédit naissance</a></li>
-              <li><a href="./credit-mariage" data-i18n="footer.personal.wedding">Crédit mariage</a></li>
+              <li><a href="/prets-personnels/credit-projet/credit-vacances" data-i18n="footer.personal.vacation">Crédit vacances</a></li>
+              <li><a href="/prets-personnels/credit-projet/credit-demenagement" data-i18n="footer.personal.moving">Crédit déménagement</a></li>
+              <li><a href="/prets-personnels/credit-projet/credit-loisirs" data-i18n="footer.personal.leisure">Crédit loisirs</a></li>
+              <li><a href="/prets-personnels/credit-projet/credit-divorce" data-i18n="footer.personal.divorce">Crédit divorce</a></li>
+              <li><a href="/prets-personnels/credit-projet/credit-retraite" data-i18n="footer.personal.retirement">Crédit retraite</a></li>
+              <li><a href="/prets-personnels/credit-projet/credit-naissance" data-i18n="footer.personal.birth">Crédit naissance</a></li>
+              <li><a href="/prets-personnels/credit-projet/credit-mariage" data-i18n="footer.personal.wedding">Crédit mariage</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h3 class="footer-col-title" data-i18n="footer.auto">Crédit auto</h3>
             <ul class="footer-links">
-              <li><a href="./credit-voiture-neuve" data-i18n="footer.auto.new">Crédit voiture neuve</a></li>
-              <li><a href="./credit-voiture-occasion" data-i18n="footer.auto.used">Crédit voiture occasion</a></li>
-              <li><a href="./credit-voiture-electrique" data-i18n="footer.auto.electric">Crédit voiture électrique</a></li>
-              <li><a href="./credit-voiture-hybride" data-i18n="footer.auto.hybrid">Crédit voiture hybride</a></li>
-              <li><a href="./credit-voiture-thermique" data-i18n="footer.auto.thermal">Crédit voiture thermique</a></li>
+              <li><a href="/prets-personnels/credit-auto/credit-voiture-neuve" data-i18n="footer.auto.new">Crédit voiture neuve</a></li>
+              <li><a href="/prets-personnels/credit-auto/credit-voiture-occasion" data-i18n="footer.auto.used">Crédit voiture occasion</a></li>
+              <li><a href="/prets-personnels/credit-auto/credit-voiture-electrique" data-i18n="footer.auto.electric">Crédit voiture électrique</a></li>
+              <li><a href="/prets-personnels/credit-auto/credit-voiture-hybride" data-i18n="footer.auto.hybrid">Crédit voiture hybride</a></li>
+              <li><a href="/prets-personnels/credit-auto/credit-voiture-thermique" data-i18n="footer.auto.thermal">Crédit voiture thermique</a></li>
             </ul>
             <br>
             <h3 class="footer-col-title" data-i18n="footer.moto">Crédit moto</h3>
             <ul class="footer-links">
-              <li><a href="./credit-moto-neuve" data-i18n="footer.moto.new">Crédit moto neuve</a></li>
-              <li><a href="./credit-moto-occasion" data-i18n="footer.moto.used">Crédit moto occasion</a></li>
-              <li><a href="./credit-moto-hybride" data-i18n="footer.moto.hybrid">Crédit moto hybride</a></li>
-              <li><a href="./credit-moto-thermique" data-i18n="footer.moto.thermal">Crédit moto thermique</a></li>
+              <li><a href="/prets-personnels/credit-moto/credit-moto-neuve" data-i18n="footer.moto.new">Crédit moto neuve</a></li>
+              <li><a href="/prets-personnels/credit-moto/credit-moto-occasion" data-i18n="footer.moto.used">Crédit moto occasion</a></li>
+              <li><a href="/prets-personnels/credit-moto/credit-moto-hybride" data-i18n="footer.moto.hybrid">Crédit moto hybride</a></li>
+              <li><a href="/prets-personnels/credit-moto/credit-moto-thermique" data-i18n="footer.moto.thermal">Crédit moto thermique</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h3 class="footer-col-title" data-i18n="footer.work">Crédit travaux</h3>
             <ul class="footer-links">
-              <li><a href="./credit-travaux-interieur" data-i18n="footer.work.interior">Crédit travaux intérieur</a></li>
-              <li><a href="./credit-travaux-exterieur" data-i18n="footer.work.exterior">Crédit travaux extérieur</a></li>
-              <li><a href="./credit-renovation" data-i18n="footer.work.renovation">Crédit rénovation</a></li>
-              <li><a href="./credit-salle-de-bain" data-i18n="footer.work.bathroom">Crédit salle de bain</a></li>
-              <li><a href="./credit-piscine" data-i18n="footer.work.pool">Crédit piscine</a></li>
-              <li><a href="./credit-cuisine" data-i18n="footer.work.kitchen">Crédit cuisine</a></li>
-              <li><a href="./credit-veranda" data-i18n="footer.work.veranda">Crédit véranda</a></li>
+              <li><a href="/prets-personnels/credit-travaux-interieur" data-i18n="footer.work.interior">Crédit travaux intérieur</a></li>
+              <li><a href="/prets-personnels/credit-travaux-exterieur" data-i18n="footer.work.exterior">Crédit travaux extérieur</a></li>
+              <li><a href="/prets-personnels/credit-travaux/credit-renovation" data-i18n="footer.work.renovation">Crédit rénovation</a></li>
+              <li><a href="/prets-personnels/credit-travaux/credit-salle-de-bain" data-i18n="footer.work.bathroom">Crédit salle de bain</a></li>
+              <li><a href="/prets-personnels/credit-travaux/credit-piscine" data-i18n="footer.work.pool">Crédit piscine</a></li>
+              <li><a href="/prets-personnels/credit-travaux/credit-cuisine" data-i18n="footer.work.kitchen">Crédit cuisine</a></li>
+              <li><a href="/prets-personnels/credit-travaux/credit-veranda" data-i18n="footer.work.veranda">Crédit véranda</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h3 class="footer-col-title" data-i18n="footer.green">Crédit vert</h3>
             <ul class="footer-links">
-              <li><a href="./credit-economie-energie" data-i18n="footer.green.energy">Crédit travaux économie d'énergie</a></li>
-              <li><a href="./credit-vehicule-vert" data-i18n="footer.green.vehicle">Crédit véhicule vert</a></li>
+              <li><a href="/prets-personnels/credit-economie-energie" data-i18n="footer.green.energy">Crédit économie d'énergie</a></li>
+              <li><a href="/prets-personnels/credit-vehicule-vert" data-i18n="footer.green.vehicle">Crédit véhicule vert</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h3 class="footer-col-title" data-i18n="footer.about">Qui sommes nous ?</h3>
             <ul class="footer-links">
-              <li><a href="#" data-i18n="footer.about.join">Nous rejoindre</a></li>
-              <li><a href="#" data-i18n="footer.about.legal">Mentions légales</a></li>
-              <li><a href="#" data-i18n="footer.about.accessibility">Accessibilité : partiellement conforme</a></li>
-              <li><a href="#" data-i18n="footer.about.privacy">Politique de confidentialité</a></li>
-              <li><a href="#" data-i18n="footer.about.cookies">Cookies et statistiques</a></li>
-              <li><a href="#" data-i18n="footer.about.cookie_mgmt">Gestion des cookies</a></li>
-              <li><a href="#" data-i18n="footer.about.lexicon">Lexique</a></li>
-              <li><a href="#" data-i18n="footer.about.sitemap">Plan du site</a></li>
-              <li><a href="#" data-i18n="footer.about.complaint">Réclamation</a></li>
+              <li><a href="/infos/qui-sommes-nous" data-i18n="footer.about.join">Nous rejoindre</a></li>
+              <li><a href="/infos/mentions-legales" data-i18n="footer.about.legal">Mentions légales</a></li>
+              <li><a href="/infos/politique-de-confidentialite" data-i18n="footer.about.privacy">Politique de confidentialité</a></li>
+              <li><a href="/infos/cookies-et-statistiques" data-i18n="footer.about.cookies">Cookies et statistiques</a></li>
+              <li><a href="/infos/plan-site" data-i18n="footer.about.sitemap">Plan du site</a></li>
+              <li><a href="/faq/faire-une-reclamation" data-i18n="footer.about.complaint">Réclamation</a></li>
             </ul>
             <br>
             <h3 class="footer-col-title" data-i18n="footer.help">Aide et contact</h3>
             <ul class="footer-links">
-              <li><a href="#" data-i18n="footer.help.faq">Foire aux questions</a></li>
-              <li><a href="#" data-i18n="footer.help.deaf">Sourds et malentendants</a></li>
+              <li><a href="/faq" data-i18n="footer.help.faq">Foire aux questions</a></li>
+              <li><a href="/infos/service-sourds-et-malentendants" data-i18n="footer.help.deaf">Sourds et malentendants</a></li>
             </ul>
           </div>
 
@@ -617,7 +614,7 @@
     <span data-i18n="alert.disclaimer">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</span>
   </div>
 
-  <script src="./assets/js/pages.js"></script>
-  <script src="./assets/js/app.js"></script>
+  <script src="/assets/js/pages.js"></script>
+  <script src="/assets/js/app.js"></script>
 </body>
 </html>

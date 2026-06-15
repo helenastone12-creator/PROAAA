@@ -12,16 +12,9 @@ let currentLang = DEFAULT_LANG;
 let translations = {};
 
 async function loadTranslations(lang) {
-  const base = getBase();
-  const res = await fetch(`${base}locales/${lang}.json`);
+  const res = await fetch(`/locales/${lang}.json`);
   if (!res.ok) throw new Error(`Failed to load ${lang}.json`);
   return res.json();
-}
-
-function getBase() {
-  // Works both at root and in subdirectories
-  const depth = window.location.pathname.replace(/^\//, '').split('/').length - 1;
-  return depth > 0 ? '../'.repeat(depth) : './';
 }
 
 function t(key) {
@@ -38,7 +31,6 @@ function applyTranslations() {
     el.placeholder = t(el.dataset.i18nPlaceholder);
   });
 
-  // Update lang switcher selected value
   const sel = document.getElementById('lang-select');
   if (sel) sel.value = currentLang;
 
@@ -52,10 +44,9 @@ async function setLang(lang) {
   localStorage.setItem('sorloz_lang', lang);
   applyTranslations();
 
-  // Re-render page content if on a product page
   if (typeof renderPage === 'function') renderPage(t);
-  // Re-init interactive parts
   initFaq();
+  initSimulator();
 }
 
 async function initI18n() {
@@ -117,7 +108,6 @@ function initFaq() {
     const btn = item.querySelector('.faq-question');
     const answer = item.querySelector('.faq-answer');
     if (!btn || !answer) return;
-    // Reset max-height
     if (!item.classList.contains('open')) answer.style.maxHeight = '0';
     btn.onclick = () => {
       const open = item.classList.toggle('open');
@@ -127,13 +117,60 @@ function initFaq() {
   });
 }
 
-// ─── Simulation input ────────────────────────────────────────────────────────
+// ─── Loan Simulator ──────────────────────────────────────────────────────────
+
+function calcLoan(principal, months, annualRate) {
+  const r = annualRate / 100 / 12;
+  if (r === 0) return { monthly: principal / months, total: principal, cost: 0 };
+  const pow = Math.pow(1 + r, months);
+  const monthly = principal * r * pow / (pow - 1);
+  const total = monthly * months;
+  return { monthly, total, cost: total - principal };
+}
+
+function formatEur(n) {
+  return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+}
+
+function showSimResult(container, principal, months) {
+  const { monthly, total, cost } = calcLoan(principal, months, 7.6);
+  const existing = container.querySelector('.sim-result');
+  if (existing) existing.remove();
+
+  const div = document.createElement('div');
+  div.className = 'sim-result';
+  div.style.cssText = 'margin-top:20px;padding:20px 24px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.10);';
+  div.innerHTML = `
+    <p style="font-size:13px;color:#666;margin:0 0 4px">Mensualité estimée</p>
+    <p style="font-size:32px;font-weight:800;color:var(--dark);margin:0 0 12px">${formatEur(monthly)}<span style="font-size:15px;font-weight:500;color:#888"> /mois</span></p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:14px">
+      <div style="background:#F5F7FA;border-radius:8px;padding:12px">
+        <p style="color:#666;margin:0 0 2px">Total à rembourser</p>
+        <p style="font-weight:700;color:var(--dark);margin:0">${formatEur(total)}</p>
+      </div>
+      <div style="background:#F5F7FA;border-radius:8px;padding:12px">
+        <p style="color:#666;margin:0 0 2px">Coût du crédit</p>
+        <p style="font-weight:700;color:var(--red);margin:0">${formatEur(cost)}</p>
+      </div>
+    </div>
+    <p style="font-size:11px;color:#aaa;margin:12px 0 0">TAEG fixe 7,6 % — simulation non contractuelle</p>
+  `;
+  container.appendChild(div);
+}
 
 function initSimulator() {
   document.querySelectorAll('.sim-btn').forEach(btn => {
-    const input = btn.closest('.hero-sim, .hero-left')?.querySelector('.sim-input');
+    const container = btn.closest('.hero-sim, .hero-left, .sim-block');
+    if (!container) return;
+    const input = container.querySelector('.sim-input');
+    const durationSel = container.querySelector('.sim-duration');
     if (!input) return;
-    btn.addEventListener('click', () => {
+
+    // Remove old listener by cloning
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+
+    newBtn.addEventListener('click', () => {
       const val = parseFloat(String(input.value).replace(/[^0-9.]/g, ''));
       if (!val || val < 500 || val > 75000) {
         input.classList.add('error');
@@ -141,10 +178,11 @@ function initSimulator() {
         return;
       }
       input.classList.remove('error');
-      alert(`Simulation pour ${val.toLocaleString('fr-FR')} €`);
+      const months = durationSel ? parseInt(durationSel.value, 10) : 60;
+      showSimResult(container, val, months);
     });
     input.addEventListener('input', () => input.classList.remove('error'));
-    input.addEventListener('keydown', e => { if (e.key === 'Enter') btn.click(); });
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') newBtn.click(); });
   });
 }
 
@@ -169,11 +207,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   initFaq();
   initMobileNav();
 
-  // Page-specific init (page.html)
   if (typeof renderPage === 'function') {
     renderPage(t);
-    initSimulator();
-  } else {
-    initSimulator();
   }
+  initSimulator();
 });

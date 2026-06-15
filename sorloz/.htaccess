@@ -1,11 +1,10 @@
 Options -Indexes
 RewriteEngine On
 
-# Serve existing files/directories directly
+# Serve real files and directories directly
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Route all unknown paths to page.html with slug param
-RewriteRule ^([a-z0-9-]+)/?$ /page.html?slug=$1 [L,QSA]
-RewriteRule ^([a-z0-9-]+)/([a-z0-9-]+)/?$ /page.html?slug=$1-$2 [L,QSA]
+# Route all other paths to page.html (client-side routing)
+RewriteRule ^ /page.html [L]

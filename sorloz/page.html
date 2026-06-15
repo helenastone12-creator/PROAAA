@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOrloz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    .page-hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+    .breadcrumb { display:inline-flex; align-items:center; gap:6px; font-size:14px; color:var(--text-light); margin-bottom:16px; transition:color .15s; }
+    .breadcrumb:hover { color:var(--dark); }
+    .page-icon { font-size:48px; margin-bottom:12px; }
+    .page-hero-desc { font-size:17px; color:var(--text-light); line-height:1.7; margin-top:12px; max-width:480px; }
+    .page-rate-card { background:var(--red); border-radius:var(--radius-lg); padding:36px 32px; color:#fff; }
+    @media(max-width:768px) { .page-hero-inner { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="alert-bar" role="alert">
+    <span data-i18n="alert.disclaimer">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./" class="logo" aria-label="SOrloz - Accueil">S<span>O</span>rloz</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <div class="dropdown">
+          <button class="dropdown-trigger nav-link" aria-expanded="false" aria-haspopup="true">
+            <span data-i18n="nav.credits">Crédits</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="./prets-personnels" role="menuitem" data-i18n="nav.credits.personal">Prêt personnel</a>
+            <a href="./credit-auto" role="menuitem" data-i18n="nav.credits.auto">Crédit auto</a>
+            <a href="./credit-travaux" role="menuitem" data-i18n="nav.credits.work">Crédit travaux</a>
+            <a href="./credit-vert" role="menuitem" data-i18n="nav.credits.eco">Crédit vert</a>
+            <a href="./credit-moto" role="menuitem" data-i18n="nav.credits.moto">Crédit moto</a>
+          </div>
+        </div>
+        <a href="./assurances" class="nav-link" data-i18n="nav.insurance">Assurances</a>
+        <a href="./nos-conseils" class="nav-link" data-i18n="nav.advice">Nos conseils</a>
+      </nav>
+      <div class="nav-right">
+        <div id="lang-switcher-wrap" role="group" aria-label="Langue"></div>
+        <a href="./aide-contact" class="btn btn-outline" data-i18n="nav.help">Aide et contact</a>
+        <a href="./espace-client" class="btn btn-primary" data-i18n="nav.client">Espace client</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="page-hero"></div>
+    <div id="page-content"></div>
+
+    <section class="faq" aria-labelledby="faq-title" style="padding:48px 0">
+      <div class="container">
+        <div class="faq-inner">
+          <div class="faq-left">
+            <h2 class="faq-title" id="faq-title" data-i18n="faq.title">Nous sommes là pour vous aider</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span data-i18n="faq.q1">SOrloz, qui sommes-nous ?</span>
+                  <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a1"></div></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span data-i18n="faq.q2">Comment faire ma demande ?</span>
+                  <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a2"></div></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span data-i18n="faq.q3">Pourquoi choisir SOrloz ?</span>
+                  <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a3"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-right">
+            <div class="contact-box">
+              <p class="contact-box-teaser" data-i18n="contact.teaser">Besoin de préciser votre projet ?</p>
+              <p class="contact-box-headline" data-i18n="contact.headline">On vous écoute.</p>
+              <p class="contact-box-hours" data-i18n="contact.hours">du lundi au vendredi de 8h30 à 19h</p>
+              <p class="contact-box-phone">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span data-i18n="contact.phone">0 811 36 00 27</span>
+              </p>
+              <p class="contact-box-rate" data-i18n="contact.rate">Service 0,06 €/min + prix appel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="./" class="footer-logo">S<span>O</span>rloz</a>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Facebook">f</a>
+              <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title" data-i18n="footer.personal">Prêts personnels</h3>
+            <ul class="footer-links">
+              <li><a href="./credit-vacances" data-i18n="footer.personal.vacation">Crédit vacances</a></li>
+              <li><a href="./credit-demenagement" data-i18n="footer.personal.moving">Crédit déménagement</a></li>
+              <li><a href="./credit-loisirs" data-i18n="footer.personal.leisure">Crédit loisirs</a></li>
+              <li><a href="./credit-divorce" data-i18n="footer.personal.divorce">Crédit divorce</a></li>
+              <li><a href="./credit-retraite" data-i18n="footer.personal.retirement">Crédit retraite</a></li>
+              <li><a href="./credit-naissance" data-i18n="footer.personal.birth">Crédit naissance</a></li>
+              <li><a href="./credit-mariage" data-i18n="footer.personal.wedding">Crédit mariage</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title" data-i18n="footer.auto">Crédit auto</h3>
+            <ul class="footer-links">
+              <li><a href="./credit-voiture-neuve" data-i18n="footer.auto.new">Crédit voiture neuve</a></li>
+              <li><a href="./credit-voiture-occasion" data-i18n="footer.auto.used">Crédit voiture occasion</a></li>
+              <li><a href="./credit-voiture-electrique" data-i18n="footer.auto.electric">Crédit voiture électrique</a></li>
+              <li><a href="./credit-voiture-hybride" data-i18n="footer.auto.hybrid">Crédit voiture hybride</a></li>
+              <li><a href="./credit-voiture-thermique" data-i18n="footer.auto.thermal">Crédit voiture thermique</a></li>
+            </ul>
+            <br>
+            <h3 class="footer-col-title" data-i18n="footer.moto">Crédit moto</h3>
+            <ul class="footer-links">
+              <li><a href="./credit-moto-neuve" data-i18n="footer.moto.new">Crédit moto neuve</a></li>
+              <li><a href="./credit-moto-occasion" data-i18n="footer.moto.used">Crédit moto occasion</a></li>
+              <li><a href="./credit-moto-hybride" data-i18n="footer.moto.hybrid">Crédit moto hybride</a></li>
+              <li><a href="./credit-moto-thermique" data-i18n="footer.moto.thermal">Crédit moto thermique</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title" data-i18n="footer.work">Crédit travaux</h3>
+            <ul class="footer-links">
+              <li><a href="./credit-travaux-interieur" data-i18n="footer.work.interior">Crédit travaux intérieur</a></li>
+              <li><a href="./credit-travaux-exterieur" data-i18n="footer.work.exterior">Crédit travaux extérieur</a></li>
+              <li><a href="./credit-renovation" data-i18n="footer.work.renovation">Crédit rénovation</a></li>
+              <li><a href="./credit-salle-de-bain" data-i18n="footer.work.bathroom">Crédit salle de bain</a></li>
+              <li><a href="./credit-piscine" data-i18n="footer.work.pool">Crédit piscine</a></li>
+              <li><a href="./credit-cuisine" data-i18n="footer.work.kitchen">Crédit cuisine</a></li>
+              <li><a href="./credit-veranda" data-i18n="footer.work.veranda">Crédit véranda</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title" data-i18n="footer.green">Crédit vert</h3>
+            <ul class="footer-links">
+              <li><a href="./credit-economie-energie" data-i18n="footer.green.energy">Crédit économie d'énergie</a></li>
+              <li><a href="./credit-vehicule-vert" data-i18n="footer.green.vehicle">Crédit véhicule vert</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title" data-i18n="footer.about">Qui sommes nous ?</h3>
+            <ul class="footer-links">
+              <li><a href="#" data-i18n="footer.about.join">Nous rejoindre</a></li>
+              <li><a href="#" data-i18n="footer.about.legal">Mentions légales</a></li>
+              <li><a href="#" data-i18n="footer.about.privacy">Politique de confidentialité</a></li>
+              <li><a href="#" data-i18n="footer.about.cookies">Cookies et statistiques</a></li>
+              <li><a href="#" data-i18n="footer.about.sitemap">Plan du site</a></li>
+              <li><a href="#" data-i18n="footer.about.complaint">Réclamation</a></li>
+            </ul>
+            <br>
+            <h3 class="footer-col-title" data-i18n="footer.help">Aide et contact</h3>
+            <ul class="footer-links">
+              <li><a href="./aide-contact" data-i18n="footer.help.faq">Foire aux questions</a></li>
+              <li><a href="#" data-i18n="footer.help.deaf">Sourds et malentendants</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-legal" data-i18n="footer.legal"></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="alert-bar">
+    <span data-i18n="alert.disclaimer"></span>
+  </div>
+
+  <script src="./assets/js/pages.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

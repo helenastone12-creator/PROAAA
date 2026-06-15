@@ -1,4 +1,4 @@
-name: Deploy to Hostinger
+name: Sync deploy branch for Hostinger
 
 on:
   push:
@@ -9,16 +9,30 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  sync-deploy:
     runs-on: ubuntu-latest
-    name: Trigger Hostinger Git Auto-deploy
+    name: Sync sorloz/ → deploy branch
+
+    permissions:
+      contents: write
 
     steps:
-      - name: Ping Hostinger deploy webhook
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push sorloz/ content to deploy branch
         run: |
-          curl -s -X POST "${{ secrets.HOSTINGER_DEPLOY_URL }}" \
-            -H "Content-Type: application/json" \
-            --fail \
-            --retry 3 \
-            --retry-delay 5
-          echo "Deploy triggered successfully"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout deploy
+          git rm -rf . --quiet || true
+          git checkout main -- sorloz/
+          cp -r sorloz/. .
+          rm -rf sorloz
+
+          git add -A
+          git diff --cached --quiet || git commit -m "Deploy: sync from main [skip ci]"
+          git push origin deploy

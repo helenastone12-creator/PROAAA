@@ -539,7 +539,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (max-width: 768px) {
   .nav-right { display: none; }
   .nav-links { display: none; flex-direction: column; position: fixed;
-    top: 70px; left: 0; right: 0; background: #fff;
+    top: 70px; left: 0; right: 0; bottom: 0; background: #fff;
     padding: 0; box-shadow: var(--shadow-md); z-index: 200;
     overflow-y: auto; }
   .nav-links.open { display: flex; }

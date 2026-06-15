@@ -539,13 +539,19 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (max-width: 768px) {
   .nav-right { display: none; }
   .nav-links { display: none; flex-direction: column; position: fixed;
-    top: 70px; left: 0; right: 0; bottom: 0; background: #fff;
-    padding: 16px 16px 24px; box-shadow: var(--shadow-md); z-index: 200;
+    top: 70px; left: 0; right: 0; background: #fff;
+    padding: 0; box-shadow: var(--shadow-md); z-index: 200;
     overflow-y: auto; }
   .nav-links.open { display: flex; }
+  .nav-links .nav-link,
+  .nav-links .dropdown-trigger {
+    padding: 18px 20px; border-bottom: 1px solid var(--border);
+    border-radius: 0; width: 100%; font-size: 16px;
+  }
+  .nav-links .dropdown { width: 100%; }
   .mobile-nav-footer {
     display: flex; flex-direction: column; gap: 12px;
-    margin-top: auto; padding-top: 20px;
+    margin-top: 24px; padding: 20px;
     border-top: 1px solid var(--border);
   }
   .mobile-nav-footer .lang-select {
@@ -553,7 +559,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     font-size: 16px; border-radius: 10px;
   }
   .mobile-nav-home {
-    width: 100%; justify-content: center;
+    display: block; width: 100%; text-align: center;
     padding: 14px; font-size: 16px; border-radius: 12px;
   }
   .nav-toggle {
@@ -561,17 +567,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     width: 40px; height: 40px; font-size: 22px;
     color: var(--dark); background: none; border: none;
     margin-left: auto;
-  }
-  .mobile-nav-footer {
-    display: flex; flex-direction: column; gap: 12px;
-    margin-top: auto; padding-top: 20px;
-    border-top: 1px solid var(--border);
-  }
-  .mobile-nav-footer .lang-select { width: 100%; }
-  .mobile-nav-home {
-    display: block; text-align: center;
-    padding: 10px 16px; border-radius: var(--radius-sm);
-    font-size: 15px; font-weight: 500;
   }
   .hero-inner,
   .testimonial-inner,

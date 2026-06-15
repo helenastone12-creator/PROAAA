@@ -172,7 +172,7 @@ function initSimulator() {
 
     newBtn.addEventListener('click', () => {
       const val = parseFloat(String(input.value).replace(/[^0-9.]/g, ''));
-      if (!val || val < 500 || val > 75000) {
+      if (!val || val < 5500 || val > 60000) {
         input.classList.add('error');
         input.focus();
         return;

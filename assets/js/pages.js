@@ -207,6 +207,10 @@ const PAGE_CONFIG = {
       { href: '/prets-personnels/credit-travaux/credit-piscine', icon: '🏊', title_fr: 'Crédit piscine' },
       { href: '/prets-personnels/credit-travaux/credit-cuisine', icon: '🍳', title_fr: 'Crédit cuisine' },
       { href: '/prets-personnels/credit-travaux/credit-veranda', icon: '🌿', title_fr: 'Crédit véranda' },
+      { href: '/prets-personnels/credit-travaux/credit-terrasse', icon: '🏡', title_fr: 'Crédit terrasse' },
+      { href: '/prets-personnels/credit-travaux/credit-chauffage', icon: '🔥', title_fr: 'Crédit chauffage' },
+      { href: '/prets-personnels/credit-travaux/credit-isolation', icon: '🏠', title_fr: 'Crédit isolation' },
+      { href: '/prets-personnels/credit-travaux/credit-amenagement', icon: '🛋️', title_fr: 'Crédit aménagement' },
     ],
   },
 
@@ -257,6 +261,41 @@ const PAGE_CONFIG = {
     title_fr: 'Crédit véranda',
     hero_fr: 'Financez votre véranda',
     desc_fr: 'Agrandissez votre espace de vie avec une véranda financée par SOrloz. Un investissement qui valorise votre bien immobilier.',
+    parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+  },
+  '/prets-personnels/credit-travaux/credit-terrasse': {
+    icon: '🏡', bg: '#FFF4C2',
+    title_fr: 'Crédit terrasse',
+    hero_fr: 'Financez votre terrasse avec SOrloz',
+    desc_fr: 'Créez ou rénovez votre terrasse avec le financement SOrloz. Bois, composite, béton… Un espace extérieur de qualité pour profiter des beaux jours.',
+    parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+  },
+  '/prets-personnels/credit-travaux/credit-chauffage': {
+    icon: '🔥', bg: '#FFF4C2',
+    title_fr: 'Crédit chauffage',
+    hero_fr: 'Financez votre système de chauffage',
+    desc_fr: 'Poêle à bois, chaudière, pompe à chaleur, plancher chauffant… Le crédit chauffage SOrloz finance votre confort thermique tout au long de l\'année.',
+    parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+  },
+  '/prets-personnels/credit-travaux/credit-isolation': {
+    icon: '🏠', bg: '#FFF4C2',
+    title_fr: 'Crédit isolation',
+    hero_fr: 'Financez vos travaux d\'isolation',
+    desc_fr: 'Isolation des combles, des murs, du plancher… Réduisez votre consommation d\'énergie et améliorez votre confort avec le crédit isolation SOrloz.',
+    parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+  },
+  '/prets-personnels/credit-travaux/credit-amenagement': {
+    icon: '🛋️', bg: '#FFF4C2',
+    title_fr: 'Crédit aménagement',
+    hero_fr: 'Financez vos travaux d\'aménagement',
+    desc_fr: 'Parquet, peinture, électricité, plomberie… Le crédit aménagement SOrloz vous aide à transformer votre intérieur selon vos envies et votre budget.',
+    parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+  },
+  '/prets-personnels/credit-travaux-maison': {
+    icon: '🏠', bg: '#FFF4C2',
+    title_fr: 'Crédit travaux maison',
+    hero_fr: 'Financez les travaux de votre maison',
+    desc_fr: 'Tous les travaux de votre maison, de la cave au grenier, financés par SOrloz. Des conditions adaptées à votre projet pour réaliser la maison de vos rêves.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
 
@@ -355,6 +394,64 @@ const PAGE_CONFIG = {
     title_fr: 'Espace client',
     hero_fr: 'Gérez votre contrat en ligne',
     desc_fr: 'Consultez vos contrats, suivez vos remboursements et gérez vos documents depuis votre espace client sécurisé SOrloz.',
+  },
+
+  // ── Simulateur & simulations
+  '/simulateur': {
+    icon: '🧮', bg: '#FDEAEA',
+    title_fr: 'Simulateur de crédit',
+    hero_fr: 'Simulez votre crédit en ligne',
+    desc_fr: 'Calculez vos mensualités en quelques secondes. Montant, durée, taux… Notre simulateur vous donne une réponse immédiate et sans engagement.',
+  },
+  '/prets-personnels/simulation-credit-auto': {
+    icon: '🚗', bg: '#EBF5EE',
+    title_fr: 'Simulation crédit voiture',
+    hero_fr: 'Simulez votre crédit voiture',
+    desc_fr: 'Calculez vos mensualités pour l\'achat de votre voiture. Renseignez le montant et la durée, obtenez votre estimation immédiatement.',
+    parent: { href: '/prets-personnels/credit-auto', label_fr: 'Crédit auto' },
+  },
+  '/prets-personnels/simulation-credit-moto': {
+    icon: '🏍️', bg: '#E6F3F5',
+    title_fr: 'Simulation crédit moto',
+    hero_fr: 'Simulez votre crédit moto',
+    desc_fr: 'Estimez vos mensualités pour l\'achat de votre moto en quelques clics. Sans engagement, réponse immédiate.',
+    parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
+  },
+  '/prets-personnels/simulation-credit-travaux': {
+    icon: '🔨', bg: '#FFF4C2',
+    title_fr: 'Simulation crédit travaux',
+    hero_fr: 'Simulez votre crédit travaux',
+    desc_fr: 'Obtenez une estimation de vos mensualités pour financer vos travaux. Rapide, gratuit et sans engagement.',
+    parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+  },
+  '/prets-personnels/simulation-credit-projet': {
+    icon: '💼', bg: '#FDEAEA',
+    title_fr: 'Simulation crédit projet',
+    hero_fr: 'Simulez votre crédit projet',
+    desc_fr: 'Estimez le coût de votre crédit projet en quelques secondes. Montant, durée, mensualités — obtenez une réponse immédiate.',
+    parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+  },
+  '/prets-personnels/simulation-credit-mariage': {
+    icon: '💍', bg: '#FDEAEA',
+    title_fr: 'Simulation crédit mariage',
+    hero_fr: 'Simulez votre crédit mariage',
+    desc_fr: 'Préparez votre budget mariage grâce à notre simulateur. Calculez vos mensualités sans engagement en quelques clics.',
+    parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+  },
+  '/prets-personnels/simulation-credit-vacances': {
+    icon: '✈️', bg: '#FDEAEA',
+    title_fr: 'Simulation crédit vacances',
+    hero_fr: 'Simulez votre crédit vacances',
+    desc_fr: 'Partez l\'esprit tranquille ! Estimez vos mensualités pour financer vos vacances avec SOrloz.',
+    parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+  },
+
+  // ── Infos accessibilité
+  '/infos/accessibilite': {
+    icon: '♿', bg: '#E6F3F5',
+    title_fr: 'Accessibilité',
+    hero_fr: 'Accessibilité numérique SOrloz',
+    desc_fr: 'SOrloz s\'engage pour l\'accessibilité numérique. Découvrez notre déclaration d\'accessibilité et les mesures mises en place.',
   },
 };
 

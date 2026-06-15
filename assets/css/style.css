@@ -375,6 +375,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   cursor: pointer; background: #fff;
 }
 .article-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.article-link {
+  display: block; text-decoration: none; color: inherit;
+}
 .article-thumb {
   background: var(--pink-bg);
   aspect-ratio: 16/9;

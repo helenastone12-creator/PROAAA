@@ -734,3 +734,59 @@ body.sim-fullpage .alert-bar { display: none !important; }
   .sp-range { width: 100%; }
   .sp-range-val { text-align: left; }
 }
+
+/* ─── Simulator form step ───────────────────────────────────────────────────── */
+.sp-form-section-head {
+  font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--text-light); margin-bottom: 4px;
+}
+.sp-title-left { text-align: left; }
+.sp-form-block {
+  background: #f8f9fb; border-radius: var(--radius);
+  padding: 24px; margin-bottom: 20px;
+}
+.sp-form-block-title {
+  font-size: 16px; font-weight: 700; color: var(--dark);
+  margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.sp-form-row {
+  display: flex; gap: 24px; margin-bottom: 20px;
+}
+.sp-radio-wrap {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 15px; cursor: pointer;
+}
+.sp-form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.sp-field { display: flex; flex-direction: column; gap: 6px; }
+.sp-field-full { grid-column: 1 / -1; }
+.sp-field label {
+  font-size: 13px; font-weight: 600; color: var(--text-light);
+}
+.sp-input {
+  padding: 12px 14px; border: 1.5px solid var(--border);
+  border-radius: 8px; font-size: 15px; font-family: inherit;
+  color: var(--dark); background: #fff; outline: none;
+  transition: border-color .2s;
+}
+.sp-input:focus { border-color: var(--dark); }
+.sp-select {
+  padding: 12px 14px; border: 1.5px solid var(--border);
+  border-radius: 8px; font-size: 15px; font-family: inherit;
+  color: var(--dark); background: #fff; outline: none;
+  cursor: pointer; transition: border-color .2s;
+}
+.sp-select:focus { border-color: var(--dark); }
+.sp-checkbox-wrap {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14px; cursor: pointer; line-height: 1.5;
+}
+.sp-consent { margin-top: 16px; color: var(--text-light); font-size: 12px; }
+.sp-amount-badge-wrap { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+
+@media (max-width: 640px) {
+  .sp-form-grid { grid-template-columns: 1fr; }
+  .sp-form-row { flex-direction: column; gap: 12px; }
+}

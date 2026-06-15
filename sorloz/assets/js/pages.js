@@ -467,16 +467,31 @@ function renderSimulator() {
   if (!heroEl) return;
 
   const params = new URLSearchParams(window.location.search);
-  const initAmount = Math.min(60000, Math.max(5500, parseFloat(params.get('amount')) || 15000));
+  const rawAmt = parseFloat(params.get('amount'));
+  const hasAmount = !isNaN(rawAmt) && rawAmt >= 5500 && rawAmt <= 60000;
 
   const PROJECT_TYPES = [
-    { key: 'projets',    icon: '👤', label: 'Projets' },
-    { key: 'travaux',   icon: '🔨', label: 'Travaux' },
-    { key: 'voiture',   icon: '🚗', label: 'Voiture' },
-    { key: 'deux-roues',icon: '🏍️', label: 'Deux roues' },
+    { key: 'projets',     icon: '\u{1F464}', label: 'Projets' },
+    { key: 'travaux',    icon: '\u{1F528}', label: 'Travaux' },
+    { key: 'voiture',    icon: '\u{1F697}', label: 'Voiture' },
+    { key: 'deux-roues', icon: '\u{1F3CD}\uFE0F', label: 'Deux roues' },
   ];
 
-  const state = { step: 1, projectType: null, amount: initAmount, months: 36 };
+  // If amount pre-filled from homepage: skip the amount step
+  const STAGES = hasAmount
+    ? ['project', 'sliders', 'proposals', 'form']
+    : ['project', 'amount', 'sliders', 'proposals', 'form'];
+
+  const state = {
+    idx: 0,
+    projectType: null,
+    amount: hasAmount ? rawAmt : 15000,
+    months: 36,
+  };
+
+  function stage() { return STAGES[state.idx]; }
+  function total() { return STAGES.length; }
+  function stepNum() { return state.idx + 1; }
 
   function pmt(P, n, rate) {
     const r = rate / 100 / 12;
@@ -486,186 +501,225 @@ function renderSimulator() {
   }
 
   function fmt(n) {
-    return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+    return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' \u20AC';
   }
 
   function monthsFromPayment(P, target, rate) {
     const r = rate / 100 / 12;
     if (target <= P * r) return 84;
-    return Math.round(-Math.log(1 - P * r / target) / Math.log(1 + r));
+    const n = -Math.log(1 - P * r / target) / Math.log(1 + r);
+    return Math.max(12, Math.min(84, Math.round(n / 6) * 6));
   }
 
-  function progressBar(step) {
-    const pct = Math.round((step / 4) * 100);
-    return `
-      <div class="sp-progress">
-        <span class="sp-step-lbl">Étape ${step} sur 4</span>
-        <div class="sp-bar"><div class="sp-bar-fill" style="width:${pct}%"></div></div>
-      </div>`;
+  function progressBar() {
+    const pct = Math.round((stepNum() / total()) * 100);
+    return '<div class="sp-progress">'
+      + '<span class="sp-step-lbl">\u00C9tape ' + stepNum() + ' sur ' + total() + '</span>'
+      + '<div class="sp-bar"><div class="sp-bar-fill" style="width:' + pct + '%"></div></div>'
+      + '</div>';
   }
 
   function amountBadge() {
-    return state.step >= 3
-      ? `<div class="sp-amount-badge">Montant souhaité&nbsp;<strong>${state.amount.toLocaleString('fr-FR')}&nbsp;€</strong></div>`
-      : '';
+    return '<div class="sp-amount-badge-wrap"><div class="sp-amount-badge">Montant souhait\u00E9&nbsp;<strong>'
+      + state.amount.toLocaleString('fr-FR') + '&nbsp;\u20AC</strong></div></div>';
   }
 
-  function renderStep1() {
-    return `
-      <h1 class="sp-title">Faire une simulation</h1>
-      <p class="sp-sub">Répondez à quelques questions en une minute pour préciser votre projet</p>
-      ${progressBar(1)}
-      <p class="sp-question">Quel projet voulez-vous financer&nbsp;?</p>
-      <div class="sp-proj-grid">
-        ${PROJECT_TYPES.map(p => `
-          <button class="sp-proj-btn${state.projectType === p.key ? ' active' : ''}" data-key="${p.key}">
-            <span class="sp-proj-icon">${p.icon}</span>
-            ${p.label}
-          </button>`).join('')}
-      </div>
-      <div class="sp-actions sp-actions-end">
-        <button class="btn btn-primary sp-next" ${state.projectType ? '' : 'disabled'}>Passer à l'étape suivante</button>
-      </div>`;
+  function renderProject() {
+    const btns = PROJECT_TYPES.map(function(p) {
+      return '<button class="sp-proj-btn' + (state.projectType === p.key ? ' active' : '') + '" data-key="' + p.key + '">'
+        + '<span class="sp-proj-icon">' + p.icon + '</span>' + p.label + '</button>';
+    }).join('');
+    return '<h1 class="sp-title">Faire une simulation</h1>'
+      + '<p class="sp-sub">R\u00E9pondez \u00E0 quelques questions en une minute pour pr\u00E9ciser votre projet</p>'
+      + progressBar()
+      + '<p class="sp-question">Quel projet voulez-vous financer&nbsp;?</p>'
+      + '<div class="sp-proj-grid">' + btns + '</div>'
+      + '<div class="sp-actions sp-actions-end">'
+      + '<button class="btn btn-primary sp-next"' + (state.projectType ? '' : ' disabled') + '>Passer \u00E0 l\'\u00E9tape suivante</button>'
+      + '</div>';
   }
 
-  function renderStep2() {
-    return `
-      <h1 class="sp-title">Faire une simulation</h1>
-      <p class="sp-sub">Répondez à quelques questions en une minute pour préciser votre projet</p>
-      ${progressBar(2)}
-      <p class="sp-question">Quel montant souhaitez-vous emprunter&nbsp;?</p>
-      <div class="sp-amt-wrap">
-        <input class="sp-amt-input" type="number" min="5500" max="60000" value="${state.amount}">
-        <span class="sp-amt-unit">€</span>
-      </div>
-      <p class="sp-hint">Entre 5 500 € et 60 000 €</p>
-      <div class="sp-actions">
-        <button class="btn btn-outline sp-prev">← Précédent</button>
-        <button class="btn btn-primary sp-next">Passer à l'étape suivante</button>
-      </div>`;
+  function renderAmount() {
+    return '<h1 class="sp-title">Faire une simulation</h1>'
+      + '<p class="sp-sub">R\u00E9pondez \u00E0 quelques questions en une minute pour pr\u00E9ciser votre projet</p>'
+      + progressBar()
+      + '<p class="sp-question">Quel montant souhaitez-vous emprunter&nbsp;?</p>'
+      + '<div class="sp-amt-wrap">'
+      + '<input class="sp-amt-input" type="number" min="5500" max="60000" value="' + state.amount + '">'
+      + '<span class="sp-amt-unit">\u20AC</span>'
+      + '</div>'
+      + '<p class="sp-hint">Entre 5 500 \u20AC et 60 000 \u20AC</p>'
+      + '<div class="sp-actions">'
+      + '<button class="btn btn-outline sp-prev">\u2190 Pr\u00E9c\u00E9dent</button>'
+      + '<button class="btn btn-primary sp-next">Passer \u00E0 l\'\u00E9tape suivante</button>'
+      + '</div>';
   }
 
-  function renderStep3() {
+  function renderSliders() {
     const m = Math.round(pmt(state.amount, state.months, 7.6));
-    const maxMonths = 84;
-    return `
-      ${amountBadge()}
-      <h1 class="sp-title">Faire une simulation</h1>
-      <p class="sp-sub">Répondez à quelques questions en une minute pour préciser votre projet</p>
-      ${progressBar(3)}
-      <p class="sp-question">Précisez vos besoins</p>
-      <div class="sp-sliders-box">
-        <div class="sp-slider-row">
-          <label class="sp-slider-lbl">Pour une durée de</label>
-          <div class="sp-slider-inner">
-            <input type="range" class="sp-range" id="sp-dur" min="12" max="${maxMonths}" step="6" value="${state.months}">
-            <span class="sp-range-val" id="sp-dur-val">${state.months} mois</span>
-          </div>
-        </div>
-        <div class="sp-or">ou</div>
-        <div class="sp-slider-row">
-          <label class="sp-slider-lbl">Pour une mensualité de</label>
-          <div class="sp-slider-inner">
-            <input type="range" class="sp-range" id="sp-mth" min="50" max="3000" step="5" value="${m}">
-            <span class="sp-range-val" id="sp-mth-val">${m} €/mois</span>
-          </div>
-        </div>
-      </div>
-      <div class="sp-actions">
-        <button class="btn btn-outline sp-prev">← Précédent</button>
-        <button class="btn btn-primary sp-next">Voir les simulations</button>
-      </div>`;
+    return amountBadge()
+      + '<h1 class="sp-title">Faire une simulation</h1>'
+      + '<p class="sp-sub">R\u00E9pondez \u00E0 quelques questions en une minute pour pr\u00E9ciser votre projet</p>'
+      + progressBar()
+      + '<p class="sp-question">Pr\u00E9cisez vos besoins</p>'
+      + '<div class="sp-sliders-box">'
+      + '<div class="sp-slider-row"><label class="sp-slider-lbl">Pour une dur\u00E9e de</label>'
+      + '<div class="sp-slider-inner">'
+      + '<input type="range" class="sp-range" id="sp-dur" min="12" max="84" step="6" value="' + state.months + '">'
+      + '<span class="sp-range-val" id="sp-dur-val">' + state.months + ' mois</span>'
+      + '</div></div>'
+      + '<div class="sp-or">ou</div>'
+      + '<div class="sp-slider-row"><label class="sp-slider-lbl">Pour une mensualit\u00E9 de</label>'
+      + '<div class="sp-slider-inner">'
+      + '<input type="range" class="sp-range" id="sp-mth" min="50" max="3000" step="5" value="' + m + '">'
+      + '<span class="sp-range-val" id="sp-mth-val">' + m + ' \u20AC/mois</span>'
+      + '</div></div>'
+      + '</div>'
+      + '<div class="sp-actions">'
+      + '<button class="btn btn-outline sp-prev">\u2190 Pr\u00E9c\u00E9dent</button>'
+      + '<button class="btn btn-primary sp-next">Voir les simulations</button>'
+      + '</div>';
   }
 
-  function renderStep4() {
-    const proj = PROJECT_TYPES.find(p => p.key === state.projectType)?.label || 'Projet';
+  function renderProposals() {
+    const proj = (PROJECT_TYPES.find(function(p){ return p.key === state.projectType; }) || {label:'Projet'}).label;
     const P = state.amount;
     const n = state.months;
-
     const fast = Math.max(12, Math.round(n * 0.55 / 6) * 6);
     const easy = Math.min(84, Math.round(n * 1.6 / 6) * 6);
 
-    function card(label, months, rate, highlight) {
+    function card(label, months, rate, hl) {
       const monthly = pmt(P, months, rate);
       const total = monthly * months;
       const cost = total - P;
-      return `
-        <div class="sp-card${highlight ? ' sp-card-hl' : ''}">
-          <div class="sp-card-label">${label}</div>
-          <div class="sp-card-monthly">${fmt(monthly)}<span>/mois</span></div>
-          <div class="sp-card-dur">sur ${months} mois</div>
-          <table class="sp-card-table">
-            <tr><td>TAEG fixe</td><td>${rate.toFixed(2).replace('.', ',')} %</td></tr>
-            <tr><td>Taux débiteur fixe</td><td>${rate.toFixed(2).replace('.', ',')} %</td></tr>
-            <tr><td>Montant du crédit</td><td>${fmt(P)}</td></tr>
-            <tr><td>Montant total dû</td><td>${fmt(total)}</td></tr>
-            <tr><td>Coût du crédit</td><td>${fmt(cost)}</td></tr>
-          </table>
-          <a href="/contact" class="btn${highlight ? ' btn-outline-white' : ' btn-primary'} sp-card-btn">Choisir cette offre</a>
-        </div>`;
+      const rateStr = rate.toFixed(2).replace('.', ',');
+      return '<div class="sp-card' + (hl ? ' sp-card-hl' : '') + '">'
+        + '<div class="sp-card-label">' + label + '</div>'
+        + '<div class="sp-card-monthly">' + fmt(monthly) + '<span>/mois</span></div>'
+        + '<div class="sp-card-dur">sur ' + months + ' mois</div>'
+        + '<table class="sp-card-table">'
+        + '<tr><td>TAEG fixe</td><td>' + rateStr + ' %</td></tr>'
+        + '<tr><td>Taux d\u00E9biteur fixe</td><td>' + rateStr + ' %</td></tr>'
+        + '<tr><td>Montant du cr\u00E9dit</td><td>' + fmt(P) + '</td></tr>'
+        + '<tr><td>Montant total d\u00FB</td><td>' + fmt(total) + '</td></tr>'
+        + '<tr><td>Co\u00FBt du cr\u00E9dit</td><td>' + fmt(cost) + '</td></tr>'
+        + '</table>'
+        + '<button class="btn ' + (hl ? 'btn-outline-white' : 'btn-primary') + ' sp-card-btn sp-choose" data-months="' + months + '">'
+        + 'Choisir cette offre</button>'
+        + '</div>';
     }
 
-    return `
-      ${amountBadge()}
-      <h1 class="sp-title">Nos propositions</h1>
-      <p class="sp-sub">Votre résultat pour votre ${proj}</p>
-      <div class="sp-cards">
-        ${card('Remboursement plus rapide', fast, 7.6, false)}
-        ${card('Offre Éco-Finance', n, 4.9, true)}
-        ${card('Remboursement plus facile', easy, 7.6, false)}
-      </div>
-      <p class="sp-legal">Simulation non contractuelle. TAEG fixe 7,60 % hors offre éco-responsable (4,90 %). Sous réserve d'acceptation de votre dossier.</p>
-      <div class="sp-actions">
-        <button class="btn btn-outline sp-prev">← Précédent</button>
-      </div>`;
+    return amountBadge()
+      + '<h1 class="sp-title">Nos propositions</h1>'
+      + '<p class="sp-sub">Votre r\u00E9sultat pour votre ' + proj + '</p>'
+      + '<div class="sp-cards">'
+      + card('Remboursement plus rapide', fast, 7.6, false)
+      + card('Offre \u00C9co-Finance', n, 4.9, true)
+      + card('Remboursement plus facile', easy, 7.6, false)
+      + '</div>'
+      + '<p class="sp-legal">Simulation non contractuelle. TAEG fixe 7,60\u00A0% hors offre \u00E9co-responsable (4,90\u00A0%). Sous r\u00E9serve d\'acceptation de votre dossier.</p>'
+      + '<div class="sp-actions">'
+      + '<button class="btn btn-outline sp-prev">\u2190 Pr\u00E9c\u00E9dent</button>'
+      + '<button class="btn btn-primary sp-next">Passer \u00E0 l\'\u00E9tape suivante</button>'
+      + '</div>';
+  }
+
+  function renderForm() {
+    return amountBadge()
+      + '<p class="sp-form-section-head">Emprunteur</p>'
+      + '<h1 class="sp-title sp-title-left">Informations</h1>'
+      + progressBar()
+      + '<div class="sp-form-block">'
+      + '<h2 class="sp-form-block-title">Vos informations personnelles</h2>'
+      + '<div class="sp-form-row">'
+      + '<label class="sp-radio-wrap"><input type="radio" name="civility" value="M"> Monsieur</label>'
+      + '<label class="sp-radio-wrap"><input type="radio" name="civility" value="F"> Madame</label>'
+      + '</div>'
+      + '<div class="sp-form-grid">'
+      + '<div class="sp-field"><label>Situation maritale</label><select class="sp-select"><option value="">S\u00E9lectionner</option><option>C\u00E9libataire</option><option>Mari\u00E9(e)</option><option>Pacs\u00E9(e)</option><option>Divorc\u00E9(e)</option><option>Veuf/Veuve</option></select></div>'
+      + '<div class="sp-field"><label>Pr\u00E9nom</label><input type="text" class="sp-input" placeholder="Au choix"></div>'
+      + '<div class="sp-field"><label>Nom</label><input type="text" class="sp-input" placeholder="Au choix"></div>'
+      + '<div class="sp-field"><label>Nom de naissance</label><input type="text" class="sp-input" placeholder="Au pr\u00E9nom"></div>'
+      + '<div class="sp-field"><label>Date de naissance</label><input type="text" class="sp-input" placeholder="JJ/MM/AAAA"></div>'
+      + '<div class="sp-field sp-field-full"><label class="sp-checkbox-wrap"><input type="checkbox"> Je suis n\u00E9(e) \u00E0 l\'\u00E9tranger</label></div>'
+      + '<div class="sp-field"><label>Ville de naissance</label><input type="text" class="sp-input" placeholder="Ville"></div>'
+      + '<div class="sp-field"><label>Nationalit\u00E9</label><select class="sp-select"><option value="">S\u00E9lectionner</option><option>Fran\u00E7aise</option><option>Autre</option></select></div>'
+      + '</div></div>'
+      + '<div class="sp-form-block">'
+      + '<h2 class="sp-form-block-title">Vos coordonn\u00E9es</h2>'
+      + '<div class="sp-form-grid">'
+      + '<div class="sp-field"><label>T\u00E9l\u00E9phone portable</label><input type="tel" class="sp-input" placeholder="06 00 00 00 00"></div>'
+      + '<div class="sp-field"><label>Email</label><input type="email" class="sp-input" placeholder="exemple@email.com"></div>'
+      + '</div>'
+      + '<label class="sp-checkbox-wrap sp-consent"><input type="checkbox"> J\'autorise SOrloz Financial Services \u00E0 me contacter par voie \u00E9lectronique dans le cadre de ma demande de cr\u00E9dit en ligne.</label>'
+      + '</div>'
+      + '<div class="sp-actions">'
+      + '<button class="btn btn-outline sp-prev">\u2190 Pr\u00E9c\u00E9dent</button>'
+      + '<button class="btn btn-primary sp-submit">Passer \u00E0 l\'\u00E9tape suivante</button>'
+      + '</div>';
   }
 
   function bind() {
-    // project selection
-    heroEl.querySelectorAll('.sp-proj-btn').forEach(b => {
-      b.addEventListener('click', () => {
+    heroEl.querySelectorAll('.sp-proj-btn').forEach(function(b) {
+      b.addEventListener('click', function() {
         state.projectType = b.dataset.key;
-        heroEl.querySelectorAll('.sp-proj-btn').forEach(x => x.classList.remove('active'));
+        heroEl.querySelectorAll('.sp-proj-btn').forEach(function(x){ x.classList.remove('active'); });
         b.classList.add('active');
-        const nb = heroEl.querySelector('.sp-next');
-        if (nb) nb.disabled = false;
+        var nb = heroEl.querySelector('.sp-next');
+        if (nb) nb.removeAttribute('disabled');
       });
     });
 
-    // prev
-    const prev = heroEl.querySelector('.sp-prev');
-    if (prev) prev.addEventListener('click', () => { state.step--; draw(); });
+    var prev = heroEl.querySelector('.sp-prev');
+    if (prev) prev.addEventListener('click', function() { state.idx--; draw(); });
 
-    // next
-    const next = heroEl.querySelector('.sp-next');
-    if (next) next.addEventListener('click', () => {
-      if (state.step === 2) {
-        const inp = heroEl.querySelector('.sp-amt-input');
+    var next = heroEl.querySelector('.sp-next');
+    if (next) next.addEventListener('click', function() {
+      if (stage() === 'amount') {
+        var inp = heroEl.querySelector('.sp-amt-input');
         if (inp) {
-          const v = parseFloat(inp.value);
+          var v = parseFloat(inp.value);
           if (!v || v < 5500 || v > 60000) { inp.style.borderColor = '#C8102E'; return; }
           state.amount = v;
         }
       }
-      state.step++;
+      state.idx++;
       draw();
     });
 
-    // sliders
-    const durR = document.getElementById('sp-dur');
-    const mthR = document.getElementById('sp-mth');
+    heroEl.querySelectorAll('.sp-choose').forEach(function(b) {
+      b.addEventListener('click', function() {
+        if (b.dataset.months) state.months = parseInt(b.dataset.months);
+        state.idx = STAGES.indexOf('form');
+        draw();
+      });
+    });
+
+    var submit = heroEl.querySelector('.sp-submit');
+    if (submit) submit.addEventListener('click', function() {
+      heroEl.querySelector('.sp-inner').innerHTML =
+        '<div style="text-align:center;padding:64px 0">'
+        + '<div style="font-size:72px;margin-bottom:24px">\u2705</div>'
+        + '<h1 class="sp-title">Demande envoy\u00E9e\u00A0!</h1>'
+        + '<p class="sp-sub">Votre dossier a \u00E9t\u00E9 pris en compte. Un conseiller vous contactera sous 24h.</p>'
+        + '<a href="/" class="btn btn-primary" style="margin-top:32px;display:inline-flex">Retour \u00E0 l\'accueil</a>'
+        + '</div>';
+    });
+
+    var durR = document.getElementById('sp-dur');
+    var mthR = document.getElementById('sp-mth');
     if (durR && mthR) {
-      durR.addEventListener('input', () => {
+      durR.addEventListener('input', function() {
         state.months = parseInt(durR.value);
         document.getElementById('sp-dur-val').textContent = state.months + ' mois';
-        const m = Math.round(pmt(state.amount, state.months, 7.6));
+        var m = Math.round(pmt(state.amount, state.months, 7.6));
         mthR.value = m;
-        document.getElementById('sp-mth-val').textContent = m + ' €/mois';
+        document.getElementById('sp-mth-val').textContent = m + ' \u20AC/mois';
       });
-      mthR.addEventListener('input', () => {
-        const m = parseInt(mthR.value);
-        document.getElementById('sp-mth-val').textContent = m + ' €/mois';
-        const n = Math.max(12, Math.min(84, Math.round(monthsFromPayment(state.amount, m, 7.6) / 6) * 6));
+      mthR.addEventListener('input', function() {
+        var m = parseInt(mthR.value);
+        document.getElementById('sp-mth-val').textContent = m + ' \u20AC/mois';
+        var n = monthsFromPayment(state.amount, m, 7.6);
         state.months = n;
         durR.value = n;
         document.getElementById('sp-dur-val').textContent = n + ' mois';
@@ -674,33 +728,30 @@ function renderSimulator() {
   }
 
   function draw() {
-    let stepHTML;
-    switch (state.step) {
-      case 1: stepHTML = renderStep1(); break;
-      case 2: stepHTML = renderStep2(); break;
-      case 3: stepHTML = renderStep3(); break;
-      case 4: stepHTML = renderStep4(); break;
-      default: stepHTML = '';
-    }
+    var stepHTML = '';
+    var s = stage();
+    if (s === 'project')   stepHTML = renderProject();
+    else if (s === 'amount')    stepHTML = renderAmount();
+    else if (s === 'sliders')   stepHTML = renderSliders();
+    else if (s === 'proposals') stepHTML = renderProposals();
+    else if (s === 'form')      stepHTML = renderForm();
 
-    heroEl.innerHTML = `
-      <div class="sp-wrap">
-        <div class="sp-hdr">
-          <a href="/" class="sp-help">Besoin d'aide</a>
-          <a href="/" class="sp-logo">S<span>O</span>rloz</a>
-          <a href="/" class="sp-quit">Quitter</a>
-        </div>
-        <div class="sp-body">
-          <div class="sp-inner">${stepHTML}</div>
-        </div>
-        <div class="sp-ftr">
-          <a href="/infos/mentions-legales">Mentions légales</a>
-          <a href="/infos/accessibilite">Accessibilité&nbsp;: partiellement conforme</a>
-          <a href="/infos/politique-de-confidentialite">Informatique et libertés</a>
-          <a href="/infos/cookies-et-statistiques">Cookies et statistiques</a>
-          <a href="/infos/cookies-et-statistiques">Gestion des cookies</a>
-        </div>
-      </div>`;
+    heroEl.innerHTML =
+      '<div class="sp-wrap">'
+      + '<div class="sp-hdr">'
+      + '<a href="/" class="sp-help">Besoin d\'aide</a>'
+      + '<a href="/" class="sp-logo">S<span>O</span>rloz</a>'
+      + '<a href="/" class="sp-quit">Quitter</a>'
+      + '</div>'
+      + '<div class="sp-body"><div class="sp-inner">' + stepHTML + '</div></div>'
+      + '<div class="sp-ftr">'
+      + '<a href="/infos/mentions-legales">Mentions l\u00E9gales</a>'
+      + '<a href="/infos/accessibilite">Accessibilit\u00E9&nbsp;: partiellement conforme</a>'
+      + '<a href="/infos/politique-de-confidentialite">Informatique et libert\u00E9s</a>'
+      + '<a href="/infos/cookies-et-statistiques">Cookies et statistiques</a>'
+      + '<a href="/infos/cookies-et-statistiques">Gestion des cookies</a>'
+      + '</div>'
+      + '</div>';
 
     bind();
   }

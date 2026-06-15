@@ -534,15 +534,28 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 @media (max-width: 768px) {
+  .nav-right { display: none; }
   .nav-links { display: none; flex-direction: column; position: fixed;
-    top: 70px; left: 0; right: 0; background: #fff;
-    padding: 16px; box-shadow: var(--shadow-md); z-index: 200; }
+    top: 70px; left: 0; right: 0; bottom: 0; background: #fff;
+    padding: 16px; box-shadow: var(--shadow-md); z-index: 200;
+    overflow-y: auto; }
   .nav-links.open { display: flex; }
   .nav-toggle {
     display: flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; font-size: 22px;
     color: var(--dark); background: none; border: none;
     margin-left: auto;
+  }
+  .mobile-nav-footer {
+    display: flex; flex-direction: column; gap: 12px;
+    margin-top: auto; padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .mobile-nav-footer .lang-select { width: 100%; }
+  .mobile-nav-home {
+    display: block; text-align: center;
+    padding: 10px 16px; border-radius: var(--radius-sm);
+    font-size: 15px; font-weight: 500;
   }
   .hero-inner,
   .testimonial-inner,

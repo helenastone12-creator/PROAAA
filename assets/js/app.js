@@ -31,8 +31,7 @@ function applyTranslations() {
     el.placeholder = t(el.dataset.i18nPlaceholder);
   });
 
-  const sel = document.getElementById('lang-select');
-  if (sel) sel.value = currentLang;
+  document.querySelectorAll('.lang-select').forEach(sel => { sel.value = currentLang; });
 
   document.documentElement.lang = currentLang;
 }
@@ -62,24 +61,26 @@ async function initI18n() {
 }
 
 function buildLangSelector() {
-  const wrap = document.getElementById('lang-switcher-wrap');
-  if (!wrap) return;
+  ['lang-switcher-wrap', 'lang-switcher-mobile'].forEach(id => {
+    const wrap = document.getElementById(id);
+    if (!wrap) return;
 
-  const sel = document.createElement('select');
-  sel.id = 'lang-select';
-  sel.className = 'lang-select';
-  sel.setAttribute('aria-label', 'Select language');
+    const sel = document.createElement('select');
+    sel.className = 'lang-select';
+    if (id === 'lang-switcher-wrap') sel.id = 'lang-select';
+    sel.setAttribute('aria-label', 'Select language');
 
-  SUPPORTED_LANGS.forEach(lang => {
-    const opt = document.createElement('option');
-    opt.value = lang;
-    opt.textContent = LANG_LABELS[lang];
-    if (lang === currentLang) opt.selected = true;
-    sel.appendChild(opt);
+    SUPPORTED_LANGS.forEach(lang => {
+      const opt = document.createElement('option');
+      opt.value = lang;
+      opt.textContent = LANG_LABELS[lang];
+      if (lang === currentLang) opt.selected = true;
+      sel.appendChild(opt);
+    });
+
+    sel.addEventListener('change', () => setLang(sel.value));
+    wrap.appendChild(sel);
   });
-
-  sel.addEventListener('change', () => setLang(sel.value));
-  wrap.appendChild(sel);
 }
 
 // ─── Nav dropdown ────────────────────────────────────────────────────────────
@@ -168,6 +169,13 @@ function initMobileNav() {
   toggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
+  });
+  // Close menu when any link is tapped
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
   });
 }
 

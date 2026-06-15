@@ -455,6 +455,259 @@ const PAGE_CONFIG = {
   },
 };
 
+// ─── Multi-step Simulator ────────────────────────────────────────────────────
+
+function renderSimulator() {
+  document.title = 'Faire une simulation | SOrloz';
+  document.body.classList.add('sim-fullpage');
+
+  const heroEl = document.getElementById('page-hero');
+  const contentEl = document.getElementById('page-content');
+  if (contentEl) contentEl.innerHTML = '';
+  if (!heroEl) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const initAmount = Math.min(60000, Math.max(5500, parseFloat(params.get('amount')) || 15000));
+
+  const PROJECT_TYPES = [
+    { key: 'projets',    icon: '👤', label: 'Projets' },
+    { key: 'travaux',   icon: '🔨', label: 'Travaux' },
+    { key: 'voiture',   icon: '🚗', label: 'Voiture' },
+    { key: 'deux-roues',icon: '🏍️', label: 'Deux roues' },
+  ];
+
+  const state = { step: 1, projectType: null, amount: initAmount, months: 36 };
+
+  function pmt(P, n, rate) {
+    const r = rate / 100 / 12;
+    if (r === 0) return P / n;
+    const pow = Math.pow(1 + r, n);
+    return P * r * pow / (pow - 1);
+  }
+
+  function fmt(n) {
+    return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  }
+
+  function monthsFromPayment(P, target, rate) {
+    const r = rate / 100 / 12;
+    if (target <= P * r) return 84;
+    return Math.round(-Math.log(1 - P * r / target) / Math.log(1 + r));
+  }
+
+  function progressBar(step) {
+    const pct = Math.round((step / 4) * 100);
+    return `
+      <div class="sp-progress">
+        <span class="sp-step-lbl">Étape ${step} sur 4</span>
+        <div class="sp-bar"><div class="sp-bar-fill" style="width:${pct}%"></div></div>
+      </div>`;
+  }
+
+  function amountBadge() {
+    return state.step >= 3
+      ? `<div class="sp-amount-badge">Montant souhaité&nbsp;<strong>${state.amount.toLocaleString('fr-FR')}&nbsp;€</strong></div>`
+      : '';
+  }
+
+  function renderStep1() {
+    return `
+      <h1 class="sp-title">Faire une simulation</h1>
+      <p class="sp-sub">Répondez à quelques questions en une minute pour préciser votre projet</p>
+      ${progressBar(1)}
+      <p class="sp-question">Quel projet voulez-vous financer&nbsp;?</p>
+      <div class="sp-proj-grid">
+        ${PROJECT_TYPES.map(p => `
+          <button class="sp-proj-btn${state.projectType === p.key ? ' active' : ''}" data-key="${p.key}">
+            <span class="sp-proj-icon">${p.icon}</span>
+            ${p.label}
+          </button>`).join('')}
+      </div>
+      <div class="sp-actions sp-actions-end">
+        <button class="btn btn-primary sp-next" ${state.projectType ? '' : 'disabled'}>Passer à l'étape suivante</button>
+      </div>`;
+  }
+
+  function renderStep2() {
+    return `
+      <h1 class="sp-title">Faire une simulation</h1>
+      <p class="sp-sub">Répondez à quelques questions en une minute pour préciser votre projet</p>
+      ${progressBar(2)}
+      <p class="sp-question">Quel montant souhaitez-vous emprunter&nbsp;?</p>
+      <div class="sp-amt-wrap">
+        <input class="sp-amt-input" type="number" min="5500" max="60000" value="${state.amount}">
+        <span class="sp-amt-unit">€</span>
+      </div>
+      <p class="sp-hint">Entre 5 500 € et 60 000 €</p>
+      <div class="sp-actions">
+        <button class="btn btn-outline sp-prev">← Précédent</button>
+        <button class="btn btn-primary sp-next">Passer à l'étape suivante</button>
+      </div>`;
+  }
+
+  function renderStep3() {
+    const m = Math.round(pmt(state.amount, state.months, 7.6));
+    const maxMonths = 84;
+    return `
+      ${amountBadge()}
+      <h1 class="sp-title">Faire une simulation</h1>
+      <p class="sp-sub">Répondez à quelques questions en une minute pour préciser votre projet</p>
+      ${progressBar(3)}
+      <p class="sp-question">Précisez vos besoins</p>
+      <div class="sp-sliders-box">
+        <div class="sp-slider-row">
+          <label class="sp-slider-lbl">Pour une durée de</label>
+          <div class="sp-slider-inner">
+            <input type="range" class="sp-range" id="sp-dur" min="12" max="${maxMonths}" step="6" value="${state.months}">
+            <span class="sp-range-val" id="sp-dur-val">${state.months} mois</span>
+          </div>
+        </div>
+        <div class="sp-or">ou</div>
+        <div class="sp-slider-row">
+          <label class="sp-slider-lbl">Pour une mensualité de</label>
+          <div class="sp-slider-inner">
+            <input type="range" class="sp-range" id="sp-mth" min="50" max="3000" step="5" value="${m}">
+            <span class="sp-range-val" id="sp-mth-val">${m} €/mois</span>
+          </div>
+        </div>
+      </div>
+      <div class="sp-actions">
+        <button class="btn btn-outline sp-prev">← Précédent</button>
+        <button class="btn btn-primary sp-next">Voir les simulations</button>
+      </div>`;
+  }
+
+  function renderStep4() {
+    const proj = PROJECT_TYPES.find(p => p.key === state.projectType)?.label || 'Projet';
+    const P = state.amount;
+    const n = state.months;
+
+    const fast = Math.max(12, Math.round(n * 0.55 / 6) * 6);
+    const easy = Math.min(84, Math.round(n * 1.6 / 6) * 6);
+
+    function card(label, months, rate, highlight) {
+      const monthly = pmt(P, months, rate);
+      const total = monthly * months;
+      const cost = total - P;
+      return `
+        <div class="sp-card${highlight ? ' sp-card-hl' : ''}">
+          <div class="sp-card-label">${label}</div>
+          <div class="sp-card-monthly">${fmt(monthly)}<span>/mois</span></div>
+          <div class="sp-card-dur">sur ${months} mois</div>
+          <table class="sp-card-table">
+            <tr><td>TAEG fixe</td><td>${rate.toFixed(2).replace('.', ',')} %</td></tr>
+            <tr><td>Taux débiteur fixe</td><td>${rate.toFixed(2).replace('.', ',')} %</td></tr>
+            <tr><td>Montant du crédit</td><td>${fmt(P)}</td></tr>
+            <tr><td>Montant total dû</td><td>${fmt(total)}</td></tr>
+            <tr><td>Coût du crédit</td><td>${fmt(cost)}</td></tr>
+          </table>
+          <a href="/contact" class="btn${highlight ? ' btn-outline-white' : ' btn-primary'} sp-card-btn">Choisir cette offre</a>
+        </div>`;
+    }
+
+    return `
+      ${amountBadge()}
+      <h1 class="sp-title">Nos propositions</h1>
+      <p class="sp-sub">Votre résultat pour votre ${proj}</p>
+      <div class="sp-cards">
+        ${card('Remboursement plus rapide', fast, 7.6, false)}
+        ${card('Offre Éco-Finance', n, 4.9, true)}
+        ${card('Remboursement plus facile', easy, 7.6, false)}
+      </div>
+      <p class="sp-legal">Simulation non contractuelle. TAEG fixe 7,60 % hors offre éco-responsable (4,90 %). Sous réserve d'acceptation de votre dossier.</p>
+      <div class="sp-actions">
+        <button class="btn btn-outline sp-prev">← Précédent</button>
+      </div>`;
+  }
+
+  function bind() {
+    // project selection
+    heroEl.querySelectorAll('.sp-proj-btn').forEach(b => {
+      b.addEventListener('click', () => {
+        state.projectType = b.dataset.key;
+        heroEl.querySelectorAll('.sp-proj-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        const nb = heroEl.querySelector('.sp-next');
+        if (nb) nb.disabled = false;
+      });
+    });
+
+    // prev
+    const prev = heroEl.querySelector('.sp-prev');
+    if (prev) prev.addEventListener('click', () => { state.step--; draw(); });
+
+    // next
+    const next = heroEl.querySelector('.sp-next');
+    if (next) next.addEventListener('click', () => {
+      if (state.step === 2) {
+        const inp = heroEl.querySelector('.sp-amt-input');
+        if (inp) {
+          const v = parseFloat(inp.value);
+          if (!v || v < 5500 || v > 60000) { inp.style.borderColor = '#C8102E'; return; }
+          state.amount = v;
+        }
+      }
+      state.step++;
+      draw();
+    });
+
+    // sliders
+    const durR = document.getElementById('sp-dur');
+    const mthR = document.getElementById('sp-mth');
+    if (durR && mthR) {
+      durR.addEventListener('input', () => {
+        state.months = parseInt(durR.value);
+        document.getElementById('sp-dur-val').textContent = state.months + ' mois';
+        const m = Math.round(pmt(state.amount, state.months, 7.6));
+        mthR.value = m;
+        document.getElementById('sp-mth-val').textContent = m + ' €/mois';
+      });
+      mthR.addEventListener('input', () => {
+        const m = parseInt(mthR.value);
+        document.getElementById('sp-mth-val').textContent = m + ' €/mois';
+        const n = Math.max(12, Math.min(84, Math.round(monthsFromPayment(state.amount, m, 7.6) / 6) * 6));
+        state.months = n;
+        durR.value = n;
+        document.getElementById('sp-dur-val').textContent = n + ' mois';
+      });
+    }
+  }
+
+  function draw() {
+    let stepHTML;
+    switch (state.step) {
+      case 1: stepHTML = renderStep1(); break;
+      case 2: stepHTML = renderStep2(); break;
+      case 3: stepHTML = renderStep3(); break;
+      case 4: stepHTML = renderStep4(); break;
+      default: stepHTML = '';
+    }
+
+    heroEl.innerHTML = `
+      <div class="sp-wrap">
+        <div class="sp-hdr">
+          <a href="/" class="sp-help">Besoin d'aide</a>
+          <a href="/" class="sp-logo">S<span>O</span>rloz</a>
+          <a href="/" class="sp-quit">Quitter</a>
+        </div>
+        <div class="sp-body">
+          <div class="sp-inner">${stepHTML}</div>
+        </div>
+        <div class="sp-ftr">
+          <a href="/infos/mentions-legales">Mentions légales</a>
+          <a href="/infos/accessibilite">Accessibilité&nbsp;: partiellement conforme</a>
+          <a href="/infos/politique-de-confidentialite">Informatique et libertés</a>
+          <a href="/infos/cookies-et-statistiques">Cookies et statistiques</a>
+          <a href="/infos/cookies-et-statistiques">Gestion des cookies</a>
+        </div>
+      </div>`;
+
+    bind();
+  }
+
+  draw();
+}
+
 // ─── Breadcrumb ───────────────────────────────────────────────────────────────
 
 function buildBreadcrumb(page) {
@@ -488,6 +741,12 @@ function buildChildrenSection(children) {
 
 function renderPage(t) {
   const pathname = window.location.pathname.replace(/\/$/, '') || '/';
+
+  if (pathname === '/simulateur') {
+    renderSimulator();
+    return;
+  }
+
   const page = PAGE_CONFIG[pathname];
   const heroEl = document.getElementById('page-hero');
   const contentEl = document.getElementById('page-content');

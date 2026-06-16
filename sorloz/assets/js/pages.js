@@ -6,7 +6,19 @@ const PAGE_CONFIG = {
     icon: '📋', bg: 'var(--pink-bg)',
     title_fr: 'Prêts personnels',
     hero_fr: 'Financement de vos projets personnels',
+    title_hero: 'Prêts personnels : à portée de financement',
     desc_fr: 'Que ce soit pour un voyage, des travaux, une voiture ou tout autre projet de vie, SOrloz vous propose des crédits personnels adaptés à votre situation et à votre budget.',
+    body_fr: 'Le prêt personnel SOrloz vous permet de concrétiser tous vos projets de vie, sans justificatif d\'utilisation des fonds. Choisissez librement le montant entre 5 500 € et 60 000 € et la durée entre 12 et 84 mois. Votre taux est fixe, vos mensualités restent stables du premier au dernier mois. Faites votre simulation en quelques clics et recevez les fonds sous 48h.',
+    editorial: {
+      heading: 'Tous vos projets à portée de financement',
+      subheading: 'On ne vend pas du rêve, on finance les vôtres.',
+      body: 'Quels sont vos projets ? SOrloz est là pour vous aider à les réaliser. Simulez le prêt personnel qui vous convient en choisissant le montant et la durée la mieux adaptés à votre situation : c\'est vous qui choisissez ! SOrloz vous propose une solution de crédit souple et vous accompagne pour financer vos envies. Et comme chaque projet est différent, vous pouvez compter sur notre expertise pour vous conseiller au mieux en fonction de vos attentes.',
+    },
+    testimonial: {
+      monthly: '346', months: 72, names: 'Anthony &amp; Marine',
+      amount: '20 000', rate: '7,78', total_due: '24 911,64', purpose: 'se dire oui',
+    },
+    example: { amount: 20000, months: 72, rate: 7.78 },
     children: [
       { href: '/prets-personnels/credit-projet', icon: '💼', title_fr: 'Crédit projet' },
       { href: '/prets-personnels/credit-auto', icon: '🚗', title_fr: 'Crédit auto' },
@@ -20,8 +32,20 @@ const PAGE_CONFIG = {
   '/prets-personnels/credit-projet': {
     icon: '💼', bg: 'var(--pink-bg)',
     title_fr: 'Crédit projet',
+    title_hero: 'Crédit projet : voyez les choses en grand',
     hero_fr: 'Financez tous vos projets',
-    desc_fr: 'Mariage, naissance, divorce, retraite, loisirs, déménagement… SOrloz vous accompagne dans tous les moments de votre vie avec un crédit projet sur mesure.',
+    desc_fr: 'Tous vos projets à portée de financement avec le prêt projet SOrloz : mariage, déménagement, naissance, voyage… Laissez-vous porter ! Votre simulation de crédit en quelques clics.',
+    body_fr: 'Pret Projet en ligne : concrétisez vos envies dès maintenant avec le crédit en ligne SOrloz ! Des envies et des idées plein la tête ? Partir à la découverte du monde en famille ou entre amis, préparer le plus beau jour de votre vie, refaire toute la déco de la maison ou installer votre grand qui quitte le nid ? Découvrez vite les avantages du Prêt Projet : simulez dès à présent votre crédit en indiquant le montant dont vous avez besoin, faites votre demande de crédit en ligne et recevez les fonds sur votre compte bancaire.',
+    editorial: {
+      heading: 'Le coup de pouce pour vos projets',
+      subheading: 'On ne vend pas du rêve, on finance les vôtres.',
+      body: 'Quels sont vos projets ? Meia pour vous aider à les réaliser. Simulez le prêt personnel SOrloz qui vous convient en choisissant le montant et la durée la mieux adaptée à votre situation : c\'est vous qui choisissez ! SOrloz vous propose une solution de crédit projet souple et vous accompagne pour financer vos envies. Que ce soit pour votre mariage, refaire votre décoration intérieure, ou encore accueillir bébé dans de bonnes conditions, le prêt personnel vous accompagne à chaque grande étape de votre vie. Chez SOrloz, nous savons que derrière chaque projet il y a une personne, comme vous, comme nous.',
+    },
+    testimonial: {
+      monthly: '346', months: 72, names: 'Anthony &amp; Marine',
+      amount: '20 000', rate: '7,78', total_due: '24 911,64', purpose: 'se dire oui',
+    },
+    example: { amount: 20000, months: 72, rate: 7.78 },
     parent: { href: '/prets-personnels', label_fr: 'Prêts personnels' },
     children: [
       { href: '/prets-personnels/credit-projet/credit-vacances', icon: '✈️', title_fr: 'Crédit vacances' },
@@ -1220,20 +1244,38 @@ function _articlesSection(page) {
     + '</div></section>';
 }
 
-function _childrenGrid(children) {
-  var cards = children.map(function(c) {
-    return '<a href="' + c.href + '" class="category-btn" style="flex-direction:column;align-items:flex-start;gap:10px;padding:24px;border-radius:var(--radius-lg);min-height:120px">'
-      + '<span style="font-size:32px" aria-hidden="true">' + c.icon + '</span>'
-      + '<span style="font-size:15px;font-weight:700;color:var(--dark)">' + c.title_fr + '</span>'
-      + '<span style="font-size:12px;color:var(--text-light)">En savoir plus →</span>'
+function _hubContentSection(page) {
+  var body = page.body_fr || page.desc_fr || '';
+  var links = (page.children || []).map(function(c) {
+    return '<a href="' + c.href + '" style="display:flex;align-items:center;gap:10px;padding:12px 16px;margin-bottom:8px;background:#fff;border:1.5px solid #e0e4ea;border-radius:8px;color:var(--dark);text-decoration:none;font-size:14px;font-weight:600;transition:border-color .15s,background .15s" onmouseover="this.style.borderColor=\'var(--red)\';this.style.background=\'var(--pink-bg)\'" onmouseout="this.style.borderColor=\'#e0e4ea\';this.style.background=\'#fff\'">'
+      + '<span style="font-size:20px">' + c.icon + '</span>'
+      + '<span>' + c.title_fr + '</span>'
+      + '<span style="margin-left:auto;color:var(--text-light);font-size:13px">›</span>'
       + '</a>';
   }).join('');
   return '<section style="background:#fff;padding:64px 0">'
     + '<div class="container">'
-    + '<p class="section-label">Nos produits</p>'
-    + '<h2 style="font-size:clamp(22px,3vw,28px);font-weight:800;color:var(--dark);margin-bottom:32px">Nos solutions de financement</h2>'
-    + '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px">' + cards + '</div>'
+    + '<div style="display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start">'
+    + '<div>'
+    + '<p style="font-size:16px;color:var(--text-light);line-height:1.9">' + body + '</p>'
+    + '</div>'
+    + '<nav>' + links + '</nav>'
+    + '</div>'
     + '</div></section>';
+}
+
+function _editorialSection(page) {
+  var ed = page.editorial;
+  if (!ed) return '';
+  return '<section style="background:#fff;padding:56px 0;border-top:1px solid #f0f0f0">'
+    + '<div class="container">'
+    + '<div style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start">'
+    + '<h2 style="font-size:28px;font-weight:900;color:var(--dark);line-height:1.3;margin:0">' + ed.heading + '</h2>'
+    + '<div>'
+    + '<p style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--red);margin-bottom:16px">' + ed.subheading + '</p>'
+    + '<p style="font-size:15px;color:var(--text-light);line-height:1.9">' + ed.body + '</p>'
+    + '</div>'
+    + '</div></div></section>';
 }
 
 // ─── Main render ──────────────────────────────────────────────────────────────
@@ -1262,16 +1304,16 @@ function renderPage(tFn) {
   if (contentEl) {
     var html = '';
     if (page.children && page.children.length) {
-      html += _childrenGrid(page.children);
+      html += _hubContentSection(page);
       html += _insuranceSection();
-      html += _contactStrip();
+      html += _editorialSection(page);
+      html += _exampleSection(page);
       html += _processSection(tFn);
       html += _faqSection(page);
     } else {
       html += _contentSection(page);
       html += _whySection(page);
       html += _insuranceSection();
-      html += _contactStrip();
       html += _featuresChecklist(page);
       html += _crosssellCard(page);
       html += _exampleSection(page);

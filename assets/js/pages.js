@@ -984,20 +984,16 @@ function _breadcrumb(page) {
 }
 
 function _heroTestimonialCard(t) {
-  return '<div style="background:#fff;border-radius:var(--radius-lg);padding:32px 36px;box-shadow:0 4px 32px rgba(0,0,0,.12)">'
-    + '<p style="font-size:13px;color:var(--text-light);margin-bottom:6px">Avec une mensualité de</p>'
-    + '<p style="font-size:42px;font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:2px">'
-    + t.monthly + ' €<span style="font-size:18px;font-weight:500"> /mois</span></p>'
-    + '<p style="font-size:13px;color:var(--text-light);padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid #eee">'
-    + 'pendant ' + t.months + ' mois · TAEG ' + t.rate + ' %</p>'
-    + '<p style="font-size:14px;color:var(--dark);line-height:1.7">'
-    + '<strong>' + t.names + '</strong> ont pu emprunter <strong>' + t.amount + ' €</strong>'
-    + ' à <strong>' + t.rate + ' %</strong>'
-    + ' pour un montant total dû de <strong>' + t.total_due + ' €</strong>'
-    + (t.purpose ? ' et ont pu ' + t.purpose + '.' : '.')
+  function tag(v) {
+    return '<span style="display:inline-block;background:rgba(255,255,255,.88);color:var(--dark);font-weight:700;font-size:14px;padding:3px 12px;border-radius:20px;white-space:nowrap">' + v + '</span>';
+  }
+  return '<div style="padding:32px 0 16px">'
+    + '<p style="font-size:15px;color:var(--dark);line-height:2.1;margin-bottom:16px">'
+    + 'Avec une mensualité de ' + tag(t.monthly + ' €/mois') + ' pendant ' + tag(t.months + ' mois') + '. '
+    + tag(t.names) + ' ont pu emprunter ' + tag(t.amount + ' €') + ' à ' + tag(t.rate + '%')
+    + ' pour un montant dû de ' + tag(t.total_due + ' €') + ' et ' + tag(t.purpose) + '.'
     + '</p>'
-    + '<a href="/infos/mentions-legales" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--red);font-weight:600;text-decoration:none">'
-    + 'Voir les conditions de l\'offre →</a>'
+    + '<a href="/infos/mentions-legales" style="font-size:13px;color:var(--dark);opacity:.65;text-decoration:underline">Voir les conditions de l\'offre</a>'
     + '</div>';
 }
 
@@ -1085,15 +1081,12 @@ function _whySection(page) {
 }
 
 function _insuranceSection() {
-  return '<section style="background:var(--teal-bg);padding:56px 0">'
-    + '<div class="container">'
-    + '<div style="display:grid;grid-template-columns:80px 1fr;gap:32px;align-items:center;max-width:720px;margin:0 auto">'
-    + '<div style="width:80px;height:80px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;box-shadow:var(--shadow);flex-shrink:0">🛡️</div>'
-    + '<div>'
-    + '<h2 style="font-size:22px;font-weight:800;color:var(--dark);margin-bottom:12px">Couvrez vos arrières et ne laissez place à aucun imprévu.</h2>'
-    + '<p style="font-size:15px;color:var(--text-light);line-height:1.7">Une assurance facultative est disponible pour vous protéger, vous et vos proches, en cas d\'accident de la vie : décès, invalidité, incapacité de travail ou perte d\'emploi.</p>'
-    + '<a href="/assurance/nos-assurances-de-prets" class="btn btn-primary" style="margin-top:20px">En savoir plus</a>'
-    + '</div></div></div></section>';
+  return '<div style="background:var(--green-bg);border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px">'
+    + '<div style="width:72px;height:72px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 2px 12px rgba(0,0,0,.08)">🛡️</div>'
+    + '<h2 style="font-size:20px;font-weight:800;color:var(--dark);line-height:1.4">Ne laissez place à aucun imprévu.</h2>'
+    + '<p style="font-size:14px;color:var(--text-light);line-height:1.8">Pour votre tranquillité et celle de vos proches, vous avez la possibilité, ainsi que votre coemprunteur, de bénéficier d\'une assurance facultative. Selon votre situation à l\'adhésion et vos besoins, elle vous garantit en cas de décès, Perte Totale et Irréversible d\'Autonomie (PTIA), Incapacité Temporaire Totale de travail (ITT) et Perte d\'Emploi. Choisissez d\'être bien protégé et certain de pouvoir rembourser votre crédit en toute circonstance.</p>'
+    + '<a href="/assurance/nos-assurances-de-prets" style="font-size:14px;font-weight:700;color:var(--dark);text-decoration:none">Découvrir nos assurances →</a>'
+    + '</div>';
 }
 
 function _contactStrip() {
@@ -1104,27 +1097,29 @@ function _contactStrip() {
     + '</div></section>';
 }
 
-function _featuresChecklist(page) {
+function _insuranceAndChecklist(page) {
   var name = page.features_name || page.title_fr || '';
   var items = [
     '100% en ligne et 0 € de frais de dossier',
     'Un prêt entre 5 500 € et 60 000 €',
     'Un taux fixe pendant toute la durée de votre crédit',
     'Réception des fonds sous 48h sur votre compte bancaire (1)',
-    'Une mensualité adaptée à vos besoins, modulable sur demande (2)',
-    'Remboursement anticipé total ou partiel possible',
+    'Une mensualité qui s\'adapte à vos besoins, modulable sur demande (2)',
   ];
   var listHtml = items.map(function(item) {
-    return '<li style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--border)">'
-      + '<span style="width:28px;height:28px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#166534;font-weight:700;font-size:14px">✓</span>'
+    return '<li style="display:flex;align-items:flex-start;gap:12px;padding:10px 0">'
+      + '<span style="width:24px;height:24px;border-radius:50%;border:2px solid var(--dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 4.5,9 10.5,3" stroke="currentColor" stroke-width="1.8"/></svg></span>'
       + '<span style="font-size:15px;color:var(--dark)">' + item + '</span></li>';
   }).join('');
   return '<section style="background:#fff;padding:64px 0">'
-    + '<div class="container" style="max-width:680px">'
-    + '<p class="section-label">Ce qui est inclus</p>'
-    + '<h2 style="font-size:clamp(22px,3vw,28px);font-weight:800;color:var(--dark);margin-bottom:32px">Le Prêt Personnel ' + name + ' : SOrloz vous accompagne</h2>'
+    + '<div class="container">'
+    + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">'
+    + '<div>' + _insuranceSection() + '</div>'
+    + '<div>'
+    + '<h2 style="font-size:22px;font-weight:800;color:var(--dark);margin-bottom:24px">Le Prêt Personnel ' + name + ' : SOrloz vous accompagne</h2>'
     + '<ul style="list-style:none;padding:0;margin:0">' + listHtml + '</ul>'
-    + '</div></section>';
+    + '</div>'
+    + '</div></div></section>';
 }
 
 function _crosssellCard(page) {
@@ -1148,26 +1143,30 @@ function _exampleSection(page) {
   var cost = total - ex.amount;
   var titleLow = (page.title_fr || '').toLowerCase();
   function row(label, val) {
-    return '<tr><td style="padding:10px 0;color:rgba(255,255,255,.75);font-size:14px;border-bottom:1px solid rgba(255,255,255,.12)">' + label + '</td>'
-      + '<td style="padding:10px 0;text-align:right;font-weight:700;font-size:14px;border-bottom:1px solid rgba(255,255,255,.12)">' + val + '</td></tr>';
+    return '<tr style="border-bottom:1px solid #eee">'
+      + '<td style="padding:12px 0;color:var(--text-light);font-size:14px">' + label + '</td>'
+      + '<td style="padding:12px 0;text-align:right;font-weight:700;font-size:14px;color:var(--dark)">' + val + '</td>'
+      + '</tr>';
   }
-  return '<section style="background:var(--green-bg);padding:64px 0">'
-    + '<div class="container" style="max-width:560px;text-align:center">'
-    + '<p class="section-label">Exemple concret</p>'
-    + '<h2 style="font-size:clamp(22px,3vw,28px);font-weight:800;color:var(--dark);margin-bottom:10px">Un exemple de prêt ' + titleLow + '</h2>'
-    + '<p style="font-size:15px;color:var(--text-light);margin-bottom:32px">Simulation non contractuelle, sous réserve d\'acceptation de votre dossier.</p>'
-    + '<a href="/simulateur" class="btn btn-primary" style="margin-bottom:32px;display:inline-flex">Faire ma simulation</a>'
-    + '<div style="background:#1a4731;color:#fff;border-radius:var(--radius-lg);padding:36px;text-align:left">'
-    + '<p style="font-size:13px;opacity:.65;margin-bottom:4px">Montant emprunté</p>'
-    + '<p style="font-size:40px;font-weight:900;line-height:1;margin-bottom:4px">' + ex.amount.toLocaleString('fr-FR') + ' €</p>'
-    + '<p style="font-size:13px;opacity:.65;margin-bottom:28px">pendant ' + ex.months + ' mois</p>'
-    + '<table style="width:100%;border-collapse:collapse">'
+  return '<section style="background:#f8f6f2;padding:64px 0">'
+    + '<div class="container" style="max-width:760px">'
+    + '<div style="display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.08)">'
+    + '<div style="background:#1a4731;color:#fff;padding:48px 40px;display:flex;flex-direction:column;justify-content:center">'
+    + '<p style="font-size:13px;opacity:.65;margin-bottom:8px">Montant emprunté</p>'
+    + '<p style="font-size:52px;font-weight:900;line-height:1;margin-bottom:8px">' + ex.amount.toLocaleString('fr-FR') + ' €</p>'
+    + '<p style="font-size:14px;opacity:.65">Pendant ' + ex.months + ' mois</p>'
+    + '</div>'
+    + '<div style="background:#fff;padding:40px">'
+    + '<h3 style="font-size:18px;font-weight:800;color:var(--dark);margin-bottom:24px;line-height:1.4">Un exemple de prêt ' + titleLow + ' et ce qu\'il faut en retenir</h3>'
+    + '<table style="width:100%;border-collapse:collapse;margin-bottom:28px">'
     + row('TAEG fixe', ex.rate.toFixed(2).replace('.', ',') + ' %')
-    + row('Mensualité', _fmt(monthly) + ' €')
+    + row('Mensualités', _fmt(monthly) + ' €')
     + row('Coût total du crédit', _fmt(cost) + ' €')
-    + row('Montant total dû', _fmt(total) + ' €')
-    + '</table></div>'
-    + '</div></section>';
+    + row('Montant total dû par l\'emprunteur', _fmt(total) + ' €')
+    + '</table>'
+    + '<a href="/simulateur" class="btn btn-primary">Faire une simulation</a>'
+    + '</div>'
+    + '</div></div></section>';
 }
 
 function _processSection(tFn) {
@@ -1191,13 +1190,12 @@ function _processSection(tFn) {
 
 function _faqSection(page) {
   var defaultFaq = [
-    { q: 'Comment faire une demande de crédit SOrloz ?', a: 'Faites votre demande directement en ligne depuis notre simulateur. Répondez à quelques questions et obtenez une réponse de principe immédiate.' },
-    { q: 'Quels sont les taux proposés par SOrloz ?', a: 'SOrloz propose un TAEG fixe à partir de 4,90% pour les projets éco-responsables et de 7,60% pour les autres projets personnels.' },
-    { q: 'Quand vais-je recevoir les fonds ?', a: 'Une fois votre dossier validé et le délai de rétractation passé, les fonds sont disponibles sous 48h sur votre compte bancaire.' },
-    { q: 'Puis-je rembourser mon crédit par anticipation ?', a: 'Oui, le remboursement anticipé total ou partiel est possible. Des frais peuvent s\'appliquer selon les conditions de votre contrat.' },
+    { q: 'C\'est quoi le TAEG ?', a: 'Le Taux Annuel Effectif Global (TAEG) représente le coût total de votre crédit exprimé en pourcentage annuel. Il inclut les intérêts ainsi que tous les frais obligatoires liés à l\'obtention du crédit.' },
+    { q: 'Comment faire ma demande de crédit en ligne ?', a: 'Faites votre simulation en ligne, sélectionnez l\'offre adaptée à votre besoin, complétez votre dossier et signez votre contrat électroniquement. Tout se fait en quelques minutes, 100% en ligne.' },
+    { q: 'Quel est le délai de mise à disposition des fonds ?', a: 'Une fois votre dossier validé et le délai légal de rétractation écoulé, les fonds sont disponibles sous 48h sur votre compte bancaire.' },
+    { q: 'Pourquoi faire ma demande de crédit en ligne avec SOrloz ?', a: 'SOrloz vous propose une solution 100% en ligne, sans frais de dossier, avec un taux fixe pendant toute la durée de votre crédit. Nos conseillers sont disponibles pour vous accompagner à chaque étape.' },
   ];
   var items = (page.faq && page.faq.length) ? page.faq : defaultFaq;
-  var faqTitle = page.faq_title || ('Questions sur le ' + (page.title_fr || 'crédit').toLowerCase());
   var itemsHtml = items.map(function(item) {
     return '<div class="faq-item">'
       + '<button class="faq-question" aria-expanded="false">' + item.q
@@ -1206,21 +1204,14 @@ function _faqSection(page) {
       + '<div class="faq-answer"><div class="faq-answer-inner">' + item.a + '</div></div>'
       + '</div>';
   }).join('');
-  return '<section class="faq">'
-    + '<div class="container"><div class="faq-inner">'
-    + '<div>'
-    + '<h2 class="faq-title">' + faqTitle + '</h2>'
+  return '<section class="faq" style="padding:64px 0">'
+    + '<div class="container" style="max-width:700px">'
+    + '<h2 class="faq-title" style="text-align:center;margin-bottom:32px">Toutes les réponses à vos questions</h2>'
     + '<div class="faq-list">' + itemsHtml + '</div>'
+    + '<div style="text-align:center;margin-top:32px">'
+    + '<a href="/infos/mentions-legales" style="font-size:14px;color:var(--text-light);text-decoration:underline">Voir les conditions</a>'
     + '</div>'
-    + '<div class="contact-box">'
-    + '<p class="contact-box-teaser">Vous avez d\'autres questions ?</p>'
-    + '<p class="contact-box-headline">Notre équipe est là pour vous</p>'
-    + '<p class="contact-box-hours">Lun–Ven · 8h30–19h</p>'
-    + '<p class="contact-box-phone">📞 <span>01 23 45 67 89</span></p>'
-    + '<p class="contact-box-rate">Appel non surtaxé</p>'
-    + '<a href="/contact" class="btn btn-primary about-cta">Nous contacter</a>'
-    + '</div>'
-    + '</div></div></section>';
+    + '</div></section>';
 }
 
 function _articlesSection(page) {
@@ -1305,7 +1296,7 @@ function renderPage(tFn) {
     var html = '';
     if (page.children && page.children.length) {
       html += _hubContentSection(page);
-      html += _insuranceSection();
+      html += _insuranceAndChecklist(page);
       html += _editorialSection(page);
       html += _exampleSection(page);
       html += _processSection(tFn);
@@ -1313,8 +1304,7 @@ function renderPage(tFn) {
     } else {
       html += _contentSection(page);
       html += _whySection(page);
-      html += _insuranceSection();
-      html += _featuresChecklist(page);
+      html += _insuranceAndChecklist(page);
       html += _crosssellCard(page);
       html += _exampleSection(page);
       html += _processSection(tFn);

@@ -959,9 +959,36 @@ function _breadcrumb(page) {
     + '</nav>';
 }
 
+function _heroTestimonialCard(t) {
+  return '<div style="background:#fff;border-radius:var(--radius-lg);padding:32px 36px;box-shadow:0 4px 32px rgba(0,0,0,.12)">'
+    + '<p style="font-size:13px;color:var(--text-light);margin-bottom:6px">Avec une mensualité de</p>'
+    + '<p style="font-size:42px;font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:2px">'
+    + t.monthly + ' €<span style="font-size:18px;font-weight:500"> /mois</span></p>'
+    + '<p style="font-size:13px;color:var(--text-light);padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid #eee">'
+    + 'pendant ' + t.months + ' mois · TAEG ' + t.rate + ' %</p>'
+    + '<p style="font-size:14px;color:var(--dark);line-height:1.7">'
+    + '<strong>' + t.names + '</strong> ont pu emprunter <strong>' + t.amount + ' €</strong>'
+    + ' à <strong>' + t.rate + ' %</strong>'
+    + ' pour un montant total dû de <strong>' + t.total_due + ' €</strong>'
+    + (t.purpose ? ' et ont pu ' + t.purpose + '.' : '.')
+    + '</p>'
+    + '<a href="/infos/mentions-legales" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--red);font-weight:600;text-decoration:none">'
+    + 'Voir les conditions de l\'offre →</a>'
+    + '</div>';
+}
+
 function _heroSection(page) {
   var title = page.title_hero || page.hero_fr || page.title_fr || '';
   var desc = page.desc_fr || '';
+  var rightCol = page.testimonial
+    ? _heroTestimonialCard(page.testimonial)
+    : ('<div class="hero-promo">'
+      + '<p class="hero-promo-teaser">Vous voulez une bonne nouvelle ?</p>'
+      + '<p class="hero-promo-rate-label">TAEG fixe à partir de</p>'
+      + '<p class="hero-promo-rate-value">4,90%</p>'
+      + '<p class="hero-promo-rate-detail">Pour 12 000 € sur 60 mois**</p>'
+      + '<a href="/simulateur" class="hero-promo-cta">Faire une simulation →</a>'
+      + '</div>');
   return '<section class="hero" style="background:' + (page.bg || 'var(--pink-bg)') + ';padding:64px 0 0">'
     + '<div class="container"><div class="page-hero-inner">'
     + '<div>'
@@ -973,13 +1000,7 @@ function _heroSection(page) {
     + '<button class="btn btn-primary sim-btn">Faire une simulation</button>'
     + '</div>'
     + '</div>'
-    + '<div class="hero-promo">'
-    + '<p class="hero-promo-teaser">Vous voulez une bonne nouvelle ?</p>'
-    + '<p class="hero-promo-rate-label">TAEG fixe à partir de</p>'
-    + '<p class="hero-promo-rate-value">4,90%</p>'
-    + '<p class="hero-promo-rate-detail">Pour 12 000 € sur 60 mois**</p>'
-    + '<a href="/simulateur" class="hero-promo-cta">Faire une simulation →</a>'
-    + '</div>'
+    + rightCol
     + '</div></div>'
     + '</section>';
 }
@@ -1247,7 +1268,6 @@ function renderPage(tFn) {
       html += _processSection(tFn);
       html += _faqSection(page);
     } else {
-      html += _testimonialSection(page.testimonial);
       html += _contentSection(page);
       html += _whySection(page);
       html += _insuranceSection();

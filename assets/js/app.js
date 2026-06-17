@@ -137,7 +137,7 @@ function formatEur(n) {
 
 function initSimulator() {
   document.querySelectorAll('.sim-btn').forEach(btn => {
-    const container = btn.closest('.hero-sim, .hero-left, .sim-block');
+    const container = btn.closest('.hero-sim, .hero-left, .sim-block, .pg-form');
     if (!container) return;
     const input = container.querySelector('.sim-input');
     if (!input) return;

@@ -773,6 +773,67 @@ const PAGE_CONFIG = {
     hero_fr: 'Financez votre voiture hybride',
     desc_fr: 'Le meilleur des deux mondes ! Avec le crédit voiture hybride SOrloz, profitez d\'un financement avantageux pour votre véhicule hybride et réduisez votre empreinte carbone.',
     parent: { href: '/prets-personnels/credit-auto', label_fr: 'Crédit auto' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-auto', label: 'Crédit auto' },
+    ],
+    testimonial: {
+      monthly: '338,86', months: 60, names: 'Léa &amp; Romain',
+      amount: '18 000', rate: '4,90', total_due: '20 331,49',
+      purpose: 'achat d\'un Toyota Yaris Cross hybride',
+    },
+    content: {
+      heading: 'Crédit voiture hybride : roulez malin, roulez responsable',
+      subheading: 'Profitez du taux éco-responsable SOrloz à 4,90%',
+      body: 'Le crédit voiture hybride SOrloz est un prêt personnel à taux préférentiel destiné à financer l\'achat de votre véhicule hybride, qu\'il soit rechargeable (PHEV) ou non rechargeable (HEV). Avec un TAEG fixe à partir de 4,90%, vous réalisez une économie significative par rapport au taux standard. Empruntez entre 5 500 € et 60 000 € et remboursez sur 12 à 84 mois, le tout sans frais de dossier.\n\nL\'hybride représente aujourd\'hui un excellent compromis entre performance, économies de carburant et respect de l\'environnement. Pour en savoir plus sur l\'ensemble de nos solutions, consultez notre page <a href="/prets-personnels/credit-auto" style="color:var(--red);font-weight:600">crédit auto</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit voiture hybride SOrloz ?',
+      intro: 'L\'hybride combine le meilleur des deux motorisations. SOrloz vous accompagne dans cette transition avec un financement à taux réduit et des conditions transparentes.',
+      sections: [
+        { title: 'Un taux préférentiel réservé aux véhicules propres', body: 'Avec un TAEG fixe à partir de 4,90%, le crédit voiture hybride SOrloz vous fait bénéficier d\'un taux nettement inférieur au taux standard de 7,60%. Cette réduction représente une économie concrète sur le coût total de votre crédit, pouvant atteindre plusieurs centaines d\'euros selon le montant et la durée choisis. C\'est notre manière de récompenser votre engagement en faveur d\'une mobilité plus responsable.' },
+        { title: 'Un financement indépendant pour mieux négocier', body: 'Le crédit voiture hybride SOrloz est un prêt personnel non affecté : vous disposez des fonds librement et vous négociez le prix de votre véhicule comme un acheteur au comptant. Cette indépendance vous donne un véritable pouvoir de négociation face au concessionnaire ou au vendeur particulier, ce qui peut faire une différence significative sur le prix final de votre véhicule hybride.' },
+        { title: 'Cumulable avec les aides publiques', body: 'Le crédit voiture hybride SOrloz est parfaitement cumulable avec les dispositifs d\'aide à l\'acquisition de véhicules propres : prime à la conversion, bonus écologique pour les hybrides rechargeables éligibles, et aides régionales le cas échéant. En combinant ces aides avec notre taux préférentiel, vous optimisez le coût global de votre projet automobile tout en contribuant à la réduction des émissions de CO2.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit voiture hybride sur mesure',
+        subheading: 'Options de personnalisation',
+        body: 'Avec SOrloz, vous adaptez votre crédit voiture hybride à vos besoins précis.',
+        bullets: [
+          '<strong>Montant :</strong> Empruntez de 5 500 € à 60 000 € pour couvrir l\'achat de votre véhicule hybride, qu\'il s\'agisse d\'un SUV familial, d\'une berline compacte ou d\'un crossover urbain.',
+          '<strong>Durée :</strong> Choisissez une durée de remboursement de 12 à 84 mois selon vos capacités financières. Une durée plus longue réduit vos mensualités pour un budget quotidien plus serein.',
+          '<strong>Mensualités :</strong> Vos mensualités sont fixes et connues dès le départ. Ajustez-les pour qu\'elles correspondent à votre reste à vivre et à vos objectifs financiers.',
+        ],
+        outro: 'Que vous optiez pour un hybride rechargeable offrant une autonomie électrique au quotidien ou un hybride classique pour réduire votre consommation, SOrloz finance votre projet.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit voiture hybride avec SOrloz ?',
+        body: 'Financer votre véhicule hybride avec SOrloz est simple et rapide. Voici les étapes :',
+        bullets: [
+          '<strong>Simulez votre crédit en ligne :</strong> Indiquez le montant souhaité pour votre véhicule hybride et découvrez instantanément vos mensualités et le taux applicable.',
+          '<strong>Complétez votre demande :</strong> Renseignez vos informations personnelles et financières en quelques minutes. L\'ensemble du processus est 100% dématérialisé.',
+          '<strong>Recevez vos fonds :</strong> Après acceptation de votre dossier et passé le délai légal de rétractation, les fonds sont versés sur votre compte bancaire sous 48h.',
+        ],
+        outro: 'Avec le crédit voiture hybride SOrloz, vous combinez performance économique et engagement écologique. Profitez de notre taux préférentiel pour rouler propre sans vous ruiner.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous hésitez avec le 100% électrique ?',
+      body: 'Découvrez notre crédit voiture électrique avec le même taux préférentiel de 4,90% pour passer au tout électrique en toute sérénité.',
+      link_href: '/prets-personnels/credit-auto/credit-voiture-electrique',
+      link_text: 'Découvrir le crédit voiture électrique',
+    },
+    example: { amount: 20000, months: 60, rate: 4.90 },
+    faq_title: 'Vos questions sur le crédit voiture hybride',
+    faq: [
+      { q: 'Quels véhicules hybrides sont éligibles au taux préférentiel ?', a: 'Tous les véhicules hybrides rechargeables (PHEV) et hybrides non-rechargeables (HEV) sont éligibles au taux préférentiel de 4,90%, sous réserve de justificatif de conformité du véhicule.' },
+      { q: 'Le crédit voiture hybride est-il cumulable avec la prime à la conversion ?', a: 'Oui, le crédit SOrloz est un prêt personnel indépendant, parfaitement cumulable avec la prime à la conversion, le bonus écologique et les aides régionales.' },
+      { q: 'Quelle est la différence de coût entre le taux hybride et le taux standard ?', a: 'Le taux préférentiel de 4,90% au lieu de 7,60% vous fait économiser significativement sur le coût total du crédit. Par exemple, sur 20 000 € empruntés sur 60 mois, l\'économie dépasse 1 600 €.' },
+      { q: 'Puis-je acheter un véhicule hybride d\'occasion avec ce crédit ?', a: 'Oui, le crédit voiture hybride SOrloz finance aussi bien les véhicules neufs que d\'occasion, sans limite d\'âge ni de kilométrage.' },
+    ],
+    features_name: 'Voiture hybride',
   },
 
   '/prets-personnels/credit-auto/credit-voiture-thermique': {
@@ -781,6 +842,67 @@ const PAGE_CONFIG = {
     hero_fr: 'Financez votre voiture thermique',
     desc_fr: 'Vous optez pour un véhicule thermique ? SOrloz vous propose un financement personnalisé pour l\'achat de votre voiture essence ou diesel.',
     parent: { href: '/prets-personnels/credit-auto', label_fr: 'Crédit auto' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-auto', label: 'Crédit auto' },
+    ],
+    testimonial: {
+      monthly: '363,38', months: 48, names: 'Nicolas &amp; Stéphanie',
+      amount: '15 000', rate: '7,60', total_due: '17 442,43',
+      purpose: 'achat d\'une Dacia Duster essence',
+    },
+    content: {
+      heading: 'Crédit voiture thermique : financez votre véhicule essence ou diesel',
+      subheading: 'Un prêt personnel adapté à votre projet automobile',
+      body: 'Le crédit voiture thermique SOrloz est un prêt personnel non affecté qui vous permet de financer l\'achat de votre véhicule essence ou diesel, neuf ou d\'occasion. Avec un TAEG fixe à partir de 7,60%, vous bénéficiez de mensualités stables sur toute la durée de votre remboursement. Empruntez de 5 500 € à 60 000 € sur une durée de 12 à 84 mois.\n\nQue vous recherchiez une citadine pour vos trajets quotidiens, un SUV familial ou un utilitaire pour vos besoins professionnels, le crédit voiture thermique SOrloz s\'adapte à tous vos projets. Pour découvrir l\'ensemble de nos offres, rendez-vous sur notre page <a href="/prets-personnels/credit-auto" style="color:var(--red);font-weight:600">crédit auto</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit voiture thermique SOrloz ?',
+      intro: 'Le moteur thermique reste un choix pertinent pour de nombreux automobilistes. SOrloz vous propose un financement transparent, sans frais cachés, pour concrétiser votre projet.',
+      sections: [
+        { title: 'Liberté de choix du véhicule', body: 'Le crédit voiture thermique SOrloz est un prêt personnel non affecté : vous êtes libre de choisir votre véhicule chez le concessionnaire, en concession multimarque ou auprès d\'un particulier. Essence, diesel, GPL ou même bioéthanol, vous financez le véhicule thermique qui correspond exactement à vos besoins de conduite et à votre budget, sans restriction de marque ni de motorisation.' },
+        { title: 'Des mensualités fixes et prévisibles', body: 'Votre TAEG est fixé dès la souscription et ne varie pas pendant toute la durée de votre crédit. Vos mensualités restent identiques du premier au dernier mois, ce qui vous permet de gérer votre budget automobile en toute sérénité. Aucune mauvaise surprise, aucune indexation : vous savez précisément combien vous remboursez chaque mois et quel sera le coût total de votre financement.' },
+        { title: 'Négociez comme un acheteur comptant', body: 'En finançant votre voiture thermique avec un prêt personnel SOrloz, vous disposez des fonds avant même de vous rendre chez le vendeur. Cet avantage vous place en position de force pour négocier le prix d\'achat, les options ou la reprise de votre ancien véhicule. Les vendeurs sont généralement plus enclins à accorder des remises à un acheteur qui règle comptant, ce qui peut compenser une partie du coût du crédit.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit voiture thermique sur mesure',
+        subheading: 'Options de personnalisation',
+        body: 'Avec SOrloz, vous configurez votre crédit voiture thermique selon vos besoins.',
+        bullets: [
+          '<strong>Montant :</strong> Empruntez de 5 500 € à 60 000 € pour financer l\'achat de votre véhicule thermique, que ce soit une citadine, une berline, un SUV ou un utilitaire.',
+          '<strong>Durée :</strong> Optez pour une durée de remboursement de 12 à 84 mois. Plus la durée est longue, plus vos mensualités sont réduites pour préserver votre pouvoir d\'achat.',
+          '<strong>Mensualités :</strong> Vos mensualités sont fixes et déterminées dès la simulation. Ajustez le curseur pour trouver le juste équilibre entre durée et montant de remboursement mensuel.',
+        ],
+        outro: 'Le crédit voiture thermique SOrloz s\'adapte à tous les profils d\'automobilistes, du conducteur occasionnel au grand rouleur.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit voiture thermique avec SOrloz ?',
+        body: 'Votre demande de financement se fait entièrement en ligne en quelques étapes simples :',
+        bullets: [
+          '<strong>Lancez votre simulation :</strong> Indiquez le montant dont vous avez besoin et la durée souhaitée. Vous obtenez instantanément le détail de vos mensualités et le coût total du crédit.',
+          '<strong>Constituez votre dossier :</strong> Remplissez le formulaire en ligne avec vos informations personnelles et financières. La démarche est 100% dématérialisée et ne prend que quelques minutes.',
+          '<strong>Signez et recevez vos fonds :</strong> Après validation de votre dossier, signez électroniquement votre contrat. Les fonds sont versés sur votre compte sous 48h après le délai légal de rétractation.',
+        ],
+        outro: 'Avec SOrloz, financer votre voiture thermique n\'a jamais été aussi simple. Faites votre simulation dès maintenant et roulez en toute tranquillité.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous envisagez de passer à l\'hybride ou à l\'électrique ?',
+      body: 'Profitez de notre taux préférentiel de 4,90% réservé aux véhicules hybrides et électriques. Une économie significative sur le coût total de votre crédit.',
+      link_href: '/prets-personnels/credit-auto/credit-voiture-hybride',
+      link_text: 'Découvrir le crédit voiture hybride',
+    },
+    example: { amount: 18000, months: 48, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit voiture thermique',
+    faq: [
+      { q: 'Le crédit voiture thermique finance-t-il l\'essence et le diesel ?', a: 'Oui, le crédit voiture thermique SOrloz finance tous les types de motorisation thermique : essence, diesel, GPL, bioéthanol et gaz naturel.' },
+      { q: 'Puis-je financer une voiture thermique d\'occasion ?', a: 'Absolument. Le crédit SOrloz est un prêt personnel non affecté qui finance aussi bien les véhicules neufs que d\'occasion, sans limite d\'âge ni de kilométrage.' },
+      { q: 'Quel est le taux pour un crédit voiture thermique ?', a: 'Le TAEG fixe est à partir de 7,60% pour un crédit voiture thermique. Un taux préférentiel de 4,90% est disponible pour les véhicules hybrides et électriques.' },
+      { q: 'Quand les fonds sont-ils disponibles ?', a: 'Après acceptation de votre dossier et passé le délai légal de rétractation de 14 jours, les fonds sont versés sur votre compte bancaire sous 48h.' },
+    ],
+    features_name: 'Voiture thermique',
   },
 
   // ── Crédit moto hub
@@ -804,6 +926,67 @@ const PAGE_CONFIG = {
     hero_fr: 'Financez votre nouvelle moto',
     desc_fr: 'Offrez-vous la moto de vos rêves ! Le crédit moto neuve SOrloz vous permet de financer votre deux-roues avec des mensualités adaptées.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-moto', label: 'Crédit moto' },
+    ],
+    testimonial: {
+      monthly: '290,71', months: 48, names: 'Maxime &amp; Clara',
+      amount: '12 000', rate: '7,60', total_due: '13 953,94',
+      purpose: 'achat d\'une Yamaha MT-07 neuve',
+    },
+    content: {
+      heading: 'Crédit moto neuve : offrez-vous la moto de vos rêves',
+      subheading: 'Un financement indépendant du concessionnaire moto',
+      body: 'Le crédit moto neuve SOrloz est un prêt personnel non affecté qui vous permet de financer l\'achat de votre moto neuve sans passer par le financement proposé par le concessionnaire. Vous bénéficiez d\'un taux fixe et de mensualités stables sur toute la durée du crédit, sans frais de dossier. De 5 500 € à 60 000 €, financez la moto de vos rêves et négociez le prix comme un acheteur comptant.\n\nQue vous soyez un motard débutant à la recherche de votre première cylindrée ou un passionné qui souhaite monter en gamme, le crédit moto neuve SOrloz s\'adapte à tous les projets deux-roues. Retrouvez toutes nos offres sur notre page <a href="/prets-personnels/credit-moto" style="color:var(--red);font-weight:600">crédit moto</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit moto neuve SOrloz ?',
+      intro: 'Votre nouvelle moto mérite un financement à la hauteur de vos ambitions. SOrloz vous offre les meilleures conditions pour concrétiser votre rêve deux-roues.',
+      sections: [
+        { title: 'Indépendance vis-à-vis du concessionnaire', body: 'Avec le crédit moto neuve SOrloz, vous n\'êtes pas lié au financement proposé par le concessionnaire. Vous disposez des fonds en amont et vous négociez le prix de votre moto comme un acheteur qui paie comptant. Cette liberté vous donne un avantage concret lors de la négociation et vous permet de comparer sereinement les offres entre différents vendeurs sans contrainte de financement.' },
+        { title: 'Un taux fixe pour un budget maîtrisé', body: 'Votre TAEG est fixé dès la souscription et ne change jamais pendant toute la durée de votre crédit. Vos mensualités restent identiques du premier au dernier mois, ce qui vous permet de planifier sereinement vos dépenses moto : assurance, entretien, équipement. Aucune surprise, aucun frais caché, vous savez exactement ce que vous remboursez chaque mois.' },
+        { title: 'Rapidité et simplicité de la démarche', body: 'Toute votre demande de crédit moto neuve se fait en ligne, en quelques minutes seulement. Vous obtenez une réponse de principe immédiate et, après validation de votre dossier, les fonds sont disponibles sur votre compte sous 48h. Cette rapidité vous permet de saisir les bonnes affaires et de réserver votre moto sans délai, avant qu\'elle ne soit vendue à un autre acheteur.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit moto neuve sur mesure',
+        subheading: 'Options de personnalisation',
+        body: 'Avec SOrloz, vous configurez votre crédit moto neuve selon vos besoins.',
+        bullets: [
+          '<strong>Montant :</strong> Empruntez de 5 500 € à 60 000 € pour couvrir l\'achat de votre moto neuve, du roadster sportif à la routière grand tourisme, en passant par le trail aventure.',
+          '<strong>Durée :</strong> Choisissez une durée de remboursement de 12 à 84 mois. Optez pour une durée plus longue afin de réduire vos mensualités et préserver votre budget équipement.',
+          '<strong>Mensualités :</strong> Vos mensualités sont fixes et déterminées dès la simulation. Trouvez l\'équilibre parfait entre la durée de remboursement et le montant mensuel qui vous convient.',
+        ],
+        outro: 'Du permis A2 à la moto de vos rêves, SOrloz vous accompagne à chaque étape de votre parcours motard avec un financement adapté.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit moto neuve avec SOrloz ?',
+        body: 'Financer votre moto neuve avec SOrloz est rapide et entièrement en ligne :',
+        bullets: [
+          '<strong>Simulez votre crédit :</strong> Renseignez le montant de votre moto neuve et la durée souhaitée. Vous obtenez instantanément le détail de vos mensualités et le coût total.',
+          '<strong>Déposez votre demande :</strong> Complétez le formulaire en ligne avec vos informations personnelles et financières. La démarche est 100% dématérialisée et ne prend que quelques minutes.',
+          '<strong>Recevez vos fonds :</strong> Après acceptation et passé le délai légal de rétractation, les fonds sont versés sur votre compte sous 48h. Rendez-vous chez le concessionnaire !',
+        ],
+        outro: 'Avec le crédit moto neuve SOrloz, prenez la route l\'esprit libre. Votre prochaine moto est à portée de financement.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous préférez une moto d\'occasion ?',
+      body: 'Découvrez notre crédit moto occasion avec les mêmes avantages : taux fixe, 0 € de frais de dossier et fonds disponibles sous 48h.',
+      link_href: '/prets-personnels/credit-moto/credit-moto-occasion',
+      link_text: 'Découvrir le crédit moto occasion',
+    },
+    example: { amount: 10000, months: 48, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit moto neuve',
+    faq: [
+      { q: 'Quel montant puis-je emprunter pour une moto neuve ?', a: 'Vous pouvez emprunter entre 5 500 € et 60 000 € selon le prix de la moto et votre capacité de remboursement.' },
+      { q: 'Le crédit moto neuve est-il différent du crédit auto ?', a: 'Non, il s\'agit du même prêt personnel non affecté. Vous êtes libre de l\'utiliser pour financer une moto, un scooter ou tout autre deux-roues motorisé.' },
+      { q: 'Puis-je financer aussi l\'équipement moto ?', a: 'Oui, le crédit moto neuve SOrloz est un prêt personnel libre d\'emploi. Vous pouvez inclure le casque, le blouson, les gants et tout l\'équipement dans votre financement.' },
+      { q: 'Les motos électriques bénéficient-elles d\'un taux réduit ?', a: 'Oui, les motos électriques et hybrides sont éligibles au taux préférentiel de 4,90% dans le cadre de notre offre éco-responsable.' },
+    ],
+    features_name: 'Moto neuve',
   },
 
   '/prets-personnels/credit-moto/credit-moto-occasion': {
@@ -812,6 +995,67 @@ const PAGE_CONFIG = {
     hero_fr: 'Financez votre moto d\'occasion',
     desc_fr: 'Trouvez la moto d\'occasion idéale et financez-la avec SOrloz. Des conditions avantageuses pour votre projet deux-roues.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-moto', label: 'Crédit moto' },
+    ],
+    testimonial: {
+      monthly: '249,22', months: 36, names: 'Alexandre &amp; Julie',
+      amount: '8 000', rate: '7,60', total_due: '8 971,82',
+      purpose: 'achat d\'une Kawasaki Z650 occasion',
+    },
+    content: {
+      heading: 'Crédit moto occasion : trouvez la perle rare sans compromis',
+      subheading: 'Financer une moto d\'occasion, c\'est simple avec SOrloz',
+      body: 'Le crédit moto occasion SOrloz est un prêt personnel non affecté qui vous permet de financer l\'achat de votre moto d\'occasion, que ce soit auprès d\'un professionnel ou d\'un particulier. Aucune restriction d\'âge ni de kilométrage pour le véhicule : vous choisissez la moto qui vous plaît et SOrloz vous avance les fonds. Remboursez en mensualités fixes sur 12 à 84 mois.\n\nLe marché de la moto d\'occasion regorge d\'opportunités pour tous les budgets. Que vous recherchiez un trail d\'aventure, un roadster urbain ou une sportive racée, le crédit moto occasion SOrloz vous donne les moyens de concrétiser votre projet. Découvrez toutes nos offres sur notre page <a href="/prets-personnels/credit-moto" style="color:var(--red);font-weight:600">crédit moto</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit moto occasion SOrloz ?',
+      intro: 'Le marché de l\'occasion offre un excellent rapport qualité-prix pour les motards avertis. SOrloz vous propose un financement flexible et sans contrainte pour dénicher la moto idéale.',
+      sections: [
+        { title: 'Achat entre particuliers ou professionnel', body: 'Contrairement à certains crédits moto du marché, le prêt personnel SOrloz vous permet d\'acheter votre moto d\'occasion aussi bien chez un concessionnaire que chez un particulier. Vous avez ainsi accès à l\'intégralité du marché de l\'occasion et pouvez comparer les offres en toute liberté. Les petites annonces entre particuliers recèlent souvent les meilleures affaires pour les motards qui savent ce qu\'ils recherchent.' },
+        { title: 'Aucune restriction sur le véhicule', body: 'Le crédit moto occasion SOrloz ne pose aucune condition d\'âge, de kilométrage ni de cylindrée sur la moto financée. Que vous jetiez votre dévolu sur une moto récente avec peu de kilomètres ou sur un modèle plus ancien qui a du caractère, votre financement reste le même. Cette liberté vous permet de choisir en fonction de vos envies et de votre budget, sans contrainte administrative.' },
+        { title: 'Des mensualités adaptées à votre budget', body: 'Avec un taux fixe garanti sur toute la durée du crédit, vous connaissez à l\'avance le montant exact de chaque mensualité. Pas de variable, pas de surprise : vous maîtrisez votre budget moto de A à Z. En ajustant la durée de remboursement, vous pouvez réduire vos mensualités pour conserver une marge confortable pour l\'assurance, l\'entretien et l\'équipement de votre deux-roues.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit moto occasion sur mesure',
+        subheading: 'Options de personnalisation',
+        body: 'Avec SOrloz, vous adaptez votre crédit moto occasion à votre projet.',
+        bullets: [
+          '<strong>Montant :</strong> Empruntez de 5 500 € à 60 000 € pour financer votre moto d\'occasion. Le marché de l\'occasion permet de s\'offrir des modèles haut de gamme à des prix accessibles.',
+          '<strong>Durée :</strong> Choisissez une durée de remboursement de 12 à 84 mois. Une durée courte réduit le coût total, une durée longue allège vos mensualités.',
+          '<strong>Mensualités :</strong> Vos mensualités sont fixes et connues dès la simulation. Gardez une marge de budget pour l\'équipement, l\'assurance et l\'entretien de votre moto.',
+        ],
+        outro: 'Une moto d\'occasion bien choisie, c\'est le plaisir de rouler sans se ruiner. SOrloz vous aide à concrétiser votre projet deux-roues.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit moto occasion avec SOrloz ?',
+        body: 'Financer votre moto d\'occasion avec SOrloz se fait en quelques étapes simples :',
+        bullets: [
+          '<strong>Faites votre simulation :</strong> Indiquez le montant nécessaire pour votre moto d\'occasion et choisissez la durée de remboursement. Le résultat est immédiat.',
+          '<strong>Complétez votre dossier en ligne :</strong> Renseignez vos informations personnelles et financières. Aucun déplacement nécessaire, tout se fait depuis chez vous.',
+          '<strong>Recevez vos fonds rapidement :</strong> Une fois votre dossier validé et le délai de rétractation passé, les fonds sont sur votre compte sous 48h. Vous pouvez conclure la vente.',
+        ],
+        outro: 'Avec le crédit moto occasion SOrloz, saisissez les bonnes affaires sans attendre. Votre future moto vous attend !',
+      },
+    ],
+    crosssell: {
+      question: 'Vous préférez une moto neuve ?',
+      body: 'Découvrez notre crédit moto neuve avec les mêmes avantages : taux fixe, 0 € de frais de dossier et un financement rapide pour rouler sur du neuf.',
+      link_href: '/prets-personnels/credit-moto/credit-moto-neuve',
+      link_text: 'Découvrir le crédit moto neuve',
+    },
+    example: { amount: 7000, months: 36, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit moto occasion',
+    faq: [
+      { q: 'Puis-je acheter ma moto d\'occasion à un particulier ?', a: 'Oui, le crédit moto occasion SOrloz est un prêt personnel non affecté. Vous pouvez acheter votre moto chez un professionnel ou un particulier, sans restriction.' },
+      { q: 'Y a-t-il une limite d\'âge ou de kilométrage pour la moto ?', a: 'Non, aucune restriction. Le crédit SOrloz finance votre moto d\'occasion quelle que soit son ancienneté ou son kilométrage.' },
+      { q: 'Puis-je inclure les frais d\'équipement dans mon crédit ?', a: 'Oui, le prêt personnel SOrloz est libre d\'emploi. Vous pouvez financer la moto, le casque, le blouson, les gants et tout le nécessaire.' },
+      { q: 'Quel délai pour recevoir les fonds ?', a: 'Après validation de votre dossier et passé le délai légal de rétractation de 14 jours, les fonds sont versés sous 48h sur votre compte bancaire.' },
+    ],
+    features_name: 'Moto occasion',
   },
 
   '/prets-personnels/credit-moto/credit-moto-hybride': {
@@ -820,6 +1064,67 @@ const PAGE_CONFIG = {
     hero_fr: 'Financez votre moto hybride',
     desc_fr: 'Adoptez la mobilité hybride pour vos deux-roues. SOrloz vous propose un financement avantageux pour votre moto hybride.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-moto', label: 'Crédit moto' },
+    ],
+    testimonial: {
+      monthly: '229,84', months: 48, names: 'Mathieu &amp; Émilie',
+      amount: '10 000', rate: '4,90', total_due: '11 032,33',
+      purpose: 'achat d\'un scooter hybride BMW CE 04',
+    },
+    content: {
+      heading: 'Crédit moto hybride : la mobilité deux-roues de demain',
+      subheading: 'Profitez du taux éco-responsable SOrloz à 4,90%',
+      body: 'Le crédit moto hybride SOrloz est un prêt personnel à taux préférentiel dédié au financement de votre moto ou scooter hybride. Avec un TAEG fixe à partir de 4,90%, vous bénéficiez d\'un taux nettement inférieur au taux standard pour accompagner votre transition vers une mobilité deux-roues plus propre. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois.\n\nLa motorisation hybride fait son entrée dans l\'univers du deux-roues avec des modèles alliant performances et économies de carburant. Pour découvrir l\'ensemble de nos solutions de financement moto, consultez notre page <a href="/prets-personnels/credit-moto" style="color:var(--red);font-weight:600">crédit moto</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit moto hybride SOrloz ?',
+      intro: 'La technologie hybride arrive dans le monde du deux-roues. SOrloz accompagne cette évolution avec un financement à taux réduit pour les motards soucieux de leur empreinte environnementale.',
+      sections: [
+        { title: 'Un taux préférentiel pour encourager la mobilité propre', body: 'Avec un TAEG fixe à partir de 4,90% au lieu de 7,60%, le crédit moto hybride SOrloz récompense votre choix d\'une motorisation plus respectueuse de l\'environnement. Cette différence de taux représente une économie substantielle sur le coût total de votre financement, rendant l\'accès aux technologies hybrides encore plus abordable. C\'est notre engagement concret en faveur de la transition énergétique dans la mobilité deux-roues.' },
+        { title: 'Un financement adapté aux nouveaux modèles', body: 'Le marché du deux-roues hybride est en pleine expansion avec de nouveaux modèles toujours plus performants. Le crédit moto hybride SOrloz vous permet de financer aussi bien un scooter hybride pour vos déplacements urbains qu\'une moto hybride pour vos escapades du week-end. Notre prêt personnel s\'adapte à toutes les cylindrées et à tous les constructeurs, sans restriction de marque ni de modèle.' },
+        { title: 'Cumulable avec les aides à la mobilité propre', body: 'Le crédit moto hybride SOrloz est cumulable avec les différentes aides disponibles pour l\'acquisition de deux-roues propres : bonus écologique, prime à la conversion, aides régionales et municipales. En combinant ces dispositifs avec notre taux préférentiel, vous réduisez significativement le coût d\'acquisition de votre moto hybride tout en contribuant à améliorer la qualité de l\'air en ville.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit moto hybride sur mesure',
+        subheading: 'Options de personnalisation',
+        body: 'Avec SOrloz, vous personnalisez votre crédit moto hybride selon vos besoins.',
+        bullets: [
+          '<strong>Montant :</strong> Empruntez de 5 500 € à 60 000 € pour financer votre moto ou scooter hybride. Les modèles hybrides représentent un investissement qui se rentabilise grâce aux économies de carburant.',
+          '<strong>Durée :</strong> Optez pour une durée de remboursement de 12 à 84 mois. Ajustez la durée pour que vos mensualités s\'intègrent naturellement dans votre budget mensuel.',
+          '<strong>Mensualités :</strong> Vos mensualités sont fixes et prévisibles sur toute la durée du crédit. Combinez-les avec les économies réalisées sur le carburant pour un budget mobilité optimisé.',
+        ],
+        outro: 'La moto hybride combine le plaisir de conduite avec une conscience environnementale. SOrloz vous aide à franchir le pas avec un financement avantageux.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit moto hybride avec SOrloz ?',
+        body: 'Votre financement moto hybride est à portée de clic. Suivez ces étapes simples :',
+        bullets: [
+          '<strong>Simulez votre crédit :</strong> Indiquez le montant de votre moto hybride et la durée souhaitée. Vous découvrez immédiatement vos mensualités au taux préférentiel de 4,90%.',
+          '<strong>Complétez votre demande en ligne :</strong> Renseignez vos informations en quelques minutes. L\'ensemble de la démarche est dématérialisé, rapide et sécurisé.',
+          '<strong>Recevez vos fonds :</strong> Après validation de votre dossier et passé le délai légal de rétractation, les fonds sont disponibles sur votre compte sous 48h.',
+        ],
+        outro: 'Avec le crédit moto hybride SOrloz, adoptez la mobilité de demain à un taux d\'aujourd\'hui. Faites votre simulation et roulez propre dès maintenant.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous envisagez aussi un véhicule hybride ?',
+      body: 'Profitez du même taux préférentiel de 4,90% pour financer votre voiture hybride avec notre crédit voiture hybride.',
+      link_href: '/prets-personnels/credit-auto/credit-voiture-hybride',
+      link_text: 'Découvrir le crédit voiture hybride',
+    },
+    example: { amount: 12000, months: 48, rate: 4.90 },
+    faq_title: 'Vos questions sur le crédit moto hybride',
+    faq: [
+      { q: 'Quels deux-roues hybrides sont éligibles au taux préférentiel ?', a: 'Tous les deux-roues motorisés hybrides (motos, scooters, maxi-scooters) sont éligibles au taux préférentiel de 4,90%, sous réserve de justificatif de conformité du véhicule.' },
+      { q: 'Le crédit moto hybride est-il cumulable avec le bonus écologique ?', a: 'Oui, le crédit SOrloz est un prêt personnel indépendant, cumulable avec le bonus écologique, la prime à la conversion et les aides locales.' },
+      { q: 'Puis-je financer un scooter hybride avec ce crédit ?', a: 'Absolument. Le crédit moto hybride SOrloz finance tous les types de deux-roues hybrides : motos, scooters, maxi-scooters, quel que soit le constructeur.' },
+      { q: 'Quelle économie par rapport au taux standard ?', a: 'Le taux préférentiel de 4,90% au lieu de 7,60% vous fait économiser significativement. Par exemple, sur 12 000 € empruntés sur 48 mois, l\'économie dépasse 700 €.' },
+    ],
+    features_name: 'Moto hybride',
   },
 
   '/prets-personnels/credit-moto/credit-moto-thermique': {
@@ -828,6 +1133,67 @@ const PAGE_CONFIG = {
     hero_fr: 'Financez votre moto thermique',
     desc_fr: 'Vous préférez la puissance d\'un moteur thermique ? SOrloz finance votre moto thermique avec des taux compétitifs.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-moto', label: 'Crédit moto' },
+    ],
+    testimonial: {
+      monthly: '280,37', months: 36, names: 'Damien &amp; Pauline',
+      amount: '9 000', rate: '7,60', total_due: '10 093,30',
+      purpose: 'achat d\'une Triumph Street Triple',
+    },
+    content: {
+      heading: 'Crédit moto thermique : la passion du moteur à portée de financement',
+      subheading: 'Un prêt personnel adapté à votre projet deux-roues',
+      body: 'Le crédit moto thermique SOrloz est un prêt personnel non affecté qui vous permet de financer l\'achat de votre moto à moteur thermique, neuve ou d\'occasion. Avec un TAEG fixe à partir de 7,60%, vous bénéficiez de mensualités stables et prévisibles tout au long de votre remboursement. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois.\n\nLa moto thermique reste le choix de prédilection de millions de passionnés pour ses sensations de conduite inégalées, son autonomie et la richesse de l\'offre disponible sur le marché. Pour découvrir toutes nos solutions, consultez notre page <a href="/prets-personnels/credit-moto" style="color:var(--red);font-weight:600">crédit moto</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit moto thermique SOrloz ?',
+      intro: 'La moto thermique offre des sensations uniques et une offre pléthorique. SOrloz vous propose un financement simple et transparent pour concrétiser votre passion.',
+      sections: [
+        { title: 'Toutes les marques et cylindrées', body: 'Le crédit moto thermique SOrloz finance toutes les motos thermiques sans restriction de marque, de cylindrée ni de type. Roadster, sportive, trail, custom, routière ou café racer : quel que soit votre style de conduite, le prêt personnel SOrloz s\'adapte à votre projet. Vous pouvez financer une 125 cm3 pour vos débuts ou une grosse cylindrée pour vos virées du week-end, avec les mêmes conditions avantageuses.' },
+        { title: 'Liberté d\'achat totale', body: 'En tant que prêt personnel non affecté, le crédit moto thermique SOrloz vous laisse entièrement libre dans votre achat. Concessionnaire officiel, revendeur multimarque, ou particulier : vous choisissez votre vendeur sans contrainte. Vous pouvez même inclure dans votre financement les frais annexes comme l\'équipement du motard, les accessoires ou la première révision, sans avoir à justifier l\'utilisation des fonds.' },
+        { title: 'Un taux fixe sans surprise', body: 'Votre TAEG est déterminé dès la souscription et reste identique pendant toute la durée de votre crédit. Chaque mensualité est la même, du premier au dernier mois, ce qui facilite la gestion de votre budget moto au quotidien. Cette transparence est l\'un des engagements forts de SOrloz : pas de frais cachés, pas de clause surprise, juste un financement clair et honnête pour votre passion deux-roues.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit moto thermique sur mesure',
+        subheading: 'Options de personnalisation',
+        body: 'Avec SOrloz, vous configurez votre crédit moto thermique selon vos envies.',
+        bullets: [
+          '<strong>Montant :</strong> Empruntez de 5 500 € à 60 000 € pour financer votre moto thermique. Des petites cylindrées accessibles aux modèles premium, chaque projet a son financement.',
+          '<strong>Durée :</strong> Choisissez une durée de remboursement de 12 à 84 mois. Adaptez la durée à votre situation pour des mensualités qui respectent votre budget.',
+          '<strong>Mensualités :</strong> Vos mensualités sont fixes et connues dès le départ. Conservez une marge confortable pour l\'assurance, l\'entretien et les sorties sur route.',
+        ],
+        outro: 'Que vous soyez un motard du dimanche ou un aventurier au long cours, le crédit moto thermique SOrloz s\'adapte à votre profil et à vos ambitions.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit moto thermique avec SOrloz ?',
+        body: 'Votre crédit moto thermique se demande entièrement en ligne :',
+        bullets: [
+          '<strong>Simulez votre financement :</strong> Renseignez le montant de votre moto et la durée souhaitée. Vous obtenez immédiatement vos mensualités et le coût total du crédit.',
+          '<strong>Déposez votre demande :</strong> Complétez le formulaire en ligne en quelques minutes avec vos informations personnelles et financières. Tout est dématérialisé.',
+          '<strong>Recevez vos fonds :</strong> Après validation et passé le délai légal de rétractation, les fonds sont versés sur votre compte sous 48h. La route vous appartient !',
+        ],
+        outro: 'Avec le crédit moto thermique SOrloz, votre prochaine moto n\'attend plus que vous. Faites votre simulation et prenez la route de vos rêves.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous envisagez une moto hybride ou électrique ?',
+      body: 'Profitez de notre taux préférentiel de 4,90% réservé aux deux-roues hybrides et électriques. Une économie significative sur votre financement.',
+      link_href: '/prets-personnels/credit-moto/credit-moto-hybride',
+      link_text: 'Découvrir le crédit moto hybride',
+    },
+    example: { amount: 8000, months: 36, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit moto thermique',
+    faq: [
+      { q: 'Le crédit moto thermique finance-t-il toutes les cylindrées ?', a: 'Oui, le crédit moto thermique SOrloz finance toutes les cylindrées, de la 125 cm3 à la moto de grosse cylindrée, sans restriction.' },
+      { q: 'Puis-je financer une moto thermique d\'occasion ?', a: 'Absolument. Le crédit SOrloz est un prêt personnel non affecté qui finance les motos neuves comme d\'occasion, sans limite d\'âge ni de kilométrage.' },
+      { q: 'Quel est le taux pour un crédit moto thermique ?', a: 'Le TAEG fixe est à partir de 7,60% pour un crédit moto thermique. Un taux préférentiel de 4,90% est disponible pour les motos hybrides et électriques.' },
+      { q: 'Puis-je inclure l\'équipement dans mon financement ?', a: 'Oui, le prêt personnel SOrloz est libre d\'emploi. Vous pouvez financer la moto, le casque, le blouson, les bottes et tout l\'équipement nécessaire.' },
+    ],
+    features_name: 'Moto thermique',
   },
 
   // ── Crédit travaux hub
@@ -855,65 +1221,561 @@ const PAGE_CONFIG = {
   '/prets-personnels/credit-travaux-interieur': {
     icon: '🏠', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit travaux intérieur',
+    title_hero: 'Crédit travaux intérieur : transformez votre chez-vous',
     hero_fr: 'Financez vos travaux intérieurs',
     desc_fr: 'Rénovez votre intérieur avec le financement SOrloz. Peinture, parquet, isolation, électricité… Tous vos travaux intérieurs financés à des conditions avantageuses.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '241,03', months: 60, names: 'Sophie &amp; Julien',
+      amount: '12 000', rate: '7,60', total_due: '14 461,56',
+      purpose: 'rénovation complète de leur appartement',
+    },
+    content: {
+      heading: 'Crédit travaux intérieur : donnez un nouveau souffle à votre habitat',
+      subheading: 'Peinture, parquet, électricité… tout est finançable',
+      body: 'Le crédit travaux intérieur SOrloz est un prêt personnel conçu pour financer l\'ensemble de vos projets de rénovation et d\'embellissement intérieur. Peinture des murs et plafonds, pose de parquet ou de carrelage, réfection de l\'électricité, mise aux normes de la plomberie, création de cloisons ou aménagement de combles : chaque poste de travaux peut être couvert par votre crédit. Empruntez de 5 500 € à 60 000 € et étalez le remboursement sur une durée adaptée à votre budget.\n\nLes fonds sont versés directement sur votre compte bancaire sous 48 heures, vous laissant libre de choisir vos artisans, vos matériaux et votre calendrier de travaux. Aucun justificatif d\'utilisation n\'est exigé : le crédit travaux intérieur SOrloz est un prêt personnel non affecté, vous gardez une totale liberté dans la gestion de votre projet.',
+    },
+    why: {
+      heading: 'Pourquoi financer vos travaux intérieurs avec SOrloz ?',
+      intro: 'Rénover son intérieur améliore le confort quotidien et valorise votre patrimoine. SOrloz vous accompagne pour concrétiser ces projets sans puiser dans votre épargne.',
+      sections: [
+        { icon: '🎨', title: 'Liberté totale sur vos choix', body: 'Contrairement à un prêt affecté, le crédit travaux intérieur SOrloz ne vous impose aucune contrainte sur le choix de vos prestataires ni sur la nature des travaux. Vous décidez librement de refaire la peinture de votre salon, de poser un nouveau parquet dans les chambres ou de moderniser votre installation électrique. Cette flexibilité vous permet d\'adapter votre projet au fur et à mesure, en ajoutant ou en modifiant des postes de travaux selon vos envies et votre budget disponible.' },
+        { icon: '📐', title: 'Valorisation de votre bien immobilier', body: 'Des travaux d\'intérieur bien réalisés augmentent significativement la valeur de votre logement. Une cuisine remise au goût du jour, un parquet en bois massif ou une salle de bain modernisée sont autant d\'atouts qui séduiront de futurs acquéreurs. Même si vous ne prévoyez pas de vendre, un intérieur rénové améliore votre qualité de vie au quotidien et peut faciliter une éventuelle renégociation de votre assurance habitation.' },
+        { icon: '⚡', title: 'Déblocage rapide des fonds', body: 'SOrloz s\'engage à mettre les fonds à votre disposition sous 48 heures après acceptation de votre dossier. Cette réactivité est essentielle lorsque vous avez déjà engagé des devis auprès d\'artisans ou que vous devez réserver des matériaux en rupture de stock. Vous pouvez ainsi lancer vos travaux immédiatement, sans perdre de temps ni risquer de voir vos devis expirer.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit travaux intérieur adapté à votre projet',
+        subheading: 'Options de personnalisation',
+        body: 'Le crédit travaux intérieur SOrloz s\'adapte à l\'ampleur et à la nature de votre projet de rénovation.',
+        bullets: [
+          '<strong>Montant :</strong> Empruntez de 5 500 € à 60 000 € pour couvrir l\'intégralité de vos travaux intérieurs, de la simple remise en peinture à la rénovation complète d\'un appartement.',
+          '<strong>Durée :</strong> Choisissez une durée de remboursement de 12 à 84 mois selon votre capacité financière. Une durée plus longue allège vos mensualités pour un confort budgétaire optimal.',
+          '<strong>Taux fixe :</strong> Votre taux est fixé dès la signature du contrat et ne change jamais. Vous connaissez le coût total de votre crédit dès le départ, sans mauvaise surprise.',
+        ],
+        outro: 'Que vous rénoviez une seule pièce ou l\'ensemble de votre logement, le crédit travaux intérieur SOrloz s\'adapte à votre projet et à votre rythme.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit travaux intérieur SOrloz ?',
+        body: 'Quelques étapes simples suffisent pour financer vos travaux intérieurs :',
+        bullets: [
+          '<strong>Simulez votre crédit en ligne :</strong> Indiquez le montant souhaité et la durée de remboursement pour obtenir une estimation immédiate de vos mensualités.',
+          '<strong>Complétez votre demande :</strong> Renseignez vos informations personnelles et financières en quelques minutes. Aucun devis ni justificatif de travaux n\'est requis.',
+          '<strong>Signez électroniquement :</strong> Validez votre contrat depuis votre espace personnel sécurisé. Les fonds sont versés sous 48h sur votre compte bancaire.',
+        ],
+        outro: 'Avec SOrloz, vos travaux intérieurs ne sont plus un rêve mais un projet concret. Lancez votre simulation dès maintenant.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous envisagez aussi des travaux extérieurs ?',
+      body: 'Combinez votre crédit travaux intérieur avec un crédit travaux extérieur pour rénover votre maison de fond en comble et maximiser la valeur de votre bien.',
+      link_href: '/prets-personnels/credit-travaux-exterieur',
+      link_text: 'Découvrir le crédit travaux extérieur',
+    },
+    example: { amount: 12000, months: 60, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit travaux intérieur',
+    faq: [
+      { q: 'Quels travaux intérieurs peut-on financer avec SOrloz ?', a: 'Tous les travaux d\'intérieur sont finançables : peinture, parquet, carrelage, plomberie, électricité, cloisons, aménagement de combles, dressing, rénovation de salle de bain ou de cuisine.' },
+      { q: 'Faut-il fournir des devis ou des factures ?', a: 'Non, le crédit travaux intérieur SOrloz est un prêt personnel non affecté. Vous n\'avez aucun justificatif de travaux à fournir.' },
+      { q: 'En combien de temps reçoit-on les fonds ?', a: 'Les fonds sont versés sous 48 heures sur votre compte bancaire après acceptation définitive de votre dossier et signature du contrat.' },
+      { q: 'Peut-on rembourser le crédit par anticipation ?', a: 'Oui, le remboursement anticipé total ou partiel est possible à tout moment. Des indemnités peuvent s\'appliquer dans la limite légale.' },
+    ],
+    features_name: 'Travaux intérieur',
   },
 
   '/prets-personnels/credit-travaux-exterieur': {
     icon: '🏡', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit travaux extérieur',
+    title_hero: 'Crédit travaux extérieur : sublimez votre maison',
     hero_fr: 'Financez vos travaux extérieurs',
     desc_fr: 'Façade, toiture, terrasse, jardin… Le crédit travaux extérieur SOrloz vous permet de financer l\'aménagement et la rénovation de l\'extérieur de votre maison.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '301,28', months: 60, names: 'Patrick &amp; Nathalie',
+      amount: '15 000', rate: '7,60', total_due: '18 076,95',
+      purpose: 'ravalement de façade et réfection de toiture',
+    },
+    content: {
+      heading: 'Crédit travaux extérieur : valorisez et protégez votre maison',
+      subheading: 'Façade, toiture, jardin, clôture… financez tous vos projets extérieurs',
+      body: 'Le crédit travaux extérieur SOrloz finance l\'ensemble de vos projets d\'aménagement et de rénovation en extérieur. Ravalement de façade, réfection de toiture, pose de clôtures, création d\'allées, aménagement paysager, construction d\'un abri de jardin ou d\'un garage : chaque projet extérieur peut être financé. Empruntez de 5 500 € à 60 000 € avec un taux fixe et des mensualités stables.\n\nVotre maison est votre premier investissement. En entretenant et en embellissant son extérieur, vous préservez sa valeur tout en améliorant votre cadre de vie. Les fonds sont disponibles sous 48 heures pour lancer vos travaux au moment idéal, notamment avant la saison estivale ou avant l\'arrivée de l\'hiver.',
+    },
+    why: {
+      heading: 'Pourquoi financer vos travaux extérieurs avec SOrloz ?',
+      intro: 'L\'extérieur de votre maison est sa carte de visite. Un entretien régulier et des aménagements de qualité protègent votre patrimoine et rehaussent votre quotidien.',
+      sections: [
+        { icon: '🏗️', title: 'Protection de votre patrimoine', body: 'Un ravalement de façade, une toiture en bon état ou des gouttières remplacées protègent la structure même de votre maison contre les infiltrations, l\'humidité et les dégradations. En finançant ces travaux avec SOrloz, vous investissez dans la durabilité de votre bien immobilier. Le coût des réparations d\'urgence est toujours bien supérieur à celui d\'un entretien préventif régulier.' },
+        { icon: '🌳', title: 'Un cadre de vie embelli', body: 'Un jardin paysagé, une allée bien dessinée, une clôture neuve ou un éclairage extérieur soigné transforment l\'aspect de votre propriété. Ces aménagements améliorent non seulement votre plaisir quotidien mais aussi l\'impression que votre maison produit sur les visiteurs et le voisinage. Les études montrent qu\'un aménagement paysager de qualité peut augmenter la valeur d\'un bien de 5 à 15 %.' },
+        { icon: '📋', title: 'Sans justificatif d\'utilisation', body: 'Le crédit travaux extérieur SOrloz est un prêt personnel non affecté. Vous n\'avez aucun devis à fournir et vous pouvez répartir librement les fonds entre plusieurs postes de travaux : un peu de façade, un peu de toiture et un peu de jardin. Vous restez maître de votre budget et de vos priorités tout au long du chantier.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit sur mesure pour vos travaux extérieurs',
+        subheading: 'Personnalisez votre financement',
+        body: 'SOrloz vous permet de calibrer votre crédit travaux extérieur selon l\'envergure de votre projet.',
+        bullets: [
+          '<strong>Montant flexible :</strong> De 5 500 € pour un simple aménagement de jardin à 60 000 € pour une rénovation extérieure complète incluant façade, toiture et aménagement paysager.',
+          '<strong>Durée adaptable :</strong> Remboursez sur 12 à 84 mois. Pour les projets importants, une durée longue permet de conserver un reste à vivre confortable.',
+          '<strong>Mensualités prévisibles :</strong> Votre taux fixe garantit des mensualités identiques du premier au dernier mois, facilitant la gestion de votre budget.',
+        ],
+        outro: 'Du simple rafraîchissement de façade à la transformation complète de vos extérieurs, SOrloz finance votre vision.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit travaux extérieur SOrloz ?',
+        body: 'Financer vos travaux extérieurs n\'a jamais été aussi simple :',
+        bullets: [
+          '<strong>Simulation en ligne :</strong> Utilisez notre simulateur pour définir le montant et la durée de votre crédit. Vous obtenez instantanément le montant de vos mensualités.',
+          '<strong>Demande dématérialisée :</strong> Remplissez le formulaire en ligne en quelques minutes. Pas de rendez-vous en agence, pas de paperasse inutile.',
+          '<strong>Réception des fonds :</strong> Après acceptation et signature électronique, les fonds sont virés sous 48h sur votre compte bancaire. Vos travaux peuvent commencer.',
+        ],
+        outro: 'Donnez à votre maison l\'extérieur qu\'elle mérite. Simulez votre crédit travaux extérieur dès maintenant sur SOrloz.',
+      },
+    ],
+    crosssell: {
+      question: 'Et pourquoi ne pas rénover aussi l\'intérieur ?',
+      body: 'Profitez de vos travaux pour donner un coup de neuf à votre intérieur. Le crédit travaux intérieur SOrloz finance peinture, parquet, électricité et bien plus.',
+      link_href: '/prets-personnels/credit-travaux-interieur',
+      link_text: 'Découvrir le crédit travaux intérieur',
+    },
+    example: { amount: 15000, months: 60, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit travaux extérieur',
+    faq: [
+      { q: 'Quels travaux extérieurs peut-on financer ?', a: 'Ravalement de façade, réfection de toiture, pose de clôture ou portail, aménagement de jardin, construction de terrasse, abri de jardin, garage, allées, éclairage extérieur et bien plus encore.' },
+      { q: 'Faut-il présenter un devis pour obtenir le crédit ?', a: 'Non, le crédit travaux extérieur SOrloz est un prêt personnel non affecté. Aucun justificatif d\'utilisation des fonds n\'est exigé.' },
+      { q: 'Quelle est la durée maximale de remboursement ?', a: 'Vous pouvez rembourser votre crédit sur une durée allant de 12 à 84 mois, selon le montant emprunté et votre capacité de remboursement.' },
+      { q: 'Peut-on financer plusieurs types de travaux avec un seul crédit ?', a: 'Oui, vous pouvez utiliser les fonds pour financer simultanément plusieurs postes de travaux extérieurs : façade, toiture, jardin, clôture, etc.' },
+    ],
+    features_name: 'Travaux extérieur',
   },
 
   '/prets-personnels/credit-travaux/credit-renovation': {
     icon: '🔧', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit rénovation',
+    title_hero: 'Crédit rénovation : repensez votre logement',
     hero_fr: 'Financez la rénovation de votre logement',
     desc_fr: 'Transformez votre logement avec le crédit rénovation SOrloz. Des fonds disponibles rapidement pour démarrer vos travaux de rénovation.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '346,77', months: 72, names: 'Caroline &amp; Mathieu',
+      amount: '20 000', rate: '7,60', total_due: '24 967,55',
+      purpose: 'rénovation globale de leur maison',
+    },
+    content: {
+      heading: 'Crédit rénovation : un financement complet pour transformer votre logement',
+      subheading: 'De la simple retouche à la rénovation intégrale',
+      body: 'Le crédit rénovation SOrloz est la solution de financement idéale pour tous vos projets de transformation. Que vous souhaitiez rafraîchir un appartement ancien, remettre aux normes une installation électrique, abattre une cloison pour créer un espace ouvert ou rénover intégralement une maison de caractère, ce prêt personnel vous donne les moyens d\'agir. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois.\n\nLe crédit rénovation SOrloz est un prêt non affecté : vous disposez des fonds librement, sans obligation de présenter des devis. Vous pouvez ainsi confier les travaux à l\'artisan de votre choix ou réaliser vous-même une partie du chantier pour optimiser votre budget.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit rénovation SOrloz ?',
+      intro: 'La rénovation est un levier puissant pour améliorer votre confort, réduire vos charges et augmenter la valeur de votre bien. Voici pourquoi SOrloz est le partenaire idéal.',
+      sections: [
+        { icon: '🏠', title: 'Un projet sans limites', body: 'Le crédit rénovation SOrloz couvre tous les types de travaux sans restriction : gros oeuvre, second oeuvre, finitions, mise aux normes, extension, surélévation. Vous n\'êtes pas limité à un seul poste de dépense et pouvez combiner différents chantiers au sein d\'un même financement. Cette polyvalence est idéale pour les projets de rénovation globale qui touchent à la fois la structure, l\'isolation, l\'électricité et la décoration.' },
+        { icon: '💰', title: 'Un budget maîtrisé', body: 'Grâce au taux fixe, vous connaissez dès la signature le montant exact de chaque mensualité et le coût total de votre crédit. Pas de mauvaise surprise, pas d\'indexation sur les marchés financiers. Vous pouvez planifier sereinement votre budget travaux en intégrant la mensualité du crédit dans vos charges mensuelles, et prévoir une marge de sécurité pour les imprévus de chantier.' },
+        { icon: '🚀', title: 'Déblocage sous 48 heures', body: 'Le temps joue souvent contre les projets de rénovation : un artisan disponible, un lot de matériaux en promotion, une fenêtre de beau temps pour les travaux extérieurs. Avec SOrloz, les fonds sont virés sous 48 heures après signature, vous permettant de saisir les opportunités sans attendre et de respecter le calendrier prévu avec vos prestataires.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Adaptez votre crédit rénovation à votre projet',
+        subheading: 'Un financement modulable',
+        body: 'Chaque projet de rénovation est unique. Le crédit rénovation SOrloz s\'adapte à vos besoins.',
+        bullets: [
+          '<strong>Montant :</strong> De 5 500 € pour un rafraîchissement ciblé à 60 000 € pour une rénovation intégrale. Définissez le budget qui correspond à l\'ampleur de vos travaux.',
+          '<strong>Durée :</strong> De 12 à 84 mois pour ajuster vos mensualités. Une durée plus longue réduit le montant mensuel et préserve votre capacité d\'épargne.',
+          '<strong>Liberté d\'utilisation :</strong> Prêt non affecté, aucun justificatif requis. Répartissez les fonds entre les différents corps de métier comme vous le souhaitez.',
+        ],
+        outro: 'Petite retouche ou grand chantier, le crédit rénovation SOrloz s\'adapte à chaque projet et à chaque budget.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit rénovation SOrloz ?',
+        body: 'Un parcours entièrement en ligne, rapide et sans paperasse :',
+        bullets: [
+          '<strong>Simulez en ligne :</strong> Renseignez le montant souhaité et la durée pour obtenir vos mensualités en temps réel.',
+          '<strong>Déposez votre demande :</strong> Complétez le formulaire dématérialisé avec vos informations. Réponse de principe immédiate.',
+          '<strong>Recevez vos fonds :</strong> Après signature électronique, les fonds sont virés sous 48h. Vos travaux de rénovation peuvent commencer.',
+        ],
+        outro: 'Ne remettez plus votre projet à demain. Simulez votre crédit rénovation SOrloz et lancez vos travaux.',
+      },
+    ],
+    crosssell: {
+      question: 'Besoin d\'améliorer votre performance énergétique ?',
+      body: 'Profitez de votre rénovation pour isoler votre logement et réduire durablement vos factures d\'énergie avec le crédit isolation SOrloz.',
+      link_href: '/prets-personnels/credit-travaux/credit-isolation',
+      link_text: 'Découvrir le crédit isolation',
+    },
+    example: { amount: 20000, months: 72, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit rénovation',
+    faq: [
+      { q: 'Quels travaux de rénovation sont finançables ?', a: 'Tous les travaux de rénovation : gros oeuvre, second oeuvre, isolation, électricité, plomberie, peinture, sols, menuiseries, extension, surélévation, mise aux normes.' },
+      { q: 'Le crédit rénovation nécessite-t-il un apport personnel ?', a: 'Non, aucun apport n\'est requis. Vous pouvez financer l\'intégralité de votre projet de rénovation avec le crédit SOrloz.' },
+      { q: 'Peut-on utiliser le crédit pour des travaux réalisés soi-même ?', a: 'Oui, le crédit rénovation SOrloz est un prêt non affecté. Vous pouvez acheter des matériaux et réaliser vous-même tout ou partie des travaux.' },
+      { q: 'Combien de temps faut-il pour obtenir les fonds ?', a: 'Après acceptation de votre dossier et signature électronique du contrat, les fonds sont virés sous 48 heures sur votre compte bancaire.' },
+    ],
+    features_name: 'Rénovation',
   },
 
   '/prets-personnels/credit-travaux/credit-salle-de-bain': {
     icon: '🛁', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit salle de bain',
+    title_hero: 'Crédit salle de bain : la pièce bien-être par excellence',
     hero_fr: 'Financez votre nouvelle salle de bain',
     desc_fr: 'Créez la salle de bain de vos rêves avec le financement SOrloz. Baignoire, douche à l\'italienne, double vasque… Réalisez votre projet sans attendre.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '193,80', months: 48, names: 'Isabelle &amp; François',
+      amount: '8 000', rate: '7,60', total_due: '9 302,63',
+      purpose: 'création d\'une salle de bain avec douche à l\'italienne',
+    },
+    content: {
+      heading: 'Crédit salle de bain : créez un espace de bien-être sur mesure',
+      subheading: 'Douche, baignoire, vasque… concrétisez votre projet',
+      body: 'La salle de bain est l\'une des pièces les plus importantes de votre logement. Le crédit salle de bain SOrloz vous permet de la transformer selon vos envies : installation d\'une douche à l\'italienne, remplacement de la baignoire, pose d\'un double vasque, carrelage mural et au sol, robinetterie design, meuble de rangement sur mesure. Empruntez de 5 500 € à 60 000 € pour créer l\'espace de bien-être dont vous rêvez.\n\nLe prêt est non affecté : vous gérez votre budget librement, choisissez vos artisans et vos matériaux sans contrainte. Les fonds sont disponibles sous 48 heures pour démarrer vos travaux rapidement.',
+    },
+    why: {
+      heading: 'Pourquoi financer votre salle de bain avec SOrloz ?',
+      intro: 'Rénover sa salle de bain est un projet qui allie confort quotidien, esthétique et valorisation de votre bien. SOrloz vous aide à le concrétiser.',
+      sections: [
+        { icon: '🛁', title: 'Un confort quotidien amélioré', body: 'Une salle de bain bien conçue transforme votre routine matinale et vos moments de détente. Douche à l\'italienne spacieuse, baignoire balnéo, sol chauffant, éclairage d\'ambiance : chaque détail compte pour créer un espace où il fait bon se ressourcer. Le crédit salle de bain SOrloz vous donne les moyens de ne faire aucun compromis sur le confort et la qualité des équipements.' },
+        { icon: '📈', title: 'Valorisation immobilière garantie', body: 'La salle de bain est l\'un des critères les plus regardés par les acheteurs potentiels. Une salle de bain moderne et fonctionnelle peut faire grimper la valeur de votre bien de plusieurs milliers d\'euros. Même sans projet de vente, cet investissement améliore votre qualité de vie pour de longues années et peut constituer un argument lors d\'une mise en location.' },
+        { icon: '🔧', title: 'Mise aux normes et sécurité', body: 'Une rénovation de salle de bain est aussi l\'occasion de mettre aux normes les installations électriques et la plomberie, de remplacer des joints vieillissants et de prévenir les problèmes d\'humidité ou de moisissure. C\'est un investissement dans la sécurité et la salubrité de votre logement, particulièrement important dans les logements anciens.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit salle de bain personnalisé',
+        subheading: 'Adaptez le financement à votre projet',
+        body: 'Votre salle de bain est unique, votre financement doit l\'être aussi.',
+        bullets: [
+          '<strong>Montant ajustable :</strong> De 5 500 € pour un rafraîchissement (robinetterie, peinture, accessoires) à 60 000 € pour une création complète avec douche à l\'italienne, baignoire îlot et mobilier sur mesure.',
+          '<strong>Durée souple :</strong> Remboursez sur 12 à 84 mois. Pour un budget salle de bain moyen de 8 000 €, des mensualités à partir de 193,80 € sur 48 mois.',
+          '<strong>Aucun justificatif :</strong> Prêt personnel non affecté, vous n\'avez pas à présenter de devis ni de factures pour obtenir votre financement.',
+        ],
+        outro: 'De la petite salle d\'eau au grand espace wellness, SOrloz finance votre salle de bain idéale.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit salle de bain SOrloz ?',
+        body: 'Trois étapes suffisent pour lancer vos travaux de salle de bain :',
+        bullets: [
+          '<strong>Simulez votre projet :</strong> Indiquez le budget estimé de votre salle de bain et choisissez la durée de remboursement qui vous convient.',
+          '<strong>Finalisez votre demande :</strong> Remplissez le formulaire en ligne avec vos coordonnées et informations financières. Réponse de principe immédiate.',
+          '<strong>Recevez les fonds :</strong> Signez électroniquement et recevez les fonds sous 48h. Votre nouvelle salle de bain est en route.',
+        ],
+        outro: 'N\'attendez plus pour créer la salle de bain dont vous rêvez. Lancez votre simulation sur SOrloz.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous pensez aussi à rénover votre cuisine ?',
+      body: 'Profitez de vos travaux pour moderniser également votre cuisine. Le crédit cuisine SOrloz finance plan de travail, électroménager et mobilier.',
+      link_href: '/prets-personnels/credit-travaux/credit-cuisine',
+      link_text: 'Découvrir le crédit cuisine',
+    },
+    example: { amount: 8000, months: 48, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit salle de bain',
+    faq: [
+      { q: 'Quel budget prévoir pour rénover une salle de bain ?', a: 'Le budget moyen d\'une rénovation de salle de bain se situe entre 5 000 € et 15 000 € selon l\'ampleur des travaux. Avec SOrloz, vous pouvez emprunter de 5 500 € à 60 000 €.' },
+      { q: 'Le crédit salle de bain est-il un prêt affecté ?', a: 'Non, c\'est un prêt personnel non affecté. Vous n\'avez pas à justifier l\'utilisation des fonds ni à fournir de devis.' },
+      { q: 'Peut-on financer l\'achat des sanitaires et du mobilier ?', a: 'Oui, le crédit couvre aussi bien la main-d\'oeuvre que les fournitures : sanitaires, robinetterie, carrelage, meubles, accessoires.' },
+      { q: 'Les fonds sont-ils versés rapidement ?', a: 'Oui, après acceptation et signature électronique, les fonds sont virés sous 48 heures sur votre compte bancaire.' },
+    ],
+    features_name: 'Salle de bain',
   },
 
   '/prets-personnels/credit-travaux/credit-piscine': {
     icon: '🏊', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit piscine',
+    title_hero: 'Crédit piscine : plongez dans votre projet',
     hero_fr: 'Financez votre piscine avec SOrloz',
     desc_fr: 'Une piscine dans votre jardin, c\'est possible ! Le crédit piscine SOrloz finance la construction ou la rénovation de votre espace aquatique.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '384,69', months: 84, names: 'Laurent &amp; Céline',
+      amount: '25 000', rate: '7,60', total_due: '32 314,12',
+      purpose: 'construction d\'une piscine enterrée 8x4',
+    },
+    content: {
+      heading: 'Crédit piscine : financez la piscine de vos rêves',
+      subheading: 'Enterrée, semi-enterrée, hors-sol… tous les projets sont finançables',
+      body: 'Posséder une piscine n\'est plus un luxe réservé à quelques-uns. Le crédit piscine SOrloz vous permet de financer la construction, l\'installation ou la rénovation de votre bassin. Piscine enterrée en béton, coque polyester, piscine semi-enterrée en bois, bassin hors-sol, piscine naturelle : chaque type de projet est éligible. Empruntez de 5 500 € à 60 000 € et remboursez sur 12 à 84 mois avec un taux fixe.\n\nLes fonds sont versés sous 48 heures sur votre compte bancaire. Vous choisissez librement votre pisciniste, vos matériaux et vos équipements. Le crédit piscine SOrloz est un prêt personnel non affecté : aucun devis à fournir, aucune contrainte sur l\'utilisation des fonds.',
+    },
+    why: {
+      heading: 'Pourquoi financer votre piscine avec SOrloz ?',
+      intro: 'Une piscine est un investissement qui transforme votre quotidien et valorise votre propriété. SOrloz rend ce projet accessible grâce à un financement adapté.',
+      sections: [
+        { icon: '☀️', title: 'Un plaisir quotidien pour toute la famille', body: 'Une piscine offre des moments de détente, de jeu et de sport à domicile. Plus besoin de réserver une place à la piscine municipale ou de parcourir des kilomètres pour se baigner. Dès les premiers beaux jours, votre piscine devient le coeur de votre vie extérieure, un lieu de convivialité pour les barbecues en famille et les après-midi entre amis.' },
+        { icon: '🏡', title: 'Valorisation de votre propriété', body: 'Une piscine bien intégrée dans son environnement peut augmenter la valeur de votre bien immobilier de 10 à 20 % selon les régions. C\'est un investissement patrimonial autant qu\'un investissement plaisir. Dans les régions ensoleillées du sud de la France, une piscine est devenue un critère de recherche incontournable pour les acquéreurs potentiels.' },
+        { icon: '💧', title: 'Financement souple et sans contrainte', body: 'Le crédit piscine SOrloz s\'adapte à tous les budgets. Que votre projet coûte 8 000 € pour une piscine hors-sol ou 50 000 € pour un bassin enterré avec plage et pool house, vous trouvez la mensualité qui vous convient. Et comme c\'est un prêt non affecté, vous pouvez aussi financer la margelle, l\'abri, le système de filtration ou l\'aménagement paysager autour du bassin.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit piscine adapté à chaque projet',
+        subheading: 'Configurez votre financement',
+        body: 'Du bassin hors-sol au complexe aquatique, SOrloz finance tous les types de piscines.',
+        bullets: [
+          '<strong>Montant :</strong> De 5 500 € pour une piscine hors-sol à 60 000 € pour une piscine enterrée complète avec terrasse, abri et équipements de filtration.',
+          '<strong>Durée :</strong> Remboursez sur 12 à 84 mois. Pour un projet à 25 000 €, optez pour 84 mois à 384,69 € par mois pour préserver votre budget quotidien.',
+          '<strong>Équipements inclus :</strong> Votre crédit peut couvrir l\'ensemble du projet : bassin, margelle, abri de piscine, pompe à chaleur, système de filtration, éclairage, mobilier de plage.',
+        ],
+        outro: 'Quelle que soit la taille de votre projet piscine, SOrloz vous accompagne avec un financement sur mesure.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit piscine SOrloz ?',
+        body: 'Votre piscine est à portée de clic. Suivez ces étapes :',
+        bullets: [
+          '<strong>Estimez votre projet :</strong> Utilisez notre simulateur en ligne pour définir le montant et la durée de votre crédit piscine.',
+          '<strong>Soumettez votre demande :</strong> Complétez le formulaire en quelques minutes. Aucun devis de pisciniste n\'est requis pour votre demande.',
+          '<strong>Lancez la construction :</strong> Après signature électronique, les fonds sont virés sous 48h. Contactez votre pisciniste et démarrez les travaux.',
+        ],
+        outro: 'L\'été prochain, vous pourriez plonger dans votre propre piscine. Simulez votre crédit dès maintenant.',
+      },
+    ],
+    crosssell: {
+      question: 'Envie d\'aménager aussi votre terrasse ?',
+      body: 'Complétez votre projet piscine avec une belle terrasse pour créer un véritable espace de vie extérieur.',
+      link_href: '/prets-personnels/credit-travaux/credit-terrasse',
+      link_text: 'Découvrir le crédit terrasse',
+    },
+    example: { amount: 25000, months: 84, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit piscine',
+    faq: [
+      { q: 'Quel budget pour construire une piscine ?', a: 'Le budget varie selon le type : de 5 000 € pour une piscine hors-sol à plus de 40 000 € pour une piscine enterrée en béton. Avec SOrloz, empruntez de 5 500 € à 60 000 €.' },
+      { q: 'Faut-il un permis de construire pour une piscine ?', a: 'Les piscines de plus de 10 m² nécessitent une déclaration préalable. Au-delà de 100 m² ou avec un abri de plus de 1,80 m, un permis de construire est obligatoire. Le crédit SOrloz n\'est pas conditionné à ces autorisations.' },
+      { q: 'Le crédit piscine finance-t-il aussi l\'entretien ?', a: 'Le crédit SOrloz est un prêt personnel non affecté. Vous pouvez utiliser les fonds pour la construction, la rénovation, les équipements ou même l\'entretien de votre piscine.' },
+      { q: 'Quelle est la durée de remboursement maximale ?', a: 'Vous pouvez rembourser votre crédit piscine sur une durée allant de 12 à 84 mois, selon le montant emprunté et votre situation financière.' },
+    ],
+    features_name: 'Piscine',
   },
 
   '/prets-personnels/credit-travaux/credit-cuisine': {
     icon: '🍳', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit cuisine',
+    title_hero: 'Crédit cuisine : la pièce maîtresse de votre foyer',
     hero_fr: 'Financez votre nouvelle cuisine',
     desc_fr: 'Réaménagez votre cuisine avec le crédit cuisine SOrloz. Plan de travail, électroménager, mobilier… Concrétisez votre projet de cuisine idéale.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '242,26', months: 48, names: 'Émilie &amp; Thomas',
+      amount: '10 000', rate: '7,60', total_due: '11 628,29',
+      purpose: 'installation d\'une cuisine équipée sur mesure',
+    },
+    content: {
+      heading: 'Crédit cuisine : concevez la cuisine dont vous avez toujours rêvé',
+      subheading: 'Meubles, électroménager, plan de travail… tout est finançable',
+      body: 'La cuisine est le coeur de la maison, le lieu où l\'on prépare les repas, où l\'on partage des moments en famille et entre amis. Le crédit cuisine SOrloz vous donne les moyens de la concevoir exactement comme vous le souhaitez. Meubles de cuisine sur mesure, plan de travail en granit ou en quartz, électroménager encastrable, îlot central, hotte design, éclairage LED : financez l\'ensemble de votre projet de 5 500 € à 60 000 €.\n\nComme tous les crédits SOrloz, le crédit cuisine est un prêt personnel non affecté. Vous n\'avez aucun devis à fournir et vous êtes libre de commander votre cuisine chez le cuisiniste de votre choix ou d\'acheter les éléments séparément. Les fonds sont disponibles sous 48 heures.',
+    },
+    why: {
+      heading: 'Pourquoi financer votre cuisine avec SOrloz ?',
+      intro: 'Une cuisine moderne et fonctionnelle améliore votre quotidien et constitue un atout majeur pour la valeur de votre logement.',
+      sections: [
+        { icon: '👨‍🍳', title: 'Un espace de vie optimisé', body: 'Une cuisine bien agencée vous fait gagner du temps au quotidien. Rangements intelligents, plan de travail ergonomique, électroménager performant : chaque élément contribue à rendre la préparation des repas plus agréable et efficace. Le crédit cuisine SOrloz vous permet de repenser entièrement l\'agencement sans compromis sur la qualité des matériaux et des équipements choisis.' },
+        { icon: '💎', title: 'Un investissement durable', body: 'Une cuisine de qualité a une durée de vie de 15 à 20 ans. C\'est un investissement rentable qui transforme votre quotidien pendant de longues années. De plus, une cuisine moderne et bien équipée est l\'un des premiers critères d\'achat pour les acquéreurs immobiliers : elle peut faire la différence entre deux biens comparables et accélérer la vente de votre logement.' },
+        { icon: '🎯', title: 'Un financement sans contrainte', body: 'Le crédit cuisine SOrloz vous laisse une liberté totale. Choisissez un cuisiniste, un artisan indépendant ou achetez vos meubles et votre électroménager en grande surface spécialisée : les fonds sont à votre disposition sans aucune restriction d\'usage. Vous pouvez même inclure dans votre financement les travaux de plomberie, d\'électricité et de carrelage nécessaires à l\'installation.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Personnalisez votre crédit cuisine',
+        subheading: 'Un financement à votre mesure',
+        body: 'Chaque projet de cuisine est différent. SOrloz vous propose un financement modulable.',
+        bullets: [
+          '<strong>Montant :</strong> De 5 500 € pour un rafraîchissement (peinture des façades, changement de poignées, nouvel électroménager) à 60 000 € pour une cuisine entièrement sur mesure avec îlot central et équipements haut de gamme.',
+          '<strong>Durée :</strong> De 12 à 84 mois pour ajuster vos mensualités à votre budget. Pour 10 000 € sur 48 mois, comptez 242,26 € par mois.',
+          '<strong>Tout inclus :</strong> Financez aussi bien le mobilier que la pose, l\'électroménager, la plomberie et l\'électricité nécessaires à votre nouvelle cuisine.',
+        ],
+        outro: 'Cuisine ouverte, fermée, avec ou sans îlot : SOrloz finance toutes les configurations.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit cuisine SOrloz ?',
+        body: 'Votre nouvelle cuisine est à portée de main. Voici comment procéder :',
+        bullets: [
+          '<strong>Simulez votre budget :</strong> Renseignez le montant de votre projet cuisine et la durée souhaitée pour connaître vos mensualités en temps réel.',
+          '<strong>Déposez votre dossier :</strong> Complétez votre demande en ligne en quelques minutes. Pas de devis à joindre, pas de rendez-vous en agence.',
+          '<strong>Commandez votre cuisine :</strong> Après acceptation et signature électronique, les fonds arrivent sous 48h. Passez commande chez le cuisiniste de votre choix.',
+        ],
+        outro: 'La cuisine idéale n\'attend plus. Simulez votre crédit cuisine SOrloz et lancez votre projet.',
+      },
+    ],
+    crosssell: {
+      question: 'Votre salle de bain mérite aussi un coup de neuf ?',
+      body: 'Profitez de vos travaux de cuisine pour rénover aussi votre salle de bain avec le crédit dédié SOrloz.',
+      link_href: '/prets-personnels/credit-travaux/credit-salle-de-bain',
+      link_text: 'Découvrir le crédit salle de bain',
+    },
+    example: { amount: 10000, months: 48, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit cuisine',
+    faq: [
+      { q: 'Quel montant emprunter pour une cuisine ?', a: 'Le budget moyen d\'une cuisine équipée se situe entre 5 000 € et 20 000 €. Avec SOrloz, empruntez de 5 500 € à 60 000 € selon l\'ampleur de votre projet.' },
+      { q: 'Le crédit cuisine couvre-t-il l\'électroménager ?', a: 'Oui, le crédit SOrloz est un prêt personnel non affecté. Vous pouvez financer les meubles, le plan de travail, l\'électroménager, la pose et tous les travaux connexes.' },
+      { q: 'Peut-on choisir n\'importe quel cuisiniste ?', a: 'Absolument. Le crédit cuisine SOrloz n\'est lié à aucun réseau de cuisinistes. Vous êtes libre de commander votre cuisine où vous le souhaitez.' },
+      { q: 'Comment se passe le remboursement ?', a: 'Vos mensualités sont fixes et prélevées automatiquement chaque mois. Le taux est fixe pendant toute la durée du crédit, sans surprise.' },
+    ],
+    features_name: 'Cuisine',
   },
 
   '/prets-personnels/credit-travaux/credit-veranda': {
     icon: '🌿', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit véranda',
+    title_hero: 'Crédit véranda : agrandissez votre espace de vie',
     hero_fr: 'Financez votre véranda',
     desc_fr: 'Agrandissez votre espace de vie avec une véranda financée par SOrloz. Un investissement qui valorise votre bien immobilier.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '312,09', months: 72, names: 'Véronique &amp; Philippe',
+      amount: '18 000', rate: '7,60', total_due: '22 470,79',
+      purpose: 'construction d\'une véranda aluminium 20 m²',
+    },
+    content: {
+      heading: 'Crédit véranda : une pièce en plus, un confort en plus',
+      subheading: 'Aluminium, bois, PVC… financez la véranda qui vous ressemble',
+      body: 'La véranda est bien plus qu\'une simple extension : c\'est une pièce de vie à part entière, baignée de lumière naturelle, qui agrandit votre maison tout en créant un lien harmonieux entre l\'intérieur et le jardin. Le crédit véranda SOrloz finance la conception, la fabrication et l\'installation de votre véranda, quel que soit le matériau choisi : aluminium, bois, PVC ou acier. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois.\n\nPrêt personnel non affecté, le crédit véranda vous laisse libre de choisir votre vérandaliste, vos options (toiture isolante, stores intégrés, chauffage au sol) et votre calendrier de travaux. Les fonds sont disponibles sous 48 heures.',
+    },
+    why: {
+      heading: 'Pourquoi financer votre véranda avec SOrloz ?',
+      intro: 'Construire une véranda est un projet qui combine plaisir de vivre et investissement patrimonial. SOrloz vous aide à le réaliser dans les meilleures conditions.',
+      sections: [
+        { icon: '🌞', title: 'Des mètres carrés en plus', body: 'Une véranda de 15 à 30 m² ajoute une pièce supplémentaire à votre maison sans les contraintes d\'une extension maçonnée. Salon, salle à manger, bureau, jardin d\'hiver : vous choisissez sa fonction selon vos besoins. Baignée de lumière toute l\'année grâce à ses parois vitrées, la véranda offre un cadre de vie unique, à mi-chemin entre l\'intérieur et l\'extérieur, pour profiter du jardin même par temps de pluie.' },
+        { icon: '🏠', title: 'Valorisation immédiate de votre bien', body: 'Une véranda de qualité peut augmenter la valeur de votre maison de 5 à 15 % selon sa surface et ses finitions. C\'est l\'un des investissements les plus rentables en matière d\'extension de l\'habitat. Les acquéreurs potentiels perçoivent la véranda comme un espace premium qui enrichit la surface habitable et apporte un cachet supplémentaire à la propriété.' },
+        { icon: '⚡', title: 'Fonds disponibles rapidement', body: 'Les projets de véranda sont souvent saisonniers : il est préférable de construire au printemps ou en été. SOrloz vous permet de saisir le bon moment en débloquant les fonds sous 48 heures après acceptation de votre dossier, vous évitant ainsi d\'attendre et de repousser votre projet à la saison suivante. La réactivité de SOrloz est un atout décisif pour tenir le calendrier prévu avec votre vérandaliste.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit véranda sur mesure',
+        subheading: 'Adaptez le financement à votre projet',
+        body: 'Chaque véranda est unique par sa taille, son matériau et ses options. SOrloz adapte le financement.',
+        bullets: [
+          '<strong>Montant :</strong> De 5 500 € pour une petite véranda en PVC à 60 000 € pour une grande véranda en aluminium avec toiture isolante, stores et chauffage intégré.',
+          '<strong>Durée :</strong> De 12 à 84 mois. Pour une véranda à 18 000 €, des mensualités de 312,09 € sur 72 mois permettent de préserver votre budget mensuel.',
+          '<strong>Options finançables :</strong> Le crédit couvre aussi les fondations, la dalle, le raccordement électrique, le chauffage au sol et les aménagements intérieurs de votre véranda.',
+        ],
+        outro: 'Véranda classique ou contemporaine, SOrloz vous accompagne dans la concrétisation de votre extension.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit véranda SOrloz ?',
+        body: 'Agrandir votre maison n\'a jamais été aussi simple :',
+        bullets: [
+          '<strong>Simulez votre projet :</strong> Indiquez le budget de votre véranda et la durée de remboursement souhaitée. Vos mensualités s\'affichent immédiatement.',
+          '<strong>Complétez votre demande :</strong> Remplissez le formulaire en ligne en quelques minutes. Aucun devis de vérandaliste n\'est exigé.',
+          '<strong>Lancez la construction :</strong> Après signature électronique, recevez les fonds sous 48h et donnez le feu vert à votre vérandaliste.',
+        ],
+        outro: 'Votre future véranda n\'est qu\'à quelques clics. Faites votre simulation sur SOrloz dès aujourd\'hui.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous pensez aussi à une terrasse ?',
+      body: 'Associez votre véranda à une terrasse pour créer un espace extérieur complet. Le crédit terrasse SOrloz finance bois, composite et béton.',
+      link_href: '/prets-personnels/credit-travaux/credit-terrasse',
+      link_text: 'Découvrir le crédit terrasse',
+    },
+    example: { amount: 18000, months: 72, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit véranda',
+    faq: [
+      { q: 'Quel est le coût moyen d\'une véranda ?', a: 'Le prix d\'une véranda varie de 8 000 € à plus de 40 000 € selon la surface, le matériau (aluminium, bois, PVC) et les options. SOrloz finance de 5 500 € à 60 000 €.' },
+      { q: 'Faut-il un permis de construire pour une véranda ?', a: 'Une déclaration préalable suffit pour les vérandas de moins de 20 m² (40 m² en zone PLU). Au-delà, un permis de construire est nécessaire. Le crédit SOrloz n\'est pas conditionné à ces autorisations.' },
+      { q: 'Le crédit véranda est-il un prêt affecté ?', a: 'Non, c\'est un prêt personnel non affecté. Aucun devis ni facture de vérandaliste n\'est requis pour votre demande.' },
+      { q: 'Peut-on financer les travaux annexes avec le même crédit ?', a: 'Oui, le crédit couvre aussi les fondations, la dalle, le raccordement électrique, le chauffage et tout aménagement lié à votre projet de véranda.' },
+    ],
+    features_name: 'Véranda',
   },
 
   '/prets-personnels/credit-travaux/credit-terrasse': {
     icon: '🏡', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit terrasse',
+    title_hero: 'Crédit terrasse : votre salon en plein air',
     hero_fr: 'Financez votre terrasse avec SOrloz',
     desc_fr: 'Créez ou rénovez votre terrasse avec le financement SOrloz. Bois, composite, béton… Un espace extérieur de qualité pour profiter des beaux jours.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '169,58', months: 48, names: 'Arnaud &amp; Sandrine',
+      amount: '7 000', rate: '7,60', total_due: '8 139,80',
+      purpose: 'création d\'une terrasse en bois composite',
+    },
+    content: {
+      heading: 'Crédit terrasse : créez votre espace de vie extérieur idéal',
+      subheading: 'Bois, composite, pierre naturelle, béton… tous les matériaux',
+      body: 'Une terrasse bien conçue prolonge votre espace de vie vers l\'extérieur et transforme votre quotidien dès les premiers rayons de soleil. Le crédit terrasse SOrloz finance la construction ou la rénovation de votre terrasse, quel que soit le matériau choisi : lames de bois exotique, composite haute durabilité, dalle de pierre naturelle, béton décoratif ou carrelage extérieur. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois.\n\nLe crédit terrasse SOrloz est un prêt personnel non affecté. Vous êtes libre de confier les travaux au professionnel de votre choix ou de réaliser vous-même la pose si vous êtes bricoleur. Les fonds sont versés sous 48 heures après acceptation de votre dossier.',
+    },
+    why: {
+      heading: 'Pourquoi financer votre terrasse avec SOrloz ?',
+      intro: 'La terrasse est devenue un prolongement naturel de la maison. SOrloz vous aide à créer cet espace de vie extérieur dont vous rêvez.',
+      sections: [
+        { icon: '☀️', title: 'Un lieu de vie supplémentaire', body: 'Une terrasse bien aménagée devient votre salon d\'été, votre salle à manger en plein air, votre espace de détente au soleil. C\'est un lieu de convivialité qui change radicalement votre façon de profiter de votre maison. Repas en famille, apéritifs entre amis, lecture au calme : la terrasse multiplie les possibilités d\'utilisation de votre extérieur et améliore considérablement votre qualité de vie.' },
+        { icon: '🏠', title: 'Plus-value pour votre bien', body: 'Une terrasse de qualité augmente la valeur perçue de votre propriété. Les acquéreurs potentiels sont particulièrement sensibles aux espaces extérieurs aménagés. Selon les professionnels de l\'immobilier, une terrasse bien réalisée peut valoriser un bien de 5 à 10 %, un retour sur investissement très attractif par rapport au coût des travaux engagés.' },
+        { icon: '🛠️', title: 'Un projet accessible', body: 'Contrairement à une extension ou à une véranda, une terrasse est un projet relativement rapide à réaliser et dont le budget reste maîtrisable. Le crédit terrasse SOrloz vous permet de choisir des matériaux de qualité sans rogner sur vos économies. Vous financez aussi bien les lames et les plots que les garde-corps, l\'éclairage extérieur et le mobilier de jardin.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit terrasse adapté à vos envies',
+        subheading: 'Personnalisez votre financement',
+        body: 'Terrasse intime ou grand espace de réception, SOrloz adapte le crédit à votre projet.',
+        bullets: [
+          '<strong>Montant :</strong> De 5 500 € pour une petite terrasse en composite à 60 000 € pour une grande terrasse en bois exotique avec pergola, éclairage et mobilier intégré.',
+          '<strong>Durée :</strong> De 12 à 84 mois. Pour une terrasse à 7 000 €, des mensualités de 169,58 € sur 48 mois.',
+          '<strong>Aménagements inclus :</strong> Financez aussi la pergola, le garde-corps, l\'éclairage d\'ambiance, les jardinières intégrées et le mobilier de terrasse.',
+        ],
+        outro: 'Petite terrasse de balcon ou grande terrasse de jardin, SOrloz finance votre projet extérieur.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit terrasse SOrloz ?',
+        body: 'Créer votre terrasse de rêve est simple avec SOrloz :',
+        bullets: [
+          '<strong>Simulez votre terrasse :</strong> Indiquez le budget et la durée souhaités. Vos mensualités s\'affichent en temps réel.',
+          '<strong>Complétez votre demande :</strong> Formulaire en ligne rapide, sans devis ni justificatif à fournir. Réponse de principe immédiate.',
+          '<strong>Lancez les travaux :</strong> Fonds virés sous 48h après signature. Commandez vos matériaux et planifiez la pose.',
+        ],
+        outro: 'Profitez des beaux jours sur votre nouvelle terrasse. Simulez votre crédit dès maintenant.',
+      },
+    ],
+    crosssell: {
+      question: 'Et si vous ajoutiez une piscine ?',
+      body: 'Complétez votre terrasse avec une piscine pour un espace extérieur complet. Le crédit piscine SOrloz finance tous les types de bassins.',
+      link_href: '/prets-personnels/credit-travaux/credit-piscine',
+      link_text: 'Découvrir le crédit piscine',
+    },
+    example: { amount: 7000, months: 48, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit terrasse',
+    faq: [
+      { q: 'Quel budget pour construire une terrasse ?', a: 'Le coût d\'une terrasse varie de 50 à 200 € par m² selon le matériau (composite, bois, pierre, béton). Pour une terrasse de 30 m², comptez entre 3 000 € et 10 000 €.' },
+      { q: 'Faut-il un permis pour construire une terrasse ?', a: 'Une terrasse de plain-pied ne nécessite généralement aucune autorisation. Les terrasses surélevées de plus de 60 cm ou couvertes peuvent nécessiter une déclaration préalable.' },
+      { q: 'Le crédit terrasse est-il un prêt affecté ?', a: 'Non, c\'est un prêt personnel non affecté. Aucun devis ni justificatif d\'utilisation des fonds n\'est demandé.' },
+      { q: 'Peut-on financer la terrasse et son aménagement ?', a: 'Oui, le crédit couvre la terrasse elle-même ainsi que tous les aménagements : pergola, éclairage, garde-corps, mobilier de jardin.' },
+    ],
+    features_name: 'Terrasse',
   },
 
   // ── Crédit chauffage

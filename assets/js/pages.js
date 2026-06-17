@@ -138,41 +138,376 @@ const PAGE_CONFIG = {
   '/prets-personnels/credit-projet/credit-demenagement': {
     icon: '📦', bg: 'var(--green-bg)',
     title_fr: 'Crédit déménagement',
+    title_hero: 'Crédit déménagement : posez vos valises sereinement',
     hero_fr: 'Déménagez l\'esprit tranquille',
     desc_fr: 'Location de camion, frais d\'agence, premiers loyers, achats mobilier… Le crédit déménagement SOrloz couvre toutes vos dépenses liées à votre nouvelle installation.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-projet', label: 'Crédit projet' },
+    ],
+    testimonial: {
+      monthly: '249,88', months: 36, names: 'Émilie &amp; Julien',
+      amount: '8 000', rate: '7,78', total_due: '8 995,67',
+      purpose: 'déménagement à Lyon',
+    },
+    content: {
+      heading: 'Déménagez sans stress financier',
+      subheading: 'Un crédit personnel pour couvrir tous vos frais de déménagement',
+      body: 'Un déménagement représente bien plus que le simple transport de cartons. Entre la location du camion ou les frais de déménageurs professionnels, le dépôt de garantie du nouveau logement, les premiers loyers, les frais d\'agence immobilière et l\'achat de nouveaux meubles, la facture peut vite grimper. Le crédit déménagement SOrloz est un prêt personnel non affecté qui vous permet de financer l\'ensemble de ces dépenses en toute liberté, sans avoir à justifier chaque poste.\n\nPour découvrir toutes nos solutions de financement, consultez notre page <a href="/prets-personnels" style="color:var(--red);font-weight:600">prêts personnels</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir un crédit déménagement SOrloz pour financer votre nouvelle installation ?',
+      intro: 'Le crédit déménagement SOrloz est conçu pour vous accompagner dans cette étape importante de votre vie. Il vous permet de gérer sereinement toutes les dépenses liées à votre changement de logement sans puiser dans votre épargne. Voici ses principaux avantages :',
+      sections: [
+        { title: 'Liberté totale dans l\'utilisation des fonds', body: 'Le crédit déménagement SOrloz est un prêt personnel non affecté, ce qui signifie que vous êtes entièrement libre d\'utiliser les fonds comme vous le souhaitez. Que vous ayez besoin de régler les frais de déménageurs professionnels, de payer le dépôt de garantie de votre nouveau logement, d\'acheter du mobilier neuf ou de financer des travaux d\'aménagement, tout est possible. Vous n\'avez aucun justificatif à fournir quant à l\'utilisation de la somme empruntée, ce qui vous laisse une totale flexibilité pour organiser votre déménagement selon vos priorités.' },
+        { title: 'Des mensualités fixes et prévisibles', body: 'Avec le crédit déménagement SOrloz, votre taux est fixe pour toute la durée de votre contrat, ce qui signifie que vos mensualités restent identiques du premier au dernier mois. Cette stabilité est particulièrement appréciable lors d\'un déménagement, période pendant laquelle vos dépenses sont déjà nombreuses et parfois imprévisibles. Vous pouvez ainsi planifier votre budget en toute sérénité, sans craindre de mauvaise surprise sur le montant de vos remboursements.' },
+        { title: 'Un accompagnement rapide et personnalisé', body: 'Chez SOrloz, nous savons qu\'un déménagement se prépare souvent dans l\'urgence. C\'est pourquoi notre processus de demande est entièrement en ligne et ne prend que quelques minutes. Vous obtenez une réponse de principe immédiate et, après validation de votre dossier, les fonds sont disponibles sous 48 heures sur votre compte bancaire. Nos conseillers sont également à votre disposition pour vous aider à déterminer le montant et la durée les mieux adaptés à votre situation.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit déménagement sur mesure pour votre projet',
+        subheading: 'Options de personnalisation',
+        body: 'Lorsque vous choisissez un crédit déménagement avec SOrloz, vous pouvez adapter le prêt à vos besoins précis.',
+        bullets: [
+          '<strong>Montant :</strong> Définissez la somme dont vous avez besoin pour couvrir l\'ensemble de vos frais de déménagement. Qu\'il s\'agisse d\'un déménagement local ou d\'un changement de région, le montant peut varier entre 5 500 € et 60 000 € selon l\'ampleur de votre projet.',
+          '<strong>Durée :</strong> Choisissez la période de remboursement qui convient le mieux à votre budget, de 12 à 84 mois. Vous pouvez opter pour une durée plus courte pour réduire le coût total, ou une durée plus longue pour alléger vos mensualités.',
+          '<strong>Mensualités :</strong> Ajustez le montant de vos remboursements mensuels en fonction de votre capacité financière, afin que votre crédit s\'intègre harmonieusement dans votre nouveau budget logement.',
+        ],
+        outro: 'Grâce à cette flexibilité, vous pouvez financer aussi bien un petit déménagement au sein de la même ville qu\'une installation complète dans un nouveau logement à l\'autre bout de la France.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit déménagement avec SOrloz ?',
+        body: 'Obtenir un crédit déménagement chez SOrloz est simple et rapide. Voici les étapes à suivre :',
+        bullets: [
+          '<strong>Simulation en ligne :</strong> Renseignez le montant envisagé pour votre déménagement et choisissez la durée de remboursement la plus adaptée à votre situation. Notre simulateur vous indique immédiatement le montant de vos mensualités.',
+          '<strong>Formulaire de demande :</strong> Complétez votre dossier en quelques minutes en renseignant les informations nécessaires à l\'étude de votre demande. Aucune pièce justificative liée au déménagement n\'est requise.',
+          '<strong>Signature et réception des fonds :</strong> Connectez-vous à votre Espace Personnel Sécurisé pour finaliser votre demande. Après acceptation par nos services et passé le délai légal de rétractation, les fonds sont versés sous 48h sur votre compte bancaire.',
+        ],
+        outro: 'Avec le crédit déménagement SOrloz, installez-vous dans votre nouveau chez-vous en toute sérénité. Nos solutions sur mesure, notre accompagnement personnalisé et nos taux compétitifs font de votre déménagement une étape plaisir plutôt qu\'une source de stress financier.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous aménagez votre nouveau logement ?',
+      body: 'Profitez de notre crédit travaux pour financer la rénovation ou la décoration de votre nouveau chez-vous, avec des conditions avantageuses.',
+      link_href: '/prets-personnels/credit-travaux',
+      link_text: 'Découvrir le crédit travaux',
+    },
+    example: { amount: 8000, months: 36, rate: 7.78 },
+    faq_title: 'Vos questions sur le crédit déménagement',
+    faq: [
+      { q: 'Quel montant puis-je emprunter pour un déménagement ?', a: 'Vous pouvez emprunter entre 5 500 € et 60 000 € selon l\'ampleur de votre déménagement et votre capacité de remboursement.' },
+      { q: 'Dois-je fournir des justificatifs de déménagement ?', a: 'Non, le crédit déménagement SOrloz est un prêt personnel non affecté. Vous n\'avez pas à justifier l\'utilisation des fonds.' },
+      { q: 'Puis-je financer le dépôt de garantie avec le crédit déménagement ?', a: 'Oui, le crédit déménagement couvre toutes les dépenses liées à votre nouvelle installation : dépôt de garantie, frais d\'agence, premiers loyers, mobilier, etc.' },
+      { q: 'Combien de temps faut-il pour recevoir les fonds ?', a: 'Après validation de votre dossier et passé le délai légal de rétractation, les fonds sont disponibles sous 48h sur votre compte bancaire.' },
+    ],
+    features_name: 'Déménagement',
+    articles: [
+      { icon: '📦', tag: 'Déménagement', href: '/conseils', title: 'Budget déménagement : combien prévoir en France ?', excerpt: 'Découvrez le coût moyen d\'un déménagement en France et les postes de dépenses à anticiper pour bien préparer votre budget.' },
+      { icon: '💡', tag: 'Conseil', href: '/conseils', title: 'Déménagement : les aides financières à ne pas manquer', excerpt: 'Action Logement, prime de déménagement, aides locales… Tour d\'horizon des dispositifs pour alléger la facture.' },
+      { icon: '📋', tag: 'Pratique', href: '/conseils', title: 'Checklist déménagement : les démarches à ne pas oublier', excerpt: 'De la résiliation des contrats au changement d\'adresse : la liste complète des démarches pour un déménagement réussi.' },
+    ],
   },
 
   '/prets-personnels/credit-projet/credit-loisirs': {
     icon: '🎯', bg: 'var(--green-bg)',
     title_fr: 'Crédit loisirs',
+    title_hero: 'Crédit loisirs : vivez vos passions à fond',
     hero_fr: 'Profitez pleinement de vos loisirs',
     desc_fr: 'Sport, culture, hi-fi, instruments de musique, animaux… Le crédit loisirs SOrloz finance toutes vos passions et vos plaisirs du quotidien.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-projet', label: 'Crédit projet' },
+    ],
+    testimonial: {
+      monthly: '248,20', months: 24, names: 'Romain &amp; Claire',
+      amount: '5 500', rate: '7,78', total_due: '5 956,77',
+      purpose: 'home cinéma et piano numérique',
+    },
+    content: {
+      heading: 'Offrez-vous la vie que vous méritez',
+      subheading: 'Financez vos passions et loisirs avec SOrloz',
+      body: 'Qu\'il s\'agisse d\'un équipement sportif haut de gamme, d\'un instrument de musique, d\'un home cinéma, d\'un abonnement en club ou de tout autre plaisir qui enrichit votre quotidien, le crédit loisirs SOrloz vous permet de vous faire plaisir sans attendre. Notre prêt personnel non affecté vous laisse entièrement libre d\'utiliser les fonds comme bon vous semble, sans aucun justificatif de dépense à fournir.\n\nPour en savoir plus sur nos solutions, consultez notre page <a href="/prets-personnels" style="color:var(--red);font-weight:600">prêts personnels</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir un crédit loisirs SOrloz pour financer vos passions ?',
+      intro: 'Les loisirs contribuent à votre épanouissement personnel et à votre bien-être au quotidien. Le crédit loisirs SOrloz vous permet de les financer sans entamer votre épargne de précaution. Voici les avantages de notre solution :',
+      sections: [
+        { title: 'Un financement pour toutes vos envies', body: 'Le crédit loisirs SOrloz n\'est pas limité à un type d\'achat en particulier. Que vous souhaitiez acquérir un vélo électrique, un équipement de plongée sous-marine, un piano à queue, du matériel photographique professionnel ou encore aménager un espace dédié à votre passion dans votre maison, vous êtes libre d\'utiliser les fonds selon vos envies. Cette polyvalence fait du crédit loisirs un outil idéal pour tous ceux qui veulent se faire plaisir sans compromis.' },
+        { title: 'Des conditions claires et sans mauvaise surprise', body: 'Chez SOrloz, la transparence est au cœur de notre démarche. Votre taux est fixe et garanti pour toute la durée du contrat, ce qui signifie que vos mensualités ne changeront jamais. Vous connaissez dès la simulation le coût total de votre crédit, le montant exact de chaque mensualité et la date de votre dernière échéance. Aucun frais caché, aucune clause ambiguë : vous savez exactement à quoi vous vous engagez.' },
+        { title: 'Une démarche simple et rapide', body: 'Pas besoin de vous déplacer en agence ni de constituer un dossier papier volumineux. Tout se fait en ligne, depuis votre canapé, en quelques minutes seulement. Vous renseignez le montant et la durée souhaités, remplissez un formulaire simple et recevez une réponse de principe immédiate. Après validation de votre dossier, les fonds sont versés sur votre compte bancaire sous 48 heures. De quoi profiter rapidement de vos nouveaux équipements.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit loisirs sur mesure pour votre projet',
+        subheading: 'Options de personnalisation',
+        body: 'Lorsque vous choisissez un crédit loisirs avec SOrloz, vous pouvez adapter le prêt à vos besoins précis.',
+        bullets: [
+          '<strong>Montant :</strong> Déterminez la somme dont vous avez besoin pour financer vos loisirs. Que ce soit pour un achat ponctuel ou un ensemble d\'équipements, le montant peut varier de 5 500 € à 60 000 € selon vos projets.',
+          '<strong>Durée :</strong> Choisissez la période de remboursement la plus adaptée à votre budget, de 12 à 84 mois. Une durée plus courte réduit le coût total, tandis qu\'une durée plus longue allège vos mensualités.',
+          '<strong>Mensualités :</strong> Ajustez le montant de vos remboursements mensuels pour qu\'ils s\'intègrent confortablement dans votre budget sans impacter votre train de vie.',
+        ],
+        outro: 'Avec cette flexibilité, vous pouvez financer aussi bien un petit plaisir personnel qu\'un projet loisirs d\'envergure, comme l\'aménagement complet d\'un studio de musique à domicile.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit loisirs avec SOrloz ?',
+        body: 'Obtenir un crédit loisirs chez SOrloz est un jeu d\'enfant. Voici les étapes à suivre :',
+        bullets: [
+          '<strong>Simulation en ligne :</strong> Renseignez le montant envisagé pour vos loisirs et choisissez la durée de remboursement qui vous convient. Notre simulateur calcule instantanément vos mensualités et le coût total du crédit.',
+          '<strong>Formulaire de demande :</strong> Complétez votre dossier en quelques minutes avec les informations nécessaires à l\'étude de votre demande. Aucun justificatif d\'achat n\'est requis.',
+          '<strong>Signature et réception des fonds :</strong> Connectez-vous à votre Espace Personnel Sécurisé pour finaliser votre demande. Après acceptation et passé le délai légal de rétractation, les fonds sont versés sous 48h sur votre compte.',
+        ],
+        outro: 'Avec le crédit loisirs SOrloz, n\'attendez plus pour vivre pleinement vos passions. Nos taux compétitifs, notre accompagnement personnalisé et notre processus 100 % en ligne vous permettent de concrétiser vos envies en toute simplicité.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous partez en vacances pour pratiquer vos loisirs ?',
+      body: 'Combinez votre crédit loisirs avec notre crédit vacances pour financer un séjour sportif, culturel ou de détente, en toute sérénité.',
+      link_href: '/prets-personnels/credit-projet/credit-vacances',
+      link_text: 'Découvrir le crédit vacances',
+    },
+    example: { amount: 5500, months: 24, rate: 7.78 },
+    faq_title: 'Vos questions sur le crédit loisirs',
+    faq: [
+      { q: 'Quels types de loisirs puis-je financer avec ce crédit ?', a: 'Tous les loisirs sont éligibles : sport, musique, high-tech, culture, animaux de compagnie, jardinage, bricolage… Le crédit loisirs SOrloz est un prêt personnel sans justificatif d\'utilisation.' },
+      { q: 'Quel montant puis-je emprunter pour mes loisirs ?', a: 'Vous pouvez emprunter entre 5 500 € et 60 000 € selon votre projet et votre capacité de remboursement.' },
+      { q: 'Dois-je fournir un devis ou une facture ?', a: 'Non, le crédit loisirs SOrloz est un prêt personnel non affecté. Vous n\'avez aucun justificatif à fournir quant à l\'utilisation des fonds.' },
+      { q: 'Puis-je rembourser mon crédit loisirs par anticipation ?', a: 'Oui, le remboursement anticipé total ou partiel est possible à tout moment. Des indemnités peuvent s\'appliquer dans la limite légale.' },
+    ],
+    features_name: 'Loisirs',
+    articles: [
+      { icon: '🎯', tag: 'Loisirs', href: '/conseils', title: 'Quel budget pour s\'équiper dans un nouveau sport ?', excerpt: 'Du vélo au golf en passant par la plongée : combien coûte vraiment l\'équipement pour débuter un nouveau sport ?' },
+      { icon: '🎵', tag: 'Culture', href: '/conseils', title: 'Financer un instrument de musique : nos conseils', excerpt: 'Piano, guitare, batterie… Comment choisir et financer l\'instrument qui correspond à votre niveau et vos ambitions.' },
+      { icon: '💡', tag: 'Conseil', href: '/conseils', title: 'Loisirs et bien-être : pourquoi investir dans ses passions ?', excerpt: 'Les loisirs ne sont pas un luxe mais un investissement dans votre qualité de vie. Découvrez comment les financer intelligemment.' },
+    ],
   },
 
   '/prets-personnels/credit-projet/credit-divorce': {
     icon: '⚖️', bg: 'var(--green-bg)',
     title_fr: 'Crédit divorce',
+    title_hero: 'Crédit divorce : tournez la page sereinement',
     hero_fr: 'Rebondir après un divorce',
     desc_fr: 'Un divorce entraîne de nombreux frais : honoraires d\'avocat, nouvelle installation, rachat de soulte… Le crédit divorce SOrloz vous aide à traverser cette étape et à repartir du bon pied.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-projet', label: 'Crédit projet' },
+    ],
+    testimonial: {
+      monthly: '302,57', months: 60, names: 'Caroline',
+      amount: '15 000', rate: '7,78', total_due: '18 154,14',
+      purpose: 'rachat de soulte et frais d\'avocat',
+    },
+    content: {
+      heading: 'Traversez cette étape sans pression financière',
+      subheading: 'Un prêt personnel pour financer sereinement votre séparation',
+      body: 'Un divorce ou une séparation engendre des frais considérables souvent difficiles à anticiper : honoraires d\'avocat, frais de notaire, rachat de soulte pour conserver le bien immobilier commun, caution et premiers loyers d\'un nouveau logement, achat de mobilier… Le crédit divorce SOrloz est un prêt personnel non affecté qui vous permet de faire face à l\'ensemble de ces dépenses, sans avoir à justifier chaque euro dépensé.\n\nPour découvrir toutes nos solutions de financement adaptées à vos projets de vie, consultez notre page <a href="/prets-personnels" style="color:var(--red);font-weight:600">prêts personnels</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir un crédit divorce SOrloz pour financer votre nouveau départ ?',
+      intro: 'Un divorce est une épreuve humaine et financière. SOrloz vous accompagne avec une solution de financement discrète, rapide et flexible pour vous permettre de vous concentrer sur l\'essentiel : reconstruire votre vie. Voici les avantages de notre crédit divorce :',
+      sections: [
+        { title: 'Financer le rachat de soulte et les frais juridiques', body: 'Le rachat de soulte est souvent le poste de dépense le plus important lors d\'un divorce : il s\'agit de racheter la part de votre ex-conjoint sur le bien immobilier commun afin de le conserver. À cela s\'ajoutent les honoraires d\'avocat, les frais de notaire et éventuellement les frais de médiation familiale. Le crédit divorce SOrloz vous permet de financer l\'ensemble de ces frais en une seule solution, avec un taux fixe et des mensualités prévisibles sur toute la durée du prêt.' },
+        { title: 'Se réinstaller dans un nouveau logement', body: 'Après une séparation, il faut souvent trouver un nouveau logement et l\'équiper entièrement. Dépôt de garantie, premiers loyers, achat de meubles, électroménager, équipement pour les enfants dans le nouveau foyer… Les dépenses s\'accumulent rapidement. Le crédit divorce SOrloz couvre toutes ces dépenses d\'installation, vous permettant de créer un environnement confortable et stable pour vous et vos enfants, sans attendre d\'avoir constitué l\'épargne nécessaire.' },
+        { title: 'Un processus discret et respectueux', body: 'Chez SOrloz, nous comprenons que le divorce est une période sensible. C\'est pourquoi notre processus de demande est entièrement en ligne, confidentiel et sans jugement. Vous n\'avez pas à justifier les raisons de votre emprunt ni à fournir de pièces liées à votre procédure de divorce. Nos conseillers sont formés pour vous accompagner avec tact et professionnalisme, en vous aidant à trouver la solution de financement la plus adaptée à votre nouvelle situation.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit divorce sur mesure pour votre situation',
+        subheading: 'Options de personnalisation',
+        body: 'Lorsque vous choisissez un crédit divorce avec SOrloz, vous pouvez adapter le prêt à votre situation personnelle et financière.',
+        bullets: [
+          '<strong>Montant :</strong> Déterminez la somme dont vous avez besoin pour couvrir l\'ensemble de vos frais liés à la séparation. Qu\'il s\'agisse d\'un rachat de soulte, de frais d\'avocat ou d\'une nouvelle installation, le montant peut varier de 5 500 € à 60 000 € selon votre projet.',
+          '<strong>Durée :</strong> Choisissez une période de remboursement adaptée à votre nouvelle capacité financière, de 12 à 84 mois. Après un divorce, vos revenus peuvent évoluer : nous vous aidons à trouver le juste équilibre.',
+          '<strong>Mensualités :</strong> Ajustez le montant de vos remboursements mensuels pour préserver votre reste à vivre et celui de vos enfants, dans cette période de transition financière.',
+        ],
+        outro: 'Le crédit divorce SOrloz s\'adapte à toutes les situations : divorce par consentement mutuel, divorce contentieux, séparation de corps ou dissolution de PACS.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit divorce avec SOrloz ?',
+        body: 'Obtenir un crédit divorce chez SOrloz est simple, rapide et confidentiel. Voici les étapes à suivre :',
+        bullets: [
+          '<strong>Simulation en ligne :</strong> Renseignez le montant nécessaire pour couvrir vos frais de divorce et choisissez la durée de remboursement adaptée à votre nouvelle situation. Notre simulateur vous indique immédiatement le montant de vos mensualités.',
+          '<strong>Formulaire de demande :</strong> Complétez votre dossier en quelques minutes. Aucun justificatif lié à votre procédure de divorce n\'est requis. Votre demande est traitée avec la plus grande confidentialité.',
+          '<strong>Signature et réception des fonds :</strong> Connectez-vous à votre Espace Personnel Sécurisé pour finaliser votre demande. Après acceptation et passé le délai légal de rétractation, les fonds sont versés sous 48h sur votre compte bancaire.',
+        ],
+        outro: 'Avec le crédit divorce SOrloz, vous pouvez tourner la page et construire un nouveau chapitre de votre vie en toute sérénité financière. Notre accompagnement discret et nos conditions transparentes sont à vos côtés dans cette période de transition.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous devez aménager votre nouveau logement ?',
+      body: 'Découvrez notre crédit déménagement pour financer votre installation dans votre nouveau chez-vous : mobilier, dépôt de garantie, travaux d\'aménagement.',
+      link_href: '/prets-personnels/credit-projet/credit-demenagement',
+      link_text: 'Découvrir le crédit déménagement',
+    },
+    example: { amount: 15000, months: 60, rate: 7.78 },
+    faq_title: 'Vos questions sur le crédit divorce',
+    faq: [
+      { q: 'Quels frais de divorce puis-je financer avec ce crédit ?', a: 'Tous les frais liés à votre séparation : honoraires d\'avocat, frais de notaire, rachat de soulte, caution et premiers loyers, mobilier, déménagement… Le crédit divorce est un prêt personnel sans justificatif.' },
+      { q: 'Puis-je emprunter seul(e) après un divorce ?', a: 'Oui, le crédit divorce SOrloz est un prêt personnel individuel. Vous empruntez en votre nom propre, sans besoin du consentement de votre ex-conjoint.' },
+      { q: 'Le crédit divorce est-il confidentiel ?', a: 'Oui, votre demande est entièrement confidentielle. Aucune information n\'est communiquée à un tiers sans votre accord.' },
+      { q: 'Quel montant puis-je emprunter pour faire face à un divorce ?', a: 'Vous pouvez emprunter entre 5 500 € et 60 000 € selon vos besoins et votre capacité de remboursement.' },
+    ],
+    features_name: 'Divorce',
+    articles: [
+      { icon: '⚖️', tag: 'Divorce', href: '/conseils', title: 'Combien coûte un divorce en France ?', excerpt: 'Honoraires d\'avocat, frais de notaire, rachat de soulte… Découvrez le budget moyen d\'un divorce et les postes à anticiper.' },
+      { icon: '💡', tag: 'Conseil', href: '/conseils', title: 'Rachat de soulte : comment ça marche ?', excerpt: 'Tout comprendre sur le rachat de soulte pour conserver le bien immobilier après un divorce ou une séparation.' },
+      { icon: '📋', tag: 'Pratique', href: '/conseils', title: 'Divorce et finances : les démarches à connaître', excerpt: 'Comptes joints, crédits en cours, partage des biens… Les étapes financières clés pour bien gérer votre séparation.' },
+    ],
   },
 
   '/prets-personnels/credit-projet/credit-retraite': {
     icon: '🏖️', bg: 'var(--green-bg)',
     title_fr: 'Crédit retraite',
+    title_hero: 'Crédit retraite : profitez de chaque instant',
     hero_fr: 'Profitez pleinement de votre retraite',
     desc_fr: 'La retraite est une nouvelle aventure ! Voyages, loisirs, aménagement de votre maison… Le crédit retraite SOrloz vous aide à financer vos projets pour en profiter pleinement.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-projet', label: 'Crédit projet' },
+    ],
+    testimonial: {
+      monthly: '291,72', months: 48, names: 'Jean-Pierre &amp; Monique',
+      amount: '12 000', rate: '7,78', total_due: '14 002,44',
+      purpose: 'aménagement véranda et voyage au Portugal',
+    },
+    content: {
+      heading: 'La retraite, c\'est maintenant que tout commence',
+      subheading: 'Financez vos projets de retraite avec SOrloz',
+      body: 'La retraite est bien plus qu\'une fin de carrière : c\'est le début d\'un nouveau chapitre riche en projets. Voyages que vous avez toujours repoussés, aménagement de votre maison pour plus de confort, activités sportives ou culturelles, aide à vos petits-enfants… Le crédit retraite SOrloz vous permet de concrétiser toutes ces envies sans puiser dans votre épargne de précaution. Notre prêt personnel non affecté s\'adapte à votre nouveau rythme de vie et à votre budget de retraité.\n\nPour découvrir toutes nos solutions de financement, consultez notre page <a href="/prets-personnels" style="color:var(--red);font-weight:600">prêts personnels</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir un crédit retraite SOrloz pour financer vos projets ?',
+      intro: 'La retraite s\'accompagne souvent d\'une baisse de revenus, mais pas d\'une baisse d\'envies. Le crédit retraite SOrloz vous offre la possibilité de réaliser vos projets tout en préservant votre épargne. Voici les avantages de notre solution :',
+      sections: [
+        { title: 'Préservez votre épargne de précaution', body: 'À la retraite, votre épargne constitue un filet de sécurité essentiel pour faire face aux imprévus. Plutôt que d\'y puiser pour financer un voyage ou des travaux d\'aménagement, le crédit retraite vous permet de répartir la dépense dans le temps grâce à des mensualités adaptées à votre pension. Vous conservez ainsi votre capital tout en profitant pleinement de vos projets, sans vous priver ni compromettre votre sécurité financière à long terme.' },
+        { title: 'Des mensualités adaptées à votre pension', body: 'Chez SOrloz, nous prenons en compte la réalité de vos revenus de retraité pour vous proposer des mensualités confortables. Votre taux est fixe pour toute la durée du contrat, ce qui signifie que vos remboursements ne changeront jamais, même si les conditions du marché évoluent. Cette prévisibilité est particulièrement précieuse lorsque vos revenus sont stables et que vous devez gérer votre budget avec rigueur. Nous vous accompagnons pour trouver le bon équilibre entre durée et mensualité.' },
+        { title: 'Une demande accessible et sans complications', body: 'Nous savons que les démarches administratives peuvent être décourageantes. C\'est pourquoi notre processus de demande est simple, rapide et entièrement en ligne. Pas de rendez-vous en agence, pas de paperasse excessive : vous remplissez votre demande en quelques minutes depuis votre domicile. Nos conseillers sont également disponibles par téléphone pour vous accompagner si vous le souhaitez, avec patience et bienveillance, à chaque étape de votre demande.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit retraite sur mesure pour votre projet',
+        subheading: 'Options de personnalisation',
+        body: 'Lorsque vous choisissez un crédit retraite avec SOrloz, vous pouvez adapter le prêt à vos envies et à votre capacité financière de retraité.',
+        bullets: [
+          '<strong>Montant :</strong> Déterminez la somme dont vous avez besoin pour réaliser votre projet de retraite. Qu\'il s\'agisse d\'un voyage, de travaux d\'adaptation de votre logement ou d\'un nouvel équipement, le montant peut varier de 5 500 € à 60 000 €.',
+          '<strong>Durée :</strong> Choisissez la période de remboursement la plus adaptée à votre pension de retraite, de 12 à 84 mois. Une durée plus longue permet de réduire vos mensualités et de préserver votre confort au quotidien.',
+          '<strong>Mensualités :</strong> Ajustez le montant de vos remboursements pour qu\'ils s\'intègrent parfaitement dans votre budget de retraité, en tenant compte de vos charges fixes et de votre reste à vivre.',
+        ],
+        outro: 'Le crédit retraite SOrloz s\'adapte à tous les projets : du petit plaisir ponctuel au grand voyage en passant par l\'aménagement de votre résidence principale ou secondaire.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit retraite avec SOrloz ?',
+        body: 'Obtenir un crédit retraite chez SOrloz est simple et rapide, même si vous n\'êtes pas à l\'aise avec Internet. Voici les étapes :',
+        bullets: [
+          '<strong>Simulation en ligne :</strong> Renseignez le montant souhaité et la durée de remboursement. Notre simulateur calcule instantanément vos mensualités et le coût total de votre crédit, pour que vous puissiez comparer les options en toute transparence.',
+          '<strong>Formulaire de demande :</strong> Complétez votre dossier en quelques minutes. Nous vous demandons des informations simples sur votre situation et vos revenus de retraite. Aucun justificatif de dépense n\'est requis.',
+          '<strong>Signature et réception des fonds :</strong> Finalisez votre demande dans votre Espace Personnel Sécurisé. Après acceptation et passé le délai légal de rétractation, les fonds sont versés sous 48h sur votre compte bancaire.',
+        ],
+        outro: 'Avec le crédit retraite SOrloz, donnez un nouvel élan à votre vie de retraité. Profitez de vos années les plus libres pour réaliser tout ce que vous avez remis à plus tard, avec un financement adapté et des conseillers à votre écoute.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous rêvez d\'un voyage pour votre retraite ?',
+      body: 'Découvrez notre crédit vacances pour financer le séjour dont vous avez toujours rêvé : croisière, tour du monde ou escapade en Europe.',
+      link_href: '/prets-personnels/credit-projet/credit-vacances',
+      link_text: 'Découvrir le crédit vacances',
+    },
+    example: { amount: 12000, months: 48, rate: 7.78 },
+    faq_title: 'Vos questions sur le crédit retraite',
+    faq: [
+      { q: 'Peut-on obtenir un crédit à la retraite ?', a: 'Oui, le crédit retraite SOrloz est accessible aux retraités. Votre pension de retraite est prise en compte comme revenu régulier pour l\'étude de votre dossier.' },
+      { q: 'Quel montant puis-je emprunter à la retraite ?', a: 'Vous pouvez emprunter entre 5 500 € et 60 000 € selon votre pension de retraite et votre capacité de remboursement.' },
+      { q: 'Y a-t-il une limite d\'âge pour emprunter ?', a: 'SOrloz étudie chaque dossier individuellement. L\'âge n\'est pas un critère d\'exclusion, c\'est votre capacité de remboursement qui détermine l\'éligibilité.' },
+      { q: 'Quels projets puis-je financer avec un crédit retraite ?', a: 'Tous les projets : voyages, loisirs, aménagement du domicile, aide aux enfants ou petits-enfants, achat d\'équipement… Le crédit retraite est un prêt personnel non affecté.' },
+    ],
+    features_name: 'Retraite',
+    articles: [
+      { icon: '🏖️', tag: 'Retraite', href: '/conseils', title: 'Retraite : comment financer ses projets sans toucher à son épargne ?', excerpt: 'Découvrez les solutions pour profiter pleinement de votre retraite tout en préservant votre patrimoine et votre sécurité financière.' },
+      { icon: '🏠', tag: 'Aménagement', href: '/conseils', title: 'Adapter son logement pour bien vieillir chez soi', excerpt: 'Douche à l\'italienne, monte-escalier, domotique… Les travaux d\'adaptation du domicile pour gagner en confort et en autonomie.' },
+      { icon: '💡', tag: 'Conseil', href: '/conseils', title: 'Budget retraite : bien anticiper la baisse de revenus', excerpt: 'Nos conseils pour organiser votre budget à la retraite et continuer à vous faire plaisir avec une pension plus modeste.' },
+    ],
   },
 
   '/prets-personnels/credit-projet/credit-naissance': {
     icon: '👶', bg: 'var(--green-bg)',
     title_fr: 'Crédit naissance',
+    title_hero: 'Crédit naissance : accueillez bébé en toute sérénité',
     hero_fr: 'Préparez l\'arrivée de bébé',
     desc_fr: 'L\'arrivée d\'un enfant est un bonheur qui s\'accompagne de nombreux achats. Poussette, chambre, équipement… Le crédit naissance SOrloz vous aide à tout préparer.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-projet', label: 'Crédit projet' },
+    ],
+    testimonial: {
+      monthly: '218,64', months: 36, names: 'Laura &amp; Maxime',
+      amount: '7 000', rate: '7,78', total_due: '7 871,21',
+      purpose: 'chambre et équipement bébé',
+    },
+    content: {
+      heading: 'Préparez le nid douillet de votre bout de chou',
+      subheading: 'Un prêt personnel pour accueillir bébé dans les meilleures conditions',
+      body: 'L\'arrivée d\'un bébé est l\'un des plus beaux moments de la vie, mais c\'est aussi une période de dépenses importantes. Chambre à aménager, poussette, siège auto, vêtements, matériel de puériculture, garde-robe de maternité… La liste est longue et le budget peut vite devenir conséquent. Le crédit naissance SOrloz est un prêt personnel non affecté qui vous permet de financer sereinement tous ces achats, pour que l\'arrivée de bébé rime avec bonheur et non avec stress financier.\n\nPour découvrir toutes nos solutions de financement, consultez notre page <a href="/prets-personnels" style="color:var(--red);font-weight:600">prêts personnels</a>.',
+    },
+    why: {
+      heading: 'Pourquoi choisir un crédit naissance SOrloz pour préparer l\'arrivée de bébé ?',
+      intro: 'L\'arrivée d\'un enfant bouleverse le quotidien et le budget du foyer. Le crédit naissance SOrloz vous permet de tout préparer sereinement, sans sacrifier la qualité de l\'équipement ni votre épargne de précaution. Voici les avantages de notre solution :',
+      sections: [
+        { title: 'Équipez-vous sans faire de compromis', body: 'Quand on attend un bébé, on veut le meilleur pour lui : un lit sécurisé, une poussette confortable, un siège auto aux dernières normes, des vêtements de qualité. Mais tout cela a un coût, et les dépenses arrivent souvent en même temps. Le crédit naissance SOrloz vous permet d\'acheter l\'ensemble de l\'équipement nécessaire sans avoir à faire de compromis sur la qualité ou la sécurité. Vous choisissez librement vos achats et vous remboursez à votre rythme, avec des mensualités adaptées à votre budget familial.' },
+        { title: 'Anticipez les changements de votre budget familial', body: 'L\'arrivée d\'un enfant modifie profondément l\'équilibre financier du foyer : réduction du temps de travail, congé parental, frais de garde, dépenses courantes supplémentaires… Le crédit naissance vous permet de lisser ces dépenses dans le temps plutôt que de les concentrer sur les premiers mois. Avec un taux fixe et des mensualités stables, vous pouvez planifier votre budget familial en toute sérénité et aborder cette nouvelle étape avec confiance.' },
+        { title: 'Un processus rapide pour ne rien manquer', body: 'Les neuf mois de grossesse passent vite, et il y a tant de choses à préparer avant l\'arrivée de bébé. Chez SOrloz, notre processus de demande est entièrement en ligne et ne prend que quelques minutes. Vous obtenez une réponse de principe immédiate et les fonds sont disponibles sous 48 heures après validation de votre dossier. Vous avez ainsi tout le temps de choisir, comparer et acheter les équipements dont vous avez besoin, sans précipitation et en toute tranquillité.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit naissance sur mesure pour votre projet',
+        subheading: 'Options de personnalisation',
+        body: 'Lorsque vous choisissez un crédit naissance avec SOrloz, vous pouvez adapter le prêt aux besoins spécifiques de votre projet parental.',
+        bullets: [
+          '<strong>Montant :</strong> Déterminez la somme dont vous avez besoin pour préparer l\'arrivée de bébé. Qu\'il s\'agisse uniquement de puériculture ou d\'un aménagement complet de la chambre et de la maison, le montant peut varier de 5 500 € à 60 000 €.',
+          '<strong>Durée :</strong> Choisissez la période de remboursement la plus adaptée à votre situation familiale, de 12 à 84 mois. Tenez compte de l\'impact éventuel d\'un congé parental sur vos revenus pour trouver la bonne durée.',
+          '<strong>Mensualités :</strong> Ajustez le montant de vos remboursements mensuels pour qu\'ils restent compatibles avec votre nouveau budget familial, même si un des parents réduit son activité professionnelle.',
+        ],
+        outro: 'Le crédit naissance SOrloz accompagne tous les projets parentaux : premier enfant, naissance multiple, adoption ou encore aménagement d\'un logement plus grand pour accueillir votre famille qui s\'agrandit.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit naissance avec SOrloz ?',
+        body: 'Obtenir un crédit naissance chez SOrloz est simple et rapide, pour que vous puissiez vous concentrer sur l\'essentiel : l\'arrivée de bébé. Voici les étapes :',
+        bullets: [
+          '<strong>Simulation en ligne :</strong> Renseignez le montant envisagé pour vos achats de naissance et choisissez la durée de remboursement adaptée à votre budget familial. Notre simulateur affiche instantanément vos mensualités.',
+          '<strong>Formulaire de demande :</strong> Complétez votre dossier en quelques minutes avec les informations nécessaires. Aucun justificatif d\'achat ou certificat de grossesse n\'est requis : c\'est un prêt personnel non affecté.',
+          '<strong>Signature et réception des fonds :</strong> Finalisez votre demande dans votre Espace Personnel Sécurisé. Après acceptation et passé le délai légal de rétractation, les fonds sont versés sous 48h sur votre compte bancaire.',
+        ],
+        outro: 'Avec le crédit naissance SOrloz, accueillez votre bébé dans les meilleures conditions. Nos solutions flexibles, notre accompagnement bienveillant et nos taux compétitifs vous permettent de vivre pleinement ce moment unique sans pression financière.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous préparez aussi votre mariage ?',
+      body: 'Découvrez notre crédit mariage pour organiser la cérémonie de vos rêves, de la salle de réception au voyage de noces.',
+      link_href: '/prets-personnels/credit-projet/credit-mariage',
+      link_text: 'Découvrir le crédit mariage',
+    },
+    example: { amount: 7000, months: 36, rate: 7.78 },
+    faq_title: 'Vos questions sur le crédit naissance',
+    faq: [
+      { q: 'Quels achats puis-je financer avec le crédit naissance ?', a: 'Tous les achats liés à l\'arrivée de bébé : chambre, poussette, siège auto, vêtements, matériel de puériculture, aménagement du logement… Le crédit naissance est un prêt personnel sans justificatif.' },
+      { q: 'Quel montant emprunter pour préparer l\'arrivée de bébé ?', a: 'Vous pouvez emprunter entre 5 500 € et 60 000 € selon vos besoins et votre capacité de remboursement. Le budget moyen pour un premier bébé se situe entre 3 000 € et 10 000 €.' },
+      { q: 'Peut-on faire une demande à deux parents ?', a: 'Oui, vous pouvez faire une demande de crédit naissance à deux co-emprunteurs pour augmenter votre capacité d\'emprunt et obtenir des conditions adaptées.' },
+      { q: 'Quand faut-il faire sa demande de crédit naissance ?', a: 'Idéalement dès le début du deuxième trimestre de grossesse, pour avoir le temps de préparer sereinement la chambre et l\'équipement de bébé avant le jour J.' },
+    ],
+    features_name: 'Naissance',
+    articles: [
+      { icon: '👶', tag: 'Naissance', href: '/conseils', title: 'Budget bébé : combien coûte l\'arrivée d\'un enfant ?', excerpt: 'Poussette, chambre, vêtements, garde… Découvrez le budget moyen pour accueillir un premier bébé et les postes de dépenses à prévoir.' },
+      { icon: '💡', tag: 'Conseil', href: '/conseils', title: 'Liste de naissance : les indispensables à ne pas oublier', excerpt: 'De la maternité aux premiers mois : notre checklist complète pour préparer l\'arrivée de bébé sans rien oublier.' },
+      { icon: '📋', tag: 'Pratique', href: '/conseils', title: 'Congé parental et finances : bien anticiper la baisse de revenus', excerpt: 'Nos conseils pour organiser votre budget familial lorsque l\'un des parents réduit son activité après la naissance.' },
+    ],
   },
 
   // ── Crédit mariage

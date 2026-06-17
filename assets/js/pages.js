@@ -1091,14 +1091,32 @@ function _heroRight(page) {
 }
 
 // Hero section injected into #page-hero
+function _responsiveStyles() {
+  return '<style>'
+    + '.pg-grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}'
+    + '.pg-grid2s{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}'
+    + '.pg-grid2e{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.08)}'
+    + '.pg-hub{display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start}'
+    + '.pg-ed{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}'
+    + '@media(max-width:768px){'
+    + '.pg-grid2,.pg-grid2s,.pg-grid2e,.pg-hub,.pg-ed{grid-template-columns:1fr !important}'
+    + '.pg-grid2{gap:24px}'
+    + '.pg-grid2s{gap:32px}'
+    + '.pg-hub{gap:32px}'
+    + '.pg-ed{gap:24px}'
+    + '}'
+    + '</style>';
+}
+
 function _heroSection(page) {
   var title = page.title_hero || page.hero_fr || page.title_fr || '';
   var desc = page.desc_fr || '';
   var bg = page.bg || 'var(--pink-bg)';
 
-  return '<section style="background:' + bg + ';padding:64px 0 0">'
+  return _responsiveStyles()
+    + '<section style="background:' + bg + ';padding:64px 0 0">'
     + '<div class="container">'
-    + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">'
+    + '<div class="pg-grid2">'
     // Left column: breadcrumb, title, description, simulator form
     + '<div>'
     + _breadcrumb(page)
@@ -1177,7 +1195,7 @@ function _insuranceAndChecklist(page) {
   }).join('');
   return '<section style="background:#fff;padding:64px 0">'
     + '<div class="container">'
-    + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">'
+    + '<div class="pg-grid2s">'
     + '<div>' + _insuranceCard() + '</div>'
     + '<div>'
     + '<h2 style="font-size:22px;font-weight:800;color:var(--dark);margin-bottom:24px">Le Prêt Personnel ' + name + ' : SOrloz vous accompagne</h2>'
@@ -1217,7 +1235,7 @@ function _exampleSection(page) {
   }
   return '<section style="background:#f8f6f2;padding:64px 0">'
     + '<div class="container" style="max-width:760px">'
-    + '<div style="display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.08)">'
+    + '<div class="pg-grid2e">'
     + '<div style="background:#1a4731;color:#fff;padding:48px 40px;display:flex;flex-direction:column;justify-content:center">'
     + '<p style="font-size:13px;opacity:.65;margin-bottom:8px">Montant emprunté</p>'
     + '<p style="font-size:52px;font-weight:900;line-height:1;margin-bottom:8px">' + ex.amount.toLocaleString('fr-FR') + ' €</p>'
@@ -1320,7 +1338,7 @@ function _hubBodyAndNav(page) {
   }).join('');
   return '<section style="background:#fff;padding:64px 0">'
     + '<div class="container">'
-    + '<div style="display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start">'
+    + '<div class="pg-hub">'
     + '<div><p style="font-size:16px;color:var(--text-light);line-height:1.9">' + body + '</p></div>'
     + '<nav>' + links + '</nav>'
     + '</div>'
@@ -1333,7 +1351,7 @@ function _editorialSection(page) {
   if (!ed) return '';
   return '<section style="background:#fff;padding:56px 0;border-top:1px solid #f0f0f0">'
     + '<div class="container">'
-    + '<div style="display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start">'
+    + '<div class="pg-ed">'
     + '<h2 style="font-size:28px;font-weight:900;color:var(--dark);line-height:1.3;margin:0">' + ed.heading + '</h2>'
     + '<div>'
     + '<p style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--red);margin-bottom:16px">' + ed.subheading + '</p>'

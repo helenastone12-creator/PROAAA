@@ -5,7 +5,7 @@ const PAGE_CONFIG = {
 
   // ── Prêts personnels hub
   '/prets-personnels': {
-    icon: '📋', bg: 'var(--pink-bg)',
+    icon: '📋', bg: 'var(--green-bg)',
     title_fr: 'Prêts personnels',
     hero_fr: 'Financement de vos projets personnels',
     title_hero: 'Prêts personnels : à portée de financement',
@@ -32,7 +32,7 @@ const PAGE_CONFIG = {
 
   // ── Crédit projet hub
   '/prets-personnels/credit-projet': {
-    icon: '💼', bg: 'var(--pink-bg)',
+    icon: '💼', bg: 'var(--green-bg)',
     title_fr: 'Crédit projet',
     title_hero: 'Crédit projet : voyez les choses en grand',
     hero_fr: 'Financez tous vos projets',
@@ -62,7 +62,7 @@ const PAGE_CONFIG = {
 
   // ── Crédit vacances
   '/prets-personnels/credit-projet/credit-vacances': {
-    icon: '✈️', bg: 'var(--pink-bg)',
+    icon: '✈️', bg: 'var(--green-bg)',
     title_fr: 'Crédit vacances',
     title_hero: 'Crédit vacances : sous le soleil des tropiques',
     desc_fr: 'Envie de soleil, de découverte ou de détente ? Le crédit vacances SOrloz vous permet de partir sereinement et de rembourser à votre rythme, sans vous priver.',
@@ -113,7 +113,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/credit-projet/credit-demenagement': {
-    icon: '📦', bg: 'var(--pink-bg)',
+    icon: '📦', bg: 'var(--green-bg)',
     title_fr: 'Crédit déménagement',
     hero_fr: 'Déménagez l\'esprit tranquille',
     desc_fr: 'Location de camion, frais d\'agence, premiers loyers, achats mobilier… Le crédit déménagement SOrloz couvre toutes vos dépenses liées à votre nouvelle installation.',
@@ -121,7 +121,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/credit-projet/credit-loisirs': {
-    icon: '🎯', bg: 'var(--pink-bg)',
+    icon: '🎯', bg: 'var(--green-bg)',
     title_fr: 'Crédit loisirs',
     hero_fr: 'Profitez pleinement de vos loisirs',
     desc_fr: 'Sport, culture, hi-fi, instruments de musique, animaux… Le crédit loisirs SOrloz finance toutes vos passions et vos plaisirs du quotidien.',
@@ -129,7 +129,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/credit-projet/credit-divorce': {
-    icon: '⚖️', bg: 'var(--pink-bg)',
+    icon: '⚖️', bg: 'var(--green-bg)',
     title_fr: 'Crédit divorce',
     hero_fr: 'Rebondir après un divorce',
     desc_fr: 'Un divorce entraîne de nombreux frais : honoraires d\'avocat, nouvelle installation, rachat de soulte… Le crédit divorce SOrloz vous aide à traverser cette étape et à repartir du bon pied.',
@@ -137,7 +137,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/credit-projet/credit-retraite': {
-    icon: '🏖️', bg: 'var(--pink-bg)',
+    icon: '🏖️', bg: 'var(--green-bg)',
     title_fr: 'Crédit retraite',
     hero_fr: 'Profitez pleinement de votre retraite',
     desc_fr: 'La retraite est une nouvelle aventure ! Voyages, loisirs, aménagement de votre maison… Le crédit retraite SOrloz vous aide à financer vos projets pour en profiter pleinement.',
@@ -145,7 +145,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/credit-projet/credit-naissance': {
-    icon: '👶', bg: 'var(--pink-bg)',
+    icon: '👶', bg: 'var(--green-bg)',
     title_fr: 'Crédit naissance',
     hero_fr: 'Préparez l\'arrivée de bébé',
     desc_fr: 'L\'arrivée d\'un enfant est un bonheur qui s\'accompagne de nombreux achats. Poussette, chambre, équipement… Le crédit naissance SOrloz vous aide à tout préparer.',
@@ -154,7 +154,7 @@ const PAGE_CONFIG = {
 
   // ── Crédit mariage
   '/prets-personnels/credit-projet/credit-mariage': {
-    icon: '💍', bg: 'var(--pink-bg)',
+    icon: '💍', bg: 'var(--green-bg)',
     title_fr: 'Crédit mariage',
     title_hero: 'Crédit mariage : le plus beau jour de votre vie',
     desc_fr: 'Salle de réception, traiteur, robe, voyage de noces… Le crédit mariage SOrloz vous permet d\'organiser la cérémonie de vos rêves sans compromis.',
@@ -659,7 +659,7 @@ const PAGE_CONFIG = {
   },
 
   '/conseils': {
-    icon: '💡', bg: 'var(--pink-bg)',
+    icon: '💡', bg: 'var(--green-bg)',
     title_fr: 'Nos conseils',
     hero_fr: 'Conseils et guides pour vos projets',
     desc_fr: 'Retrouvez tous nos conseils pour bien choisir votre crédit, comprendre les taux, préparer votre dossier et financer vos projets dans les meilleures conditions.',
@@ -673,14 +673,14 @@ const PAGE_CONFIG = {
   },
 
   '/faq': {
-    icon: '❓', bg: 'var(--pink-bg)',
+    icon: '❓', bg: 'var(--green-bg)',
     title_fr: 'Foire aux questions',
     hero_fr: 'Toutes les réponses à vos questions',
     desc_fr: 'Retrouvez ici les réponses aux questions les plus fréquentes sur nos crédits, nos taux, nos assurances et nos services.',
   },
 
   '/faq/faire-une-reclamation': {
-    icon: '📝', bg: 'var(--pink-bg)',
+    icon: '📝', bg: 'var(--green-bg)',
     title_fr: 'Faire une réclamation',
     hero_fr: 'Soumettre une réclamation',
     desc_fr: 'Vous souhaitez nous soumettre une réclamation ? Expliquez-nous votre situation et notre équipe s\'engage à vous répondre dans les meilleurs délais.',
@@ -737,7 +737,7 @@ const PAGE_CONFIG = {
   },
 
   '/simulateur': {
-    icon: '🧮', bg: 'var(--pink-bg)',
+    icon: '🧮', bg: 'var(--green-bg)',
     title_fr: 'Simulateur de crédit',
     hero_fr: 'Simulez votre crédit en ligne',
     desc_fr: 'Calculez vos mensualités en quelques secondes. Montant, durée, taux… Notre simulateur vous donne une réponse immédiate et sans engagement.',
@@ -768,7 +768,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/simulation-credit-projet': {
-    icon: '💼', bg: 'var(--pink-bg)',
+    icon: '💼', bg: 'var(--green-bg)',
     title_fr: 'Simulation crédit projet',
     hero_fr: 'Simulez votre crédit projet',
     desc_fr: 'Estimez le coût de votre crédit projet en quelques secondes. Montant, durée, mensualités — obtenez une réponse immédiate.',
@@ -776,7 +776,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/simulation-credit-mariage': {
-    icon: '💍', bg: 'var(--pink-bg)',
+    icon: '💍', bg: 'var(--green-bg)',
     title_fr: 'Simulation crédit mariage',
     hero_fr: 'Simulez votre crédit mariage',
     desc_fr: 'Préparez votre budget mariage grâce à notre simulateur. Calculez vos mensualités sans engagement en quelques clics.',
@@ -784,7 +784,7 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/simulation-credit-vacances': {
-    icon: '✈️', bg: 'var(--pink-bg)',
+    icon: '✈️', bg: 'var(--green-bg)',
     title_fr: 'Simulation crédit vacances',
     hero_fr: 'Simulez votre crédit vacances',
     desc_fr: 'Partez l\'esprit tranquille ! Estimez vos mensualités pour financer vos vacances avec SOrloz.',
@@ -1060,15 +1060,15 @@ function _breadcrumb(page) {
 
 // Inline pill tag used in hero testimonial paragraph
 function _pill(text) {
-  return '<span style="background:rgba(0,0,0,.07);color:var(--dark);font-weight:700;padding:4px 14px;border-radius:20px;font-size:15px;white-space:nowrap">' + text + '</span>';
+  return '<span style="display:inline;background:rgba(0,0,0,.06);color:var(--dark);font-weight:700;padding:2px 10px;border-radius:14px;font-size:13px;white-space:nowrap">' + text + '</span>';
 }
 
 // Right column of hero: testimonial paragraph with pill tags, or fallback rate card
 function _heroRight(page) {
   var t = page.testimonial;
   if (t) {
-    return '<div style="padding:32px 0 16px">'
-      + '<p style="font-size:15px;color:var(--dark);line-height:2.2;margin-bottom:16px">'
+    return '<div style="padding:16px 0">'
+      + '<p style="font-size:14px;color:var(--dark);line-height:2;margin-bottom:12px">'
       + 'Avec une mensualité de ' + _pill(t.monthly + ' €/mois')
       + ' pendant ' + _pill(t.months + ' mois') + '. '
       + _pill(t.names)
@@ -1077,7 +1077,7 @@ function _heroRight(page) {
       + ' pour un montant dû de ' + _pill(t.total_due + ' €')
       + ' et ' + _pill(t.purpose) + '.'
       + '</p>'
-      + '<a href="/infos/mentions-legales" style="font-size:13px;color:var(--dark);opacity:.65;text-decoration:underline">Voir les conditions de l\'offre</a>'
+      + '<a href="/infos/mentions-legales" style="font-size:12px;color:var(--dark);opacity:.55;text-decoration:underline">Voir les conditions de l\'offre</a>'
       + '</div>';
   }
   // Fallback: red TAEG rate card
@@ -1098,12 +1098,18 @@ function _responsiveStyles() {
     + '.pg-grid2e{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.08)}'
     + '.pg-hub{display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start}'
     + '.pg-ed{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}'
+    + '.pg-form{display:flex;gap:0;background:#fff;border-radius:50px;overflow:hidden;border:2.5px solid var(--dark);max-width:480px}'
+    + '.pg-form input{flex:1;min-width:0;border:none;padding:14px 20px;font-size:15px;outline:none;background:transparent}'
+    + '.pg-form button{flex:0 0 auto;border-radius:50px;padding:12px 22px;margin:4px;white-space:nowrap;background:var(--dark);color:#fff;border:none;font-size:14px;font-weight:700;cursor:pointer}'
     + '@media(max-width:768px){'
     + '.pg-grid2,.pg-grid2s,.pg-grid2e,.pg-hub,.pg-ed{grid-template-columns:1fr !important}'
     + '.pg-grid2{gap:24px}'
     + '.pg-grid2s{gap:32px}'
     + '.pg-hub{gap:32px}'
     + '.pg-ed{gap:24px}'
+    + '.pg-form{max-width:100%;border-radius:40px}'
+    + '.pg-form input{padding:12px 16px;font-size:14px}'
+    + '.pg-form button{padding:10px 16px;font-size:13px}'
     + '}'
     + '</style>';
 }
@@ -1111,7 +1117,7 @@ function _responsiveStyles() {
 function _heroSection(page) {
   var title = page.title_hero || page.hero_fr || page.title_fr || '';
   var desc = page.desc_fr || '';
-  var bg = page.bg || 'var(--pink-bg)';
+  var bg = page.bg || 'var(--green-bg)';
 
   return _responsiveStyles()
     + '<section style="background:' + bg + ';padding:64px 0 0">'
@@ -1122,9 +1128,9 @@ function _heroSection(page) {
     + _breadcrumb(page)
     + '<h1 style="font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--dark);line-height:1.15;margin-bottom:16px">' + title + '</h1>'
     + '<p style="font-size:17px;color:var(--text-light);line-height:1.7;max-width:460px;margin-bottom:32px">' + desc + '</p>'
-    + '<form style="display:flex;gap:0;background:#fff;border-radius:50px;overflow:hidden;border:2.5px solid var(--dark);max-width:480px" onsubmit="return false">'
-    + '<input type="number" min="5500" max="60000" placeholder="Saisir un montant entre 5 500 € et 60 000 €" class="sim-input" style="flex:1;min-width:0;border:none;padding:14px 24px;font-size:15px;outline:none;background:transparent">'
-    + '<button class="sim-btn" style="flex:0 0 auto;border-radius:50px;padding:14px 28px;margin:4px;white-space:nowrap;background:var(--dark);color:#fff;border:none;font-size:15px;font-weight:700;cursor:pointer">Faire une simulation</button>'
+    + '<form class="pg-form" onsubmit="return false">'
+    + '<input type="number" min="5500" max="60000" placeholder="Saisir un montant entre 5 500 € et 60 000 €" class="sim-input">'
+    + '<button class="sim-btn">Faire une simulation</button>'
     + '</form>'
     + '</div>'
     // Right column: testimonial pills or rate card

@@ -1099,7 +1099,7 @@ function _responsiveStyles() {
     + '.pg-hub{display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start}'
     + '.pg-ed{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}'
     + '.pg-hero{background:#d5f0de !important;padding:64px 0 40px}'
-    + '.pg-form{display:flex;gap:0;background:#fff;border-radius:50px;overflow:hidden;border:2px solid #1B3A4B;max-width:480px}'
+    + '.pg-form{display:flex;align-items:center;background:#fff;border-radius:50px;overflow:hidden;border:1.5px solid rgba(27,58,75,.25);max-width:480px}'
     + '.pg-form .sim-input{flex:1 1 50% !important;min-width:120px !important;border:none !important;border-radius:0 !important;padding:14px 20px !important;font-size:15px;outline:none;background:transparent !important;width:auto !important}'
     + '.pg-form .sim-btn{flex:0 0 auto !important;border-radius:50px !important;padding:12px 22px !important;margin:4px !important;white-space:nowrap;background:var(--dark);color:#fff;border:none;font-size:14px;font-weight:600;cursor:pointer;width:auto !important}'
     + '@media(max-width:768px){'

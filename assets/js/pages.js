@@ -1122,9 +1122,9 @@ function _heroSection(page) {
     + _breadcrumb(page)
     + '<h1 style="font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--dark);line-height:1.15;margin-bottom:16px">' + title + '</h1>'
     + '<p style="font-size:17px;color:var(--text-light);line-height:1.7;max-width:460px;margin-bottom:32px">' + desc + '</p>'
-    + '<form style="display:flex;gap:0;background:#fff;border-radius:50px;overflow:hidden;border:1.5px solid #dde;max-width:420px" onsubmit="return false">'
-    + '<input type="number" min="5500" max="60000" placeholder="5 500 € - 60 000 €" class="sim-input" style="flex:2;min-width:0;border:none;padding:12px 20px;font-size:15px;outline:none;background:transparent">'
-    + '<button class="sim-btn" style="flex:0 0 auto;border-radius:0 50px 50px 0;padding:12px 20px;white-space:nowrap;background:var(--dark);color:#fff;border:none;font-size:14px;font-weight:600;cursor:pointer">Simuler mon prêt</button>'
+    + '<form style="display:flex;gap:0;background:#fff;border-radius:50px;overflow:hidden;border:2.5px solid var(--dark);max-width:480px" onsubmit="return false">'
+    + '<input type="number" min="5500" max="60000" placeholder="Saisir un montant entre 5 500 € et 60 000 €" class="sim-input" style="flex:1;min-width:0;border:none;padding:14px 24px;font-size:15px;outline:none;background:transparent">'
+    + '<button class="sim-btn" style="flex:0 0 auto;border-radius:50px;padding:14px 28px;margin:4px;white-space:nowrap;background:var(--dark);color:#fff;border:none;font-size:15px;font-weight:700;cursor:pointer">Faire une simulation</button>'
     + '</form>'
     + '</div>'
     // Right column: testimonial pills or rate card

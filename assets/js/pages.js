@@ -1,4 +1,6 @@
-// Page configuration keyed by full pathname (matching exact Meia URL structure)
+// ─── PAGE_CONFIG ──────────────────────────────────────────────────────────────
+// Keyed by full pathname (matching URL structure)
+
 const PAGE_CONFIG = {
 
   // ── Prêts personnels hub
@@ -117,6 +119,7 @@ const PAGE_CONFIG = {
     desc_fr: 'Location de camion, frais d\'agence, premiers loyers, achats mobilier… Le crédit déménagement SOrloz couvre toutes vos dépenses liées à votre nouvelle installation.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
   },
+
   '/prets-personnels/credit-projet/credit-loisirs': {
     icon: '🎯', bg: 'var(--pink-bg)',
     title_fr: 'Crédit loisirs',
@@ -124,6 +127,7 @@ const PAGE_CONFIG = {
     desc_fr: 'Sport, culture, hi-fi, instruments de musique, animaux… Le crédit loisirs SOrloz finance toutes vos passions et vos plaisirs du quotidien.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
   },
+
   '/prets-personnels/credit-projet/credit-divorce': {
     icon: '⚖️', bg: 'var(--pink-bg)',
     title_fr: 'Crédit divorce',
@@ -131,6 +135,7 @@ const PAGE_CONFIG = {
     desc_fr: 'Un divorce entraîne de nombreux frais : honoraires d\'avocat, nouvelle installation, rachat de soulte… Le crédit divorce SOrloz vous aide à traverser cette étape et à repartir du bon pied.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
   },
+
   '/prets-personnels/credit-projet/credit-retraite': {
     icon: '🏖️', bg: 'var(--pink-bg)',
     title_fr: 'Crédit retraite',
@@ -138,6 +143,7 @@ const PAGE_CONFIG = {
     desc_fr: 'La retraite est une nouvelle aventure ! Voyages, loisirs, aménagement de votre maison… Le crédit retraite SOrloz vous aide à financer vos projets pour en profiter pleinement.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
   },
+
   '/prets-personnels/credit-projet/credit-naissance': {
     icon: '👶', bg: 'var(--pink-bg)',
     title_fr: 'Crédit naissance',
@@ -410,6 +416,7 @@ const PAGE_CONFIG = {
     desc_fr: 'Le meilleur des deux mondes ! Avec le crédit voiture hybride SOrloz, profitez d\'un financement avantageux pour votre véhicule hybride et réduisez votre empreinte carbone.',
     parent: { href: '/prets-personnels/credit-auto', label_fr: 'Crédit auto' },
   },
+
   '/prets-personnels/credit-auto/credit-voiture-thermique': {
     icon: '⛽', bg: 'var(--green-bg)',
     title_fr: 'Crédit voiture thermique',
@@ -440,6 +447,7 @@ const PAGE_CONFIG = {
     desc_fr: 'Offrez-vous la moto de vos rêves ! Le crédit moto neuve SOrloz vous permet de financer votre deux-roues avec des mensualités adaptées.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
   },
+
   '/prets-personnels/credit-moto/credit-moto-occasion': {
     icon: '🏍️', bg: 'var(--teal-bg)',
     title_fr: 'Crédit moto occasion',
@@ -447,6 +455,7 @@ const PAGE_CONFIG = {
     desc_fr: 'Trouvez la moto d\'occasion idéale et financez-la avec SOrloz. Des conditions avantageuses pour votre projet deux-roues.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
   },
+
   '/prets-personnels/credit-moto/credit-moto-hybride': {
     icon: '🔋', bg: 'var(--teal-bg)',
     title_fr: 'Crédit moto hybride',
@@ -454,6 +463,7 @@ const PAGE_CONFIG = {
     desc_fr: 'Adoptez la mobilité hybride pour vos deux-roues. SOrloz vous propose un financement avantageux pour votre moto hybride.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
   },
+
   '/prets-personnels/credit-moto/credit-moto-thermique': {
     icon: '⛽', bg: 'var(--teal-bg)',
     title_fr: 'Crédit moto thermique',
@@ -485,49 +495,64 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/credit-travaux-interieur': {
-    icon: '🏠', bg: 'var(--yellow-bg)', title_fr: 'Crédit travaux intérieur',
+    icon: '🏠', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit travaux intérieur',
     hero_fr: 'Financez vos travaux intérieurs',
     desc_fr: 'Rénovez votre intérieur avec le financement SOrloz. Peinture, parquet, isolation, électricité… Tous vos travaux intérieurs financés à des conditions avantageuses.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux-exterieur': {
-    icon: '🏡', bg: 'var(--yellow-bg)', title_fr: 'Crédit travaux extérieur',
+    icon: '🏡', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit travaux extérieur',
     hero_fr: 'Financez vos travaux extérieurs',
     desc_fr: 'Façade, toiture, terrasse, jardin… Le crédit travaux extérieur SOrloz vous permet de financer l\'aménagement et la rénovation de l\'extérieur de votre maison.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux/credit-renovation': {
-    icon: '🔧', bg: 'var(--yellow-bg)', title_fr: 'Crédit rénovation',
+    icon: '🔧', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit rénovation',
     hero_fr: 'Financez la rénovation de votre logement',
     desc_fr: 'Transformez votre logement avec le crédit rénovation SOrloz. Des fonds disponibles rapidement pour démarrer vos travaux de rénovation.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux/credit-salle-de-bain': {
-    icon: '🛁', bg: 'var(--yellow-bg)', title_fr: 'Crédit salle de bain',
+    icon: '🛁', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit salle de bain',
     hero_fr: 'Financez votre nouvelle salle de bain',
     desc_fr: 'Créez la salle de bain de vos rêves avec le financement SOrloz. Baignoire, douche à l\'italienne, double vasque… Réalisez votre projet sans attendre.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux/credit-piscine': {
-    icon: '🏊', bg: 'var(--yellow-bg)', title_fr: 'Crédit piscine',
+    icon: '🏊', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit piscine',
     hero_fr: 'Financez votre piscine avec SOrloz',
     desc_fr: 'Une piscine dans votre jardin, c\'est possible ! Le crédit piscine SOrloz finance la construction ou la rénovation de votre espace aquatique.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux/credit-cuisine': {
-    icon: '🍳', bg: 'var(--yellow-bg)', title_fr: 'Crédit cuisine',
+    icon: '🍳', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit cuisine',
     hero_fr: 'Financez votre nouvelle cuisine',
     desc_fr: 'Réaménagez votre cuisine avec le crédit cuisine SOrloz. Plan de travail, électroménager, mobilier… Concrétisez votre projet de cuisine idéale.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux/credit-veranda': {
-    icon: '🌿', bg: 'var(--yellow-bg)', title_fr: 'Crédit véranda',
+    icon: '🌿', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit véranda',
     hero_fr: 'Financez votre véranda',
     desc_fr: 'Agrandissez votre espace de vie avec une véranda financée par SOrloz. Un investissement qui valorise votre bien immobilier.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux/credit-terrasse': {
-    icon: '🏡', bg: 'var(--yellow-bg)', title_fr: 'Crédit terrasse',
+    icon: '🏡', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit terrasse',
     hero_fr: 'Financez votre terrasse avec SOrloz',
     desc_fr: 'Créez ou rénovez votre terrasse avec le financement SOrloz. Bois, composite, béton… Un espace extérieur de qualité pour profiter des beaux jours.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
@@ -586,31 +611,40 @@ const PAGE_CONFIG = {
   },
 
   '/prets-personnels/credit-travaux/credit-isolation': {
-    icon: '🏠', bg: 'var(--yellow-bg)', title_fr: 'Crédit isolation',
+    icon: '🏠', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit isolation',
     hero_fr: 'Financez vos travaux d\'isolation',
     desc_fr: 'Isolation des combles, des murs, du plancher… Réduisez votre consommation d\'énergie et améliorez votre confort avec le crédit isolation SOrloz.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux/credit-amenagement': {
-    icon: '🛋️', bg: 'var(--yellow-bg)', title_fr: 'Crédit aménagement',
+    icon: '🛋️', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit aménagement',
     hero_fr: 'Financez vos travaux d\'aménagement',
     desc_fr: 'Parquet, peinture, électricité, plomberie… Le crédit aménagement SOrloz vous aide à transformer votre intérieur selon vos envies et votre budget.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-travaux-maison': {
-    icon: '🏠', bg: 'var(--yellow-bg)', title_fr: 'Crédit travaux maison',
+    icon: '🏠', bg: 'var(--yellow-bg)',
+    title_fr: 'Crédit travaux maison',
     hero_fr: 'Financez les travaux de votre maison',
     desc_fr: 'Tous les travaux de votre maison, de la cave au grenier, financés par SOrloz. Des conditions adaptées à votre projet pour réaliser la maison de vos rêves.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/credit-economie-energie': {
-    icon: '♻️', bg: 'var(--green-bg)', title_fr: 'Crédit économie d\'énergie',
+    icon: '♻️', bg: 'var(--green-bg)',
+    title_fr: 'Crédit économie d\'énergie',
     hero_fr: 'Financez vos travaux d\'économie d\'énergie',
     desc_fr: 'Isolation, pompe à chaleur, panneaux solaires, chaudière… Réduisez votre consommation énergétique et vos factures avec le crédit économie d\'énergie SOrloz.',
     parent: { href: '/prets-personnels', label_fr: 'Prêts personnels' },
   },
+
   '/prets-personnels/credit-vehicule-vert': {
-    icon: '🌿', bg: 'var(--green-bg)', title_fr: 'Crédit véhicule vert',
+    icon: '🌿', bg: 'var(--green-bg)',
+    title_fr: 'Crédit véhicule vert',
     hero_fr: 'Financez votre véhicule écologique',
     desc_fr: 'Vélo électrique, trottinette, voiture électrique ou hybride… Le crédit véhicule vert SOrloz vous propose un financement avantageux pour une mobilité plus propre.',
     parent: { href: '/prets-personnels', label_fr: 'Prêts personnels' },
@@ -618,115 +652,154 @@ const PAGE_CONFIG = {
 
   // ── Assurance / Conseils / Contact / FAQ / Infos
   '/assurance/nos-assurances-de-prets': {
-    icon: '🛡️', bg: 'var(--teal-bg)', title_fr: 'Nos assurances de prêts',
+    icon: '🛡️', bg: 'var(--teal-bg)',
+    title_fr: 'Nos assurances de prêts',
     hero_fr: 'Protégez votre crédit avec SOrloz',
     desc_fr: 'Décès, invalidité, incapacité de travail, perte d\'emploi… Les assurances SOrloz vous protègent ainsi que vos proches en cas d\'accident de la vie.',
   },
+
   '/conseils': {
-    icon: '💡', bg: 'var(--pink-bg)', title_fr: 'Nos conseils',
+    icon: '💡', bg: 'var(--pink-bg)',
+    title_fr: 'Nos conseils',
     hero_fr: 'Conseils et guides pour vos projets',
     desc_fr: 'Retrouvez tous nos conseils pour bien choisir votre crédit, comprendre les taux, préparer votre dossier et financer vos projets dans les meilleures conditions.',
   },
+
   '/contact': {
-    icon: '📞', bg: 'var(--yellow-bg)', title_fr: 'Aide et contact',
+    icon: '📞', bg: 'var(--yellow-bg)',
+    title_fr: 'Aide et contact',
     hero_fr: 'Nous sommes là pour vous',
     desc_fr: 'Une question sur votre crédit ou votre dossier ? Notre équipe est disponible du lundi au vendredi de 8h30 à 19h pour vous accompagner.',
   },
+
   '/faq': {
-    icon: '❓', bg: 'var(--pink-bg)', title_fr: 'Foire aux questions',
+    icon: '❓', bg: 'var(--pink-bg)',
+    title_fr: 'Foire aux questions',
     hero_fr: 'Toutes les réponses à vos questions',
     desc_fr: 'Retrouvez ici les réponses aux questions les plus fréquentes sur nos crédits, nos taux, nos assurances et nos services.',
   },
+
   '/faq/faire-une-reclamation': {
-    icon: '📝', bg: 'var(--pink-bg)', title_fr: 'Faire une réclamation',
+    icon: '📝', bg: 'var(--pink-bg)',
+    title_fr: 'Faire une réclamation',
     hero_fr: 'Soumettre une réclamation',
     desc_fr: 'Vous souhaitez nous soumettre une réclamation ? Expliquez-nous votre situation et notre équipe s\'engage à vous répondre dans les meilleurs délais.',
     parent: { href: '/faq', label_fr: 'FAQ' },
   },
+
   '/infos/qui-sommes-nous': {
-    icon: '🏢', bg: 'var(--teal-bg)', title_fr: 'Qui sommes-nous ?',
+    icon: '🏢', bg: 'var(--teal-bg)',
+    title_fr: 'Qui sommes-nous ?',
     hero_fr: 'SOrloz, votre partenaire financier',
     desc_fr: 'Découvrez l\'histoire de SOrloz, nos valeurs et notre engagement pour un financement responsable au service de vos projets de vie.',
   },
+
   '/infos/mentions-legales': {
-    icon: '📄', bg: 'var(--teal-bg)', title_fr: 'Mentions légales',
+    icon: '📄', bg: 'var(--teal-bg)',
+    title_fr: 'Mentions légales',
     hero_fr: 'Mentions légales SOrloz',
     desc_fr: 'Informations légales relatives au site SOrloz et à la société SOrloz.',
   },
+
   '/infos/politique-de-confidentialite': {
-    icon: '🔒', bg: 'var(--teal-bg)', title_fr: 'Politique de confidentialité',
+    icon: '🔒', bg: 'var(--teal-bg)',
+    title_fr: 'Politique de confidentialité',
     hero_fr: 'Protection de vos données personnelles',
     desc_fr: 'Découvrez comment SOrloz collecte, utilise et protège vos données personnelles conformément au RGPD.',
   },
+
   '/infos/cookies-et-statistiques': {
-    icon: '🍪', bg: 'var(--teal-bg)', title_fr: 'Cookies et statistiques',
+    icon: '🍪', bg: 'var(--teal-bg)',
+    title_fr: 'Cookies et statistiques',
     hero_fr: 'Notre politique de cookies',
     desc_fr: 'Informations sur les cookies utilisés par SOrloz et comment gérer vos préférences.',
   },
+
   '/infos/plan-site': {
-    icon: '🗺️', bg: 'var(--teal-bg)', title_fr: 'Plan du site',
+    icon: '🗺️', bg: 'var(--teal-bg)',
+    title_fr: 'Plan du site',
     hero_fr: 'Plan du site SOrloz',
     desc_fr: 'Retrouvez ici l\'ensemble des pages du site SOrloz.',
   },
+
   '/infos/service-sourds-et-malentendants': {
-    icon: '👂', bg: 'var(--teal-bg)', title_fr: 'Service sourds et malentendants',
+    icon: '👂', bg: 'var(--teal-bg)',
+    title_fr: 'Service sourds et malentendants',
     hero_fr: 'Un service accessible à tous',
     desc_fr: 'SOrloz propose un service dédié aux personnes sourdes et malentendantes pour faciliter l\'accès à nos solutions de financement.',
   },
+
   '/espace-client': {
-    icon: '👤', bg: 'var(--teal-bg)', title_fr: 'Espace client',
+    icon: '👤', bg: 'var(--teal-bg)',
+    title_fr: 'Espace client',
     hero_fr: 'Gérez votre contrat en ligne',
     desc_fr: 'Consultez vos contrats, suivez vos remboursements et gérez vos documents depuis votre espace client sécurisé SOrloz.',
   },
+
   '/simulateur': {
-    icon: '🧮', bg: 'var(--pink-bg)', title_fr: 'Simulateur de crédit',
+    icon: '🧮', bg: 'var(--pink-bg)',
+    title_fr: 'Simulateur de crédit',
     hero_fr: 'Simulez votre crédit en ligne',
     desc_fr: 'Calculez vos mensualités en quelques secondes. Montant, durée, taux… Notre simulateur vous donne une réponse immédiate et sans engagement.',
   },
+
   '/prets-personnels/simulation-credit-auto': {
-    icon: '🚗', bg: 'var(--green-bg)', title_fr: 'Simulation crédit voiture',
+    icon: '🚗', bg: 'var(--green-bg)',
+    title_fr: 'Simulation crédit voiture',
     hero_fr: 'Simulez votre crédit voiture',
     desc_fr: 'Calculez vos mensualités pour l\'achat de votre voiture. Renseignez le montant et la durée, obtenez votre estimation immédiatement.',
     parent: { href: '/prets-personnels/credit-auto', label_fr: 'Crédit auto' },
   },
+
   '/prets-personnels/simulation-credit-moto': {
-    icon: '🏍️', bg: 'var(--teal-bg)', title_fr: 'Simulation crédit moto',
+    icon: '🏍️', bg: 'var(--teal-bg)',
+    title_fr: 'Simulation crédit moto',
     hero_fr: 'Simulez votre crédit moto',
     desc_fr: 'Estimez vos mensualités pour l\'achat de votre moto en quelques clics. Sans engagement, réponse immédiate.',
     parent: { href: '/prets-personnels/credit-moto', label_fr: 'Crédit moto' },
   },
+
   '/prets-personnels/simulation-credit-travaux': {
-    icon: '🔨', bg: 'var(--yellow-bg)', title_fr: 'Simulation crédit travaux',
+    icon: '🔨', bg: 'var(--yellow-bg)',
+    title_fr: 'Simulation crédit travaux',
     hero_fr: 'Simulez votre crédit travaux',
     desc_fr: 'Obtenez une estimation de vos mensualités pour financer vos travaux. Rapide, gratuit et sans engagement.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
   },
+
   '/prets-personnels/simulation-credit-projet': {
-    icon: '💼', bg: 'var(--pink-bg)', title_fr: 'Simulation crédit projet',
+    icon: '💼', bg: 'var(--pink-bg)',
+    title_fr: 'Simulation crédit projet',
     hero_fr: 'Simulez votre crédit projet',
     desc_fr: 'Estimez le coût de votre crédit projet en quelques secondes. Montant, durée, mensualités — obtenez une réponse immédiate.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
   },
+
   '/prets-personnels/simulation-credit-mariage': {
-    icon: '💍', bg: 'var(--pink-bg)', title_fr: 'Simulation crédit mariage',
+    icon: '💍', bg: 'var(--pink-bg)',
+    title_fr: 'Simulation crédit mariage',
     hero_fr: 'Simulez votre crédit mariage',
     desc_fr: 'Préparez votre budget mariage grâce à notre simulateur. Calculez vos mensualités sans engagement en quelques clics.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
   },
+
   '/prets-personnels/simulation-credit-vacances': {
-    icon: '✈️', bg: 'var(--pink-bg)', title_fr: 'Simulation crédit vacances',
+    icon: '✈️', bg: 'var(--pink-bg)',
+    title_fr: 'Simulation crédit vacances',
     hero_fr: 'Simulez votre crédit vacances',
     desc_fr: 'Partez l\'esprit tranquille ! Estimez vos mensualités pour financer vos vacances avec SOrloz.',
     parent: { href: '/prets-personnels/credit-projet', label_fr: 'Crédit projet' },
   },
+
   '/infos/accessibilite': {
-    icon: '♿', bg: 'var(--teal-bg)', title_fr: 'Accessibilité',
+    icon: '♿', bg: 'var(--teal-bg)',
+    title_fr: 'Accessibilité',
     hero_fr: 'Accessibilité numérique SOrloz',
     desc_fr: 'SOrloz s\'engage pour l\'accessibilité numérique. Découvrez notre déclaration d\'accessibilité et les mesures mises en place.',
   },
 };
 
-// ─── Multi-step Simulator ────────────────────────────────────────────────────
+// ─── Multi-step Simulator ─────────────────────────────────────────────────────
 
 function renderSimulator() {
   document.title = 'Faire une simulation | SOrloz';
@@ -954,7 +1027,7 @@ function renderSimulator() {
   draw();
 }
 
-// ─── PMT helper ──────────────────────────────────────────────────────────────
+// ─── PMT helpers ──────────────────────────────────────────────────────────────
 
 function _pmt(amount, months, rate) {
   var r = rate / 100 / 12;
@@ -962,20 +1035,22 @@ function _pmt(amount, months, rate) {
   var pow = Math.pow(1 + r, months);
   return amount * r * pow / (pow - 1);
 }
+
 function _fmt(n) {
   return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
-// ─── Section builders ────────────────────────────────────────────────────────
+// ─── Section builders ─────────────────────────────────────────────────────────
 
+// Renders breadcrumb nav with parent chain + current page title
 function _breadcrumb(page) {
   var parts = [];
   if (page.breadcrumbs && page.breadcrumbs.length) {
     page.breadcrumbs.forEach(function(b) {
-      parts.push('<a href="' + b.href + '" class="breadcrumb" style="font-size:13px;color:var(--text-light);text-decoration:none">' + b.label + '</a>');
+      parts.push('<a href="' + b.href + '" style="font-size:13px;color:var(--text-light);text-decoration:none">' + b.label + '</a>');
     });
   } else if (page.parent) {
-    parts.push('<a href="' + page.parent.href + '" class="breadcrumb" style="font-size:13px;color:var(--text-light);text-decoration:none">' + page.parent.label_fr + '</a>');
+    parts.push('<a href="' + page.parent.href + '" style="font-size:13px;color:var(--text-light);text-decoration:none">' + page.parent.label_fr + '</a>');
   }
   parts.push('<span style="font-size:13px;color:var(--dark);font-weight:600">' + (page.title_fr || '') + '</span>');
   return '<nav style="display:flex;align-items:center;gap:6px;margin-bottom:16px;flex-wrap:wrap">'
@@ -983,73 +1058,65 @@ function _breadcrumb(page) {
     + '</nav>';
 }
 
-function _heroTestimonialCard(t) {
-  function tag(v) {
-    return '<span style="display:inline-block;background:rgba(255,255,255,.88);color:var(--dark);font-weight:700;font-size:14px;padding:3px 12px;border-radius:20px;white-space:nowrap">' + v + '</span>';
+// Inline pill tag used in hero testimonial paragraph
+function _pill(text) {
+  return '<span style="background:rgba(0,0,0,.07);color:var(--dark);font-weight:700;padding:4px 14px;border-radius:20px;font-size:15px;white-space:nowrap">' + text + '</span>';
+}
+
+// Right column of hero: testimonial paragraph with pill tags, or fallback rate card
+function _heroRight(page) {
+  var t = page.testimonial;
+  if (t) {
+    return '<div style="padding:32px 0 16px">'
+      + '<p style="font-size:15px;color:var(--dark);line-height:2.2;margin-bottom:16px">'
+      + 'Avec une mensualité de ' + _pill(t.monthly + ' €/mois')
+      + ' pendant ' + _pill(t.months + ' mois') + '. '
+      + _pill(t.names)
+      + ' ont pu emprunter ' + _pill(t.amount + ' €')
+      + ' à ' + _pill(t.rate + '%')
+      + ' pour un montant dû de ' + _pill(t.total_due + ' €')
+      + ' et ' + _pill(t.purpose) + '.'
+      + '</p>'
+      + '<a href="/infos/mentions-legales" style="font-size:13px;color:var(--dark);opacity:.65;text-decoration:underline">Voir les conditions de l\'offre</a>'
+      + '</div>';
   }
-  return '<div style="padding:32px 0 16px">'
-    + '<p style="font-size:15px;color:var(--dark);line-height:2.1;margin-bottom:16px">'
-    + 'Avec une mensualité de ' + tag(t.monthly + ' €/mois') + ' pendant ' + tag(t.months + ' mois') + '. '
-    + tag(t.names) + ' ont pu emprunter ' + tag(t.amount + ' €') + ' à ' + tag(t.rate + '%')
-    + ' pour un montant dû de ' + tag(t.total_due + ' €') + ' et ' + tag(t.purpose) + '.'
-    + '</p>'
-    + '<a href="/infos/mentions-legales" style="font-size:13px;color:var(--dark);opacity:.65;text-decoration:underline">Voir les conditions de l\'offre</a>'
+  // Fallback: red TAEG rate card
+  return '<div class="hero-promo">'
+    + '<p class="hero-promo-teaser">Vous voulez une bonne nouvelle ?</p>'
+    + '<p class="hero-promo-rate-label">TAEG fixe à partir de</p>'
+    + '<p class="hero-promo-rate-value">4,90%</p>'
+    + '<p class="hero-promo-rate-detail">Pour 12 000 € sur 60 mois**</p>'
+    + '<a href="/simulateur" class="hero-promo-cta">Faire une simulation →</a>'
     + '</div>';
 }
 
+// Hero section injected into #page-hero
 function _heroSection(page) {
   var title = page.title_hero || page.hero_fr || page.title_fr || '';
   var desc = page.desc_fr || '';
-  var rightCol = page.testimonial
-    ? _heroTestimonialCard(page.testimonial)
-    : ('<div class="hero-promo">'
-      + '<p class="hero-promo-teaser">Vous voulez une bonne nouvelle ?</p>'
-      + '<p class="hero-promo-rate-label">TAEG fixe à partir de</p>'
-      + '<p class="hero-promo-rate-value">4,90%</p>'
-      + '<p class="hero-promo-rate-detail">Pour 12 000 € sur 60 mois**</p>'
-      + '<a href="/simulateur" class="hero-promo-cta">Faire une simulation →</a>'
-      + '</div>');
-  return '<section class="hero" style="background:' + (page.bg || 'var(--pink-bg)') + ';padding:64px 0 0">'
-    + '<div class="container"><div class="page-hero-inner">'
+  var bg = page.bg || 'var(--pink-bg)';
+
+  return '<section style="background:' + bg + ';padding:64px 0 0">'
+    + '<div class="container">'
+    + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">'
+    // Left column: breadcrumb, title, description, simulator form
     + '<div>'
     + _breadcrumb(page)
-    + '<h1 class="hero-title">' + title + '</h1>'
-    + '<p class="page-hero-desc">' + desc + '</p>'
-    + '<div class="hero-sim" style="margin-top:32px">'
-    + '<input class="sim-input" type="number" min="5500" max="60000" placeholder="Montant entre 5 500 € et 60 000 €" aria-label="Montant du crédit">'
-    + '<button class="btn btn-primary sim-btn">Faire une simulation</button>'
+    + '<h1 style="font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--dark);line-height:1.15;margin-bottom:16px">' + title + '</h1>'
+    + '<p style="font-size:17px;color:var(--text-light);line-height:1.7;max-width:460px;margin-bottom:32px">' + desc + '</p>'
+    + '<form style="display:flex;gap:0;background:#fff;border-radius:50px;overflow:hidden;border:1.5px solid #dde;max-width:420px" onsubmit="return false">'
+    + '<input type="number" min="5500" max="60000" placeholder="5 500 € - 60 000 €" class="sim-input" style="flex:1;border:none;padding:14px 20px;font-size:15px;outline:none;background:transparent;border-radius:50px 0 0 50px">'
+    + '<button class="btn btn-primary sim-btn" style="border-radius:0 50px 50px 0;padding:14px 24px;white-space:nowrap">Simuler mon prêt</button>'
+    + '</form>'
+    + '</div>'
+    // Right column: testimonial pills or rate card
+    + '<div>' + _heroRight(page) + '</div>'
     + '</div>'
     + '</div>'
-    + rightCol
-    + '</div></div>'
     + '</section>';
 }
 
-function _testimonialSection(t) {
-  if (!t) return '';
-  function tag(v) {
-    return '<span class="tag tag-green" style="font-size:15px;padding:3px 10px">' + v + '</span>';
-  }
-  return '<section class="testimonial">'
-    + '<div class="container"><div class="testimonial-inner">'
-    + '<div class="testimonial-visual">'
-    + '<svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">'
-    + '<rect x="20" y="20" width="160" height="110" rx="16" fill="white" opacity=".7"/>'
-    + '<text x="100" y="75" text-anchor="middle" font-size="32" fill="#1B3A4B" font-weight="800">' + t.monthly + ' €</text>'
-    + '<text x="100" y="100" text-anchor="middle" font-size="13" fill="#4a6070">/mois pendant ' + t.months + ' mois</text>'
-    + '<text x="100" y="118" text-anchor="middle" font-size="11" fill="#4a6070">TAEG ' + t.rate + ' %</text>'
-    + '</svg>'
-    + '</div>'
-    + '<div class="testimonial-text">'
-    + '<p>Avec une mensualité de ' + tag(t.monthly + ' €/mois') + ' pendant ' + tag(t.months + ' mois') + ', '
-    + t.names + ' ont pu emprunter ' + tag(t.amount + ' €') + ' à ' + tag(t.rate + ' %')
-    + ' pour un montant total dû de ' + tag(t.total_due + ' €') + ' et ont pu profiter de leur ' + t.purpose + '.</p>'
-    + '<a href="/infos/mentions-legales" class="testimonial-link">Voir les conditions de l\'offre</a>'
-    + '</div>'
-    + '</div></div>'
-    + '</section>';
-}
-
+// Content intro section (heading + red subheading + body) — leaf pages only
 function _contentSection(page) {
   var c = page.content;
   if (!c) return '';
@@ -1061,12 +1128,13 @@ function _contentSection(page) {
     + '</div></section>';
 }
 
+// Why / features section (3 cards on pink bg) — leaf pages only
 function _whySection(page) {
   var w = page.why;
   if (!w || !w.sections) return '';
   var cards = w.sections.map(function(s) {
     return '<div class="feature-card">'
-      + '<div class="feature-icon-wrap" style="font-size:28px;background:var(--yellow-bg)">' + (s.icon || '✦') + '</div>'
+      + '<div class="feature-icon-wrap" style="background:var(--yellow-bg);font-size:28px">' + (s.icon || '✦') + '</div>'
       + '<h3 class="feature-title">' + s.title + '</h3>'
       + '<p style="font-size:14px;color:var(--text-light);line-height:1.7">' + s.body + '</p>'
       + '</div>';
@@ -1080,7 +1148,8 @@ function _whySection(page) {
     + '</div></section>';
 }
 
-function _insuranceSection() {
+// Insurance green card (reused in 2-column section)
+function _insuranceCard() {
   return '<div style="background:var(--green-bg);border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px">'
     + '<div style="width:72px;height:72px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 2px 12px rgba(0,0,0,.08)">🛡️</div>'
     + '<h2 style="font-size:20px;font-weight:800;color:var(--dark);line-height:1.4">Ne laissez place à aucun imprévu.</h2>'
@@ -1089,14 +1158,7 @@ function _insuranceSection() {
     + '</div>';
 }
 
-function _contactStrip() {
-  return '<section style="background:var(--dark);padding:18px 0">'
-    + '<div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">'
-    + '<span style="color:#fff;font-size:15px;font-weight:600">Besoin d\'aide ? Nos conseillers sont disponibles.</span>'
-    + '<a href="/contact" class="btn btn-red">Aide et contact</a>'
-    + '</div></section>';
-}
-
+// Insurance (left) + checklist (right) 2-column section
 function _insuranceAndChecklist(page) {
   var name = page.features_name || page.title_fr || '';
   var items = [
@@ -1106,22 +1168,26 @@ function _insuranceAndChecklist(page) {
     'Réception des fonds sous 48h sur votre compte bancaire (1)',
     'Une mensualité qui s\'adapte à vos besoins, modulable sur demande (2)',
   ];
+  var checkmark = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 4.5,9 10.5,3" stroke="currentColor" stroke-width="1.8"/></svg>';
   var listHtml = items.map(function(item) {
     return '<li style="display:flex;align-items:flex-start;gap:12px;padding:10px 0">'
-      + '<span style="width:24px;height:24px;border-radius:50%;border:2px solid var(--dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 4.5,9 10.5,3" stroke="currentColor" stroke-width="1.8"/></svg></span>'
-      + '<span style="font-size:15px;color:var(--dark)">' + item + '</span></li>';
+      + '<span style="width:24px;height:24px;border-radius:50%;border:2px solid var(--dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">' + checkmark + '</span>'
+      + '<span style="font-size:15px;color:var(--dark)">' + item + '</span>'
+      + '</li>';
   }).join('');
   return '<section style="background:#fff;padding:64px 0">'
     + '<div class="container">'
     + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">'
-    + '<div>' + _insuranceSection() + '</div>'
+    + '<div>' + _insuranceCard() + '</div>'
     + '<div>'
     + '<h2 style="font-size:22px;font-weight:800;color:var(--dark);margin-bottom:24px">Le Prêt Personnel ' + name + ' : SOrloz vous accompagne</h2>'
     + '<ul style="list-style:none;padding:0;margin:0">' + listHtml + '</ul>'
     + '</div>'
-    + '</div></div></section>';
+    + '</div>'
+    + '</div></section>';
 }
 
+// Cross-sell card (pink bg, white card) — leaf pages only
 function _crosssellCard(page) {
   var cs = page.crosssell;
   if (!cs) return '';
@@ -1135,6 +1201,7 @@ function _crosssellCard(page) {
     + '</div></div></section>';
 }
 
+// Example loan section: dark green amount panel (left) + white details table (right)
 function _exampleSection(page) {
   var ex = page.example;
   if (!ex) return '';
@@ -1143,9 +1210,9 @@ function _exampleSection(page) {
   var cost = total - ex.amount;
   var titleLow = (page.title_fr || '').toLowerCase();
   function row(label, val) {
-    return '<tr style="border-bottom:1px solid #eee">'
-      + '<td style="padding:12px 0;color:var(--text-light);font-size:14px">' + label + '</td>'
-      + '<td style="padding:12px 0;text-align:right;font-weight:700;font-size:14px;color:var(--dark)">' + val + '</td>'
+    return '<tr>'
+      + '<td style="padding:12px 0;color:var(--text-light);font-size:14px;border-bottom:1px solid #eee">' + label + '</td>'
+      + '<td style="padding:12px 0;text-align:right;font-weight:700;font-size:14px;color:var(--dark);border-bottom:1px solid #eee">' + val + '</td>'
       + '</tr>';
   }
   return '<section style="background:#f8f6f2;padding:64px 0">'
@@ -1169,16 +1236,18 @@ function _exampleSection(page) {
     + '</div></div></section>';
 }
 
-function _processSection(tFn) {
+// Process section (yellow bg, 3 numbered steps + CTA)
+function _processSection() {
   var steps = [
-    (tFn && tFn('process.step1')) || 'Simulez votre demande en quelques clics',
-    (tFn && tFn('process.step2')) || 'Complétez vos informations et signez en ligne',
-    (tFn && tFn('process.step3')) || 'Recevez les fonds sous 48h',
+    'Simulez votre demande en quelques clics',
+    'Complétez vos informations et signez en ligne',
+    'Recevez les fonds sous 48h',
   ];
   var stepsHtml = steps.map(function(s, i) {
     return '<div class="process-step">'
-      + '<div class="process-step-icon"><div class="process-step-num">' + (i+1) + '</div></div>'
-      + '<p>' + s + '</p></div>';
+      + '<div class="process-step-icon"><div class="process-step-num">' + (i + 1) + '</div></div>'
+      + '<p>' + s + '</p>'
+      + '</div>';
   }).join('');
   return '<section class="process">'
     + '<div class="container">'
@@ -1188,6 +1257,7 @@ function _processSection(tFn) {
     + '</div></section>';
 }
 
+// FAQ accordion section (single column, centered)
 function _faqSection(page) {
   var defaultFaq = [
     { q: 'C\'est quoi le TAEG ?', a: 'Le Taux Annuel Effectif Global (TAEG) représente le coût total de votre crédit exprimé en pourcentage annuel. Il inclut les intérêts ainsi que tous les frais obligatoires liés à l\'obtention du crédit.' },
@@ -1195,12 +1265,11 @@ function _faqSection(page) {
     { q: 'Quel est le délai de mise à disposition des fonds ?', a: 'Une fois votre dossier validé et le délai légal de rétractation écoulé, les fonds sont disponibles sous 48h sur votre compte bancaire.' },
     { q: 'Pourquoi faire ma demande de crédit en ligne avec SOrloz ?', a: 'SOrloz vous propose une solution 100% en ligne, sans frais de dossier, avec un taux fixe pendant toute la durée de votre crédit. Nos conseillers sont disponibles pour vous accompagner à chaque étape.' },
   ];
+  var chevron = '<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>';
   var items = (page.faq && page.faq.length) ? page.faq : defaultFaq;
   var itemsHtml = items.map(function(item) {
     return '<div class="faq-item">'
-      + '<button class="faq-question" aria-expanded="false">' + item.q
-      + '<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>'
-      + '</button>'
+      + '<button class="faq-question" aria-expanded="false">' + item.q + chevron + '</button>'
       + '<div class="faq-answer"><div class="faq-answer-inner">' + item.a + '</div></div>'
       + '</div>';
   }).join('');
@@ -1214,6 +1283,7 @@ function _faqSection(page) {
     + '</div></section>';
 }
 
+// Articles 3-column grid — leaf pages only
 function _articlesSection(page) {
   if (!page.articles || !page.articles.length) return '';
   var heading = 'Vous saurez tout sur le financement de ' + (page.title_fr || 'vos projets').toLowerCase();
@@ -1235,10 +1305,14 @@ function _articlesSection(page) {
     + '</div></section>';
 }
 
-function _hubContentSection(page) {
+// Hub: body text (left, wide) + children nav links (right, narrow)
+function _hubBodyAndNav(page) {
   var body = page.body_fr || page.desc_fr || '';
   var links = (page.children || []).map(function(c) {
-    return '<a href="' + c.href + '" style="display:flex;align-items:center;gap:10px;padding:12px 16px;margin-bottom:8px;background:#fff;border:1.5px solid #e0e4ea;border-radius:8px;color:var(--dark);text-decoration:none;font-size:14px;font-weight:600;transition:border-color .15s,background .15s" onmouseover="this.style.borderColor=\'var(--red)\';this.style.background=\'var(--pink-bg)\'" onmouseout="this.style.borderColor=\'#e0e4ea\';this.style.background=\'#fff\'">'
+    return '<a href="' + c.href + '"'
+      + ' style="display:flex;align-items:center;gap:10px;padding:12px 16px;margin-bottom:8px;background:#fff;border:1.5px solid #e0e4ea;border-radius:8px;color:var(--dark);text-decoration:none;font-size:14px;font-weight:600;transition:border-color .15s,background .15s"'
+      + ' onmouseover="this.style.borderColor=\'var(--red)\';this.style.background=\'var(--pink-bg)\'"'
+      + ' onmouseout="this.style.borderColor=\'#e0e4ea\';this.style.background=\'#fff\'">'
       + '<span style="font-size:20px">' + c.icon + '</span>'
       + '<span>' + c.title_fr + '</span>'
       + '<span style="margin-left:auto;color:var(--text-light);font-size:13px">›</span>'
@@ -1247,14 +1321,13 @@ function _hubContentSection(page) {
   return '<section style="background:#fff;padding:64px 0">'
     + '<div class="container">'
     + '<div style="display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start">'
-    + '<div>'
-    + '<p style="font-size:16px;color:var(--text-light);line-height:1.9">' + body + '</p>'
-    + '</div>'
+    + '<div><p style="font-size:16px;color:var(--text-light);line-height:1.9">' + body + '</p></div>'
     + '<nav>' + links + '</nav>'
     + '</div>'
     + '</div></section>';
 }
 
+// Hub: editorial 2-column section (big heading left, content right)
 function _editorialSection(page) {
   var ed = page.editorial;
   if (!ed) return '';
@@ -1274,12 +1347,14 @@ function _editorialSection(page) {
 function renderPage(tFn) {
   var pathname = window.location.pathname.replace(/\/$/, '') || '/';
 
+  // Simulator gets its own full-page experience
   if (pathname === '/simulateur') { renderSimulator(); return; }
 
   var page = PAGE_CONFIG[pathname];
   var heroEl = document.getElementById('page-hero');
   var contentEl = document.getElementById('page-content');
 
+  // 404 fallback
   if (!page) {
     if (heroEl) heroEl.innerHTML = '<div class="container" style="padding:80px 24px;text-align:center">'
       + '<h1 style="font-size:48px;color:var(--dark)">404</h1>'
@@ -1290,28 +1365,35 @@ function renderPage(tFn) {
 
   document.title = (page.title_fr || '') + ' | SOrloz';
 
+  // Hero always rendered the same way for all pages
   if (heroEl) heroEl.innerHTML = _heroSection(page);
 
   if (contentEl) {
     var html = '';
+
     if (page.children && page.children.length) {
-      html += _hubContentSection(page);
+      // HUB page: body+nav, insurance+checklist, editorial, example, process, FAQ
+      html += _hubBodyAndNav(page);
       html += _insuranceAndChecklist(page);
       html += _editorialSection(page);
       html += _exampleSection(page);
-      html += _processSection(tFn);
+      html += _processSection();
       html += _faqSection(page);
     } else {
+      // LEAF page: content, why, insurance+checklist, crosssell, example, process, FAQ, articles
       html += _contentSection(page);
       html += _whySection(page);
       html += _insuranceAndChecklist(page);
       html += _crosssellCard(page);
       html += _exampleSection(page);
-      html += _processSection(tFn);
+      html += _processSection();
       html += _faqSection(page);
       html += _articlesSection(page);
     }
+
     contentEl.innerHTML = html;
+
+    // Initialise interactive components defined in app.js
     if (typeof initFaq === 'function') initFaq();
     if (typeof initSimulator === 'function') initSimulator();
   }

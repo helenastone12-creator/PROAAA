@@ -1833,41 +1833,349 @@ const PAGE_CONFIG = {
   '/prets-personnels/credit-travaux/credit-isolation': {
     icon: '🏠', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit isolation',
+    title_hero: 'Crédit isolation : confort et économies toute l\'année',
     hero_fr: 'Financez vos travaux d\'isolation',
     desc_fr: 'Isolation des combles, des murs, du plancher… Réduisez votre consommation d\'énergie et améliorez votre confort avec le crédit isolation SOrloz.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '169,43', months: 60, names: 'Gérard &amp; Monique',
+      amount: '9 000', rate: '4,90', total_due: '10 165,74',
+      purpose: 'isolation des combles et des murs par l\'extérieur',
+    },
+    content: {
+      heading: 'Crédit isolation : investissez dans le confort thermique de votre logement',
+      subheading: 'Combles, murs, planchers, fenêtres… tous les postes d\'isolation finançables',
+      body: 'L\'isolation est la clé d\'un logement confortable et économe en énergie. Le crédit isolation SOrloz finance l\'ensemble de vos travaux d\'isolation thermique : isolation des combles perdus ou aménagés, isolation des murs par l\'intérieur ou par l\'extérieur, isolation du plancher bas, remplacement des fenêtres par du double ou triple vitrage, isolation de la toiture. Empruntez de 5 500 € à 60 000 € à un taux préférentiel de 4,90 %.\n\nEn améliorant l\'isolation de votre logement, vous réduisez durablement votre facture énergétique et vous améliorez votre confort été comme hiver. Le crédit isolation SOrloz est un prêt personnel non affecté : les fonds sont versés sous 48 heures et vous choisissez librement vos artisans et vos matériaux isolants.',
+    },
+    why: {
+      heading: 'Pourquoi financer votre isolation avec SOrloz ?',
+      intro: 'Une bonne isolation est le premier geste pour réduire vos consommations d\'énergie. SOrloz vous propose un taux préférentiel pour encourager la rénovation énergétique.',
+      sections: [
+        { icon: '💡', title: 'Économies d\'énergie immédiates', body: 'L\'isolation est le poste de travaux qui offre le meilleur retour sur investissement en matière d\'économies d\'énergie. Des combles mal isolés peuvent représenter jusqu\'à 30 % des déperditions thermiques d\'une maison. En isolant correctement votre logement, vous réduisez vos factures de chauffage de 25 à 50 % dès le premier hiver, une économie qui se cumule année après année et qui rembourse progressivement le coût des travaux.' },
+        { icon: '🏛️', title: 'Cumulable avec les aides publiques', body: 'Vos travaux d\'isolation peuvent être éligibles à MaPrimeRénov\', aux Certificats d\'Économie d\'Énergie (CEE), à l\'éco-prêt à taux zéro et à la TVA réduite à 5,5 %. Ces aides sont cumulables avec votre crédit SOrloz, ce qui réduit encore le coût réel de vos travaux. SOrloz applique un taux préférentiel de 4,90 % pour les projets d\'isolation, témoignant de notre engagement en faveur de la transition énergétique.' },
+        { icon: '🌡️', title: 'Confort thermique et acoustique', body: 'Au-delà des économies, une bonne isolation transforme le confort de votre logement. Fini les courants d\'air en hiver et la surchauffe en été. L\'isolation thermique améliore aussi l\'isolation acoustique, réduisant les nuisances sonores extérieures. Votre logement gagne en confort à chaque saison, et sa classe énergétique (DPE) s\'améliore, un critère devenu déterminant pour la location et la vente.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit isolation à taux préférentiel',
+        subheading: 'SOrloz soutient la rénovation énergétique',
+        body: 'SOrloz vous propose un taux réduit de 4,90 % pour vos travaux d\'isolation, un engagement concret en faveur de la transition énergétique.',
+        bullets: [
+          '<strong>Taux préférentiel :</strong> Bénéficiez d\'un taux de 4,90 % au lieu du taux standard, soit une économie significative sur le coût total de votre crédit isolation.',
+          '<strong>Montant :</strong> De 5 500 € pour l\'isolation d\'un poste ciblé (combles, fenêtres) à 60 000 € pour une isolation globale par l\'extérieur incluant fenêtres et toiture.',
+          '<strong>Durée :</strong> De 12 à 84 mois. Pour 9 000 € sur 60 mois, vos mensualités s\'élèvent à 169,43 € seulement.',
+        ],
+        outro: 'Un investissement rentable dès le premier hiver : les économies d\'énergie compensent largement le coût du crédit.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit isolation SOrloz ?',
+        body: 'Isolez votre logement facilement grâce à un parcours 100 % en ligne :',
+        bullets: [
+          '<strong>Simulez vos économies :</strong> Indiquez le montant de vos travaux d\'isolation et la durée souhaitée. Le taux préférentiel de 4,90 % est appliqué automatiquement.',
+          '<strong>Déposez votre demande :</strong> Renseignez vos informations en quelques minutes. Aucun devis d\'artisan n\'est requis pour votre demande de crédit.',
+          '<strong>Recevez les fonds :</strong> Après acceptation et signature électronique, les fonds sont virés sous 48h. Planifiez vos travaux d\'isolation.',
+        ],
+        outro: 'N\'attendez pas le prochain hiver pour isoler votre logement. Simulez votre crédit isolation SOrloz dès maintenant.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous pensez aussi à changer votre chauffage ?',
+      body: 'Combinez isolation et chauffage performant pour maximiser vos économies d\'énergie. Le crédit chauffage SOrloz finance pompe à chaleur, chaudière et poêle.',
+      link_href: '/prets-personnels/credit-travaux/credit-chauffage',
+      link_text: 'Découvrir le crédit chauffage',
+    },
+    example: { amount: 9000, months: 60, rate: 4.90 },
+    faq_title: 'Vos questions sur le crédit isolation',
+    faq: [
+      { q: 'Quels travaux d\'isolation sont finançables ?', a: 'Tous les postes d\'isolation : combles perdus ou aménagés, murs par l\'intérieur ou l\'extérieur, plancher bas, toiture, remplacement de fenêtres (double ou triple vitrage), portes d\'entrée isolantes.' },
+      { q: 'Pourquoi le taux du crédit isolation est-il plus bas ?', a: 'SOrloz applique un taux préférentiel de 4,90 % pour les projets d\'isolation et de rénovation énergétique, afin d\'encourager les travaux qui réduisent la consommation d\'énergie.' },
+      { q: 'Le crédit isolation est-il cumulable avec MaPrimeRénov\' ?', a: 'Oui, le crédit SOrloz est cumulable avec toutes les aides publiques : MaPrimeRénov\', CEE, éco-PTZ, TVA réduite à 5,5 %. Ces aides peuvent réduire significativement le coût de vos travaux.' },
+      { q: 'Faut-il faire appel à un artisan RGE ?', a: 'Pour bénéficier des aides publiques (MaPrimeRénov\', CEE), un artisan RGE est requis. Pour le crédit SOrloz en revanche, aucune contrainte : vous choisissez librement votre prestataire.' },
+    ],
+    features_name: 'Isolation',
   },
 
   '/prets-personnels/credit-travaux/credit-amenagement': {
     icon: '🛋️', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit aménagement',
+    title_hero: 'Crédit aménagement : votre intérieur, vos règles',
     hero_fr: 'Financez vos travaux d\'aménagement',
     desc_fr: 'Parquet, peinture, électricité, plomberie… Le crédit aménagement SOrloz vous aide à transformer votre intérieur selon vos envies et votre budget.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '186,91', months: 36, names: 'Aurélie &amp; Nicolas',
+      amount: '6 000', rate: '7,60', total_due: '6 728,87',
+      purpose: 'aménagement complet d\'un studio pour leur fils',
+    },
+    content: {
+      heading: 'Crédit aménagement : financez la transformation de votre intérieur',
+      subheading: 'Parquet, peinture, rangements, électricité… tous vos projets d\'aménagement',
+      body: 'Envie de poser un parquet massif, de repeindre vos pièces de vie, d\'installer un dressing sur mesure ou de repenser l\'agencement de votre logement ? Le crédit aménagement SOrloz finance tous vos projets de décoration, d\'agencement et de petits travaux intérieurs. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois avec un taux fixe.\n\nLe crédit aménagement est un prêt personnel non affecté : vous utilisez les fonds comme bon vous semble, sans justificatif à fournir. Achetez vos matériaux en grande surface de bricolage, faites appel à un décorateur d\'intérieur ou réalisez les travaux vous-même. Les fonds sont versés sous 48 heures.',
+    },
+    why: {
+      heading: 'Pourquoi financer votre aménagement avec SOrloz ?',
+      intro: 'Un intérieur bien aménagé améliore votre confort quotidien et reflète votre personnalité. SOrloz finance vos envies de changement.',
+      sections: [
+        { icon: '🎨', title: 'Personnalisez votre espace', body: 'Votre logement doit vous ressembler. Un nouveau parquet, une peinture tendance, des rangements optimisés ou un éclairage repensé peuvent transformer radicalement l\'atmosphère de votre intérieur. Le crédit aménagement SOrloz vous donne les moyens de concrétiser chaque idée déco sans puiser dans votre épargne, pour un intérieur qui vous correspond vraiment et dans lequel vous vous sentez bien au quotidien.' },
+        { icon: '💡', title: 'Des travaux rapides et efficaces', body: 'Contrairement à une rénovation lourde, les travaux d\'aménagement sont souvent rapides à réaliser : quelques jours pour repeindre un appartement, un week-end pour poser un parquet flottant, une demi-journée pour installer des étagères sur mesure. Le crédit aménagement SOrloz est idéal pour ces projets de taille moyenne qui ne justifient pas un emprunt de longue durée. Avec une durée de 36 mois, vous remboursez rapidement sans alourdir vos charges.' },
+        { icon: '🏠', title: 'Valorisation de votre logement', body: 'Même des travaux d\'aménagement modestes peuvent valoriser significativement un logement. Un sol refait, des murs rafraîchis et des rangements intégrés changent la perception d\'un bien immobilier. Que vous soyez propriétaire ou locataire (avec l\'accord du bailleur), l\'aménagement de votre intérieur est un investissement dans votre qualité de vie quotidienne qui ne nécessite pas de budget colossal.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit aménagement adapté à vos envies',
+        subheading: 'Financez vos idées déco',
+        body: 'Petit rafraîchissement ou transformation complète, le crédit aménagement s\'adapte à chaque projet.',
+        bullets: [
+          '<strong>Montant :</strong> De 5 500 € pour un projet ciblé (peinture, parquet d\'une pièce) à 60 000 € pour un aménagement complet incluant mobilier sur mesure, éclairage et domotique.',
+          '<strong>Durée courte possible :</strong> De 12 à 84 mois. Pour un projet à 6 000 €, optez pour 36 mois à 186,91 € par mois pour un remboursement rapide.',
+          '<strong>Sans justificatif :</strong> Achetez vos matériaux où vous le souhaitez, faites appel à un professionnel ou réalisez les travaux vous-même.',
+        ],
+        outro: 'Nouveau parquet, peinture fraîche, dressing sur mesure ou agencement repensé : SOrloz finance toutes vos envies d\'aménagement.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit aménagement SOrloz ?',
+        body: 'Transformez votre intérieur en quelques étapes simples :',
+        bullets: [
+          '<strong>Simulez votre projet :</strong> Renseignez le montant souhaité et la durée de remboursement. Vos mensualités s\'affichent en temps réel.',
+          '<strong>Complétez votre demande :</strong> Formulaire rapide en ligne, sans justificatif ni rendez-vous. Réponse de principe immédiate.',
+          '<strong>Lancez votre aménagement :</strong> Fonds versés sous 48h après signature électronique. Direction le magasin de bricolage ou l\'atelier de votre artisan.',
+        ],
+        outro: 'Votre intérieur n\'attend que vous. Simulez votre crédit aménagement SOrloz et donnez vie à vos idées.',
+      },
+    ],
+    crosssell: {
+      question: 'Votre projet inclut aussi de la rénovation ?',
+      body: 'Pour des travaux plus importants (électricité, plomberie, structure), le crédit rénovation SOrloz offre un financement adapté aux grands chantiers.',
+      link_href: '/prets-personnels/credit-travaux/credit-renovation',
+      link_text: 'Découvrir le crédit rénovation',
+    },
+    example: { amount: 6000, months: 36, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit aménagement',
+    faq: [
+      { q: 'Quelle différence entre crédit aménagement et crédit rénovation ?', a: 'Le crédit aménagement est idéal pour les projets de décoration et d\'agencement (peinture, parquet, rangements), tandis que le crédit rénovation convient aux travaux plus lourds (structure, électricité, plomberie). Les deux sont des prêts personnels non affectés.' },
+      { q: 'Peut-on financer l\'achat de mobilier avec ce crédit ?', a: 'Oui, le crédit aménagement SOrloz est un prêt personnel non affecté. Vous pouvez financer aussi bien les travaux que le mobilier, la décoration et les équipements.' },
+      { q: 'Quel est le montant minimum empruntable ?', a: 'Le montant minimum est de 5 500 €. Pour des projets d\'aménagement plus modestes, le crédit SOrloz reste accessible avec des mensualités adaptées.' },
+      { q: 'Les fonds sont-ils versés rapidement ?', a: 'Oui, après acceptation de votre dossier et signature électronique, les fonds sont virés sous 48 heures sur votre compte bancaire.' },
+    ],
+    features_name: 'Aménagement',
   },
 
   '/prets-personnels/credit-travaux-maison': {
     icon: '🏠', bg: 'var(--yellow-bg)',
     title_fr: 'Crédit travaux maison',
+    title_hero: 'Crédit travaux maison : la maison de vos rêves, pièce par pièce',
     hero_fr: 'Financez les travaux de votre maison',
     desc_fr: 'Tous les travaux de votre maison, de la cave au grenier, financés par SOrloz. Des conditions adaptées à votre projet pour réaliser la maison de vos rêves.',
     parent: { href: '/prets-personnels/credit-travaux', label_fr: 'Crédit travaux' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+      { href: '/prets-personnels/credit-travaux', label: 'Crédit travaux' },
+    ],
+    testimonial: {
+      monthly: '461,63', months: 84, names: 'Christophe &amp; Valérie',
+      amount: '30 000', rate: '7,60', total_due: '38 776,94',
+      purpose: 'rénovation complète de leur maison de campagne',
+    },
+    content: {
+      heading: 'Crédit travaux maison : un financement global pour tous vos chantiers',
+      subheading: 'De la cave au grenier, financez chaque pièce de votre maison',
+      body: 'Votre maison mérite le meilleur. Le crédit travaux maison SOrloz est conçu pour financer l\'ensemble des travaux de votre habitation en un seul prêt. Toiture, façade, isolation, chauffage, cuisine, salle de bain, sols, peinture, électricité, plomberie, extension, aménagement de combles ou de sous-sol : tous les postes de travaux sont couverts. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois.\n\nLe crédit travaux maison SOrloz est un prêt personnel non affecté qui vous donne une totale liberté dans la gestion de votre chantier. Pas de devis à fournir, pas de restriction sur le type de travaux. Vous orchestrez les différents corps de métier à votre rythme et les fonds sont disponibles sous 48 heures.',
+    },
+    why: {
+      heading: 'Pourquoi financer vos travaux de maison avec SOrloz ?',
+      intro: 'Un seul crédit pour tous vos travaux de maison, c\'est la solution la plus simple et la plus économique pour mener à bien un grand projet.',
+      sections: [
+        { icon: '🏠', title: 'Un financement unique pour tous vos postes', body: 'Plutôt que de multiplier les crédits pour chaque type de travaux, le crédit travaux maison SOrloz regroupe l\'ensemble de vos besoins en un seul prêt. Toiture et façade en premier, puis cuisine et salle de bain, enfin peinture et sols : vous planifiez les travaux dans l\'ordre qui vous convient et gérez un seul prélèvement mensuel. Cette approche globale simplifie votre budget et vous offre une meilleure visibilité financière sur la durée du chantier.' },
+        { icon: '📈', title: 'Valorisation maximale de votre bien', body: 'Une maison entièrement rénovée bénéficie d\'une plus-value immobilière significative. En combinant isolation, chauffage performant, cuisine moderne et extérieurs soignés, vous pouvez augmenter la valeur de votre bien de 15 à 30 %. Le crédit travaux maison SOrloz vous permet de réaliser cette transformation complète sans attendre d\'avoir accumulé l\'épargne nécessaire, en profitant d\'un taux fixe sur toute la durée du remboursement.' },
+        { icon: '⚡', title: 'Fonds disponibles sous 48 heures', body: 'Les grands chantiers de maison nécessitent de coordonner plusieurs artisans et de commander des matériaux à l\'avance. Avec SOrloz, les fonds sont virés sous 48 heures après acceptation, vous permettant de verser les acomptes, de réserver les équipements et de lancer les travaux sans délai. Cette réactivité est un avantage décisif lorsque vous avez planifié un calendrier de chantier serré.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit travaux maison à la hauteur de vos ambitions',
+        subheading: 'Financez votre grand projet',
+        body: 'Le crédit travaux maison SOrloz est conçu pour les projets d\'envergure qui touchent plusieurs pièces ou plusieurs postes.',
+        bullets: [
+          '<strong>Montant élevé :</strong> Empruntez jusqu\'à 60 000 € pour couvrir l\'ensemble de vos travaux : toiture, façade, isolation, chauffage, cuisine, salle de bain, sols, peinture.',
+          '<strong>Durée longue possible :</strong> Jusqu\'à 84 mois pour des mensualités confortables. Pour 30 000 € sur 84 mois, comptez 461,63 € par mois.',
+          '<strong>Un seul prêt, un seul prélèvement :</strong> Simplifiez votre gestion budgétaire avec un crédit unique pour tous vos travaux de maison.',
+        ],
+        outro: 'Maison de ville, maison de campagne ou résidence secondaire : SOrloz finance la rénovation de toutes les maisons.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit travaux maison SOrloz ?',
+        body: 'Lancez la rénovation de votre maison en toute simplicité :',
+        bullets: [
+          '<strong>Simulez votre grand projet :</strong> Estimez le budget global de vos travaux et choisissez la durée de remboursement. Mensualités affichées en temps réel.',
+          '<strong>Finalisez votre demande :</strong> Remplissez le formulaire en ligne. Aucun devis ni planning de chantier n\'est demandé.',
+          '<strong>Démarrez les travaux :</strong> Fonds virés sous 48h après signature. Coordonnez vos artisans et lancez le chantier.',
+        ],
+        outro: 'Votre maison de rêve est à portée de financement. Simulez votre crédit travaux maison dès maintenant.',
+      },
+    ],
+    crosssell: {
+      question: 'Besoin d\'un financement éco-responsable ?',
+      body: 'Pour les travaux d\'économie d\'énergie (isolation, chauffage, panneaux solaires), SOrloz propose un taux préférentiel avec le crédit économie d\'énergie.',
+      link_href: '/prets-personnels/credit-economie-energie',
+      link_text: 'Découvrir le crédit économie d\'énergie',
+    },
+    example: { amount: 30000, months: 84, rate: 7.60 },
+    faq_title: 'Vos questions sur le crédit travaux maison',
+    faq: [
+      { q: 'Le crédit travaux maison finance-t-il tous les types de travaux ?', a: 'Oui, c\'est un prêt personnel non affecté. Toiture, façade, isolation, chauffage, cuisine, salle de bain, sols, peinture, électricité, plomberie, extension, aménagement de combles : tout est finançable.' },
+      { q: 'Peut-on financer des travaux dans une résidence secondaire ?', a: 'Oui, le crédit travaux maison SOrloz finance les travaux de votre résidence principale comme de votre résidence secondaire, sans distinction.' },
+      { q: 'Faut-il fournir un planning de chantier ?', a: 'Non, aucun planning, devis ni justificatif de travaux n\'est requis. Vous gérez votre chantier en toute autonomie.' },
+      { q: 'Quel est le montant maximum empruntable ?', a: 'Vous pouvez emprunter jusqu\'à 60 000 € pour vos travaux de maison, sur une durée allant de 12 à 84 mois selon votre capacité de remboursement.' },
+    ],
+    features_name: 'Travaux maison',
   },
 
   '/prets-personnels/credit-economie-energie': {
     icon: '♻️', bg: 'var(--green-bg)',
     title_fr: 'Crédit économie d\'énergie',
+    title_hero: 'Crédit économie d\'énergie : réduisez vos factures durablement',
     hero_fr: 'Financez vos travaux d\'économie d\'énergie',
     desc_fr: 'Isolation, pompe à chaleur, panneaux solaires, chaudière… Réduisez votre consommation énergétique et vos factures avec le crédit économie d\'énergie SOrloz.',
     parent: { href: '/prets-personnels', label_fr: 'Prêts personnels' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+    ],
+    testimonial: {
+      monthly: '282,38', months: 60, names: 'Stéphane &amp; Brigitte',
+      amount: '15 000', rate: '4,90', total_due: '16 942,91',
+      purpose: 'installation de panneaux solaires et pompe à chaleur',
+    },
+    content: {
+      heading: 'Crédit économie d\'énergie : investissez dans la performance énergétique',
+      subheading: 'Isolation, chauffage, panneaux solaires… un taux préférentiel pour la planète',
+      body: 'Le crédit économie d\'énergie SOrloz finance tous vos projets de rénovation énergétique à un taux préférentiel de 4,90 %. Isolation thermique, pompe à chaleur, chaudière à condensation, panneaux solaires photovoltaïques ou thermiques, ballon thermodynamique, VMC double flux, fenêtres à haute performance : chaque investissement qui réduit votre consommation d\'énergie est éligible. Empruntez de 5 500 € à 60 000 € sur 12 à 84 mois.\n\nSOrloz s\'engage pour la transition énergétique en proposant un taux réduit sur les projets éco-responsables. Les fonds sont versés sous 48 heures et vous êtes libre de combiner plusieurs types de travaux au sein d\'un même financement pour maximiser les économies d\'énergie de votre logement.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit économie d\'énergie SOrloz ?',
+      intro: 'La rénovation énergétique est le meilleur investissement pour votre logement : elle réduit vos charges, améliore votre confort et augmente la valeur de votre bien.',
+      sections: [
+        { icon: '💰', title: 'Un taux préférentiel à 4,90 %', body: 'SOrloz récompense votre engagement écologique avec un taux de 4,90 %, nettement inférieur au taux standard. Cette réduction représente une économie de plusieurs centaines d\'euros sur le coût total de votre crédit. Combiné aux économies d\'énergie générées par vos travaux (de 30 à 70 % de réduction sur vos factures selon les postes), votre investissement devient rapidement rentable et bénéfique pour l\'environnement.' },
+        { icon: '🌍', title: 'Un geste pour la planète', body: 'Chaque projet de rénovation énergétique contribue à réduire les émissions de gaz à effet de serre. En remplaçant une vieille chaudière par une pompe à chaleur, en isolant vos combles ou en installant des panneaux solaires, vous diminuez l\'empreinte carbone de votre logement tout en gagnant en confort. SOrloz accompagne cette démarche vertueuse avec un financement accessible et responsable.' },
+        { icon: '🏛️', title: 'Cumulable avec toutes les aides', body: 'Votre crédit économie d\'énergie SOrloz est cumulable avec l\'ensemble des aides publiques à la rénovation énergétique : MaPrimeRénov\', Certificats d\'Économie d\'Énergie (CEE), éco-prêt à taux zéro, TVA à 5,5 %, aides locales des collectivités. En cumulant ces dispositifs avec le taux préférentiel SOrloz, le reste à charge de vos travaux peut être considérablement réduit.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit vert adapté à vos projets énergétiques',
+        subheading: 'Tous les travaux d\'économie d\'énergie finançables',
+        body: 'SOrloz finance l\'intégralité de vos projets de rénovation énergétique avec un taux préférentiel.',
+        bullets: [
+          '<strong>Taux vert à 4,90 % :</strong> Un taux réduit pour encourager les projets qui réduisent votre consommation d\'énergie et votre empreinte carbone.',
+          '<strong>Montant :</strong> De 5 500 € pour un poste ciblé (VMC, ballon thermodynamique) à 60 000 € pour une rénovation énergétique globale (isolation + chauffage + solaire).',
+          '<strong>Travaux éligibles :</strong> Isolation, pompe à chaleur, panneaux solaires, chaudière à condensation, VMC double flux, fenêtres performantes, ballon thermodynamique, poêle à granulés.',
+        ],
+        outro: 'Chaque euro investi dans l\'économie d\'énergie vous est rendu en confort et en économies sur vos factures.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit économie d\'énergie SOrloz ?',
+        body: 'Réduisez vos factures d\'énergie en quelques étapes :',
+        bullets: [
+          '<strong>Simulez votre projet vert :</strong> Indiquez le montant de vos travaux et la durée. Le taux préférentiel de 4,90 % est appliqué automatiquement pour les projets d\'économie d\'énergie.',
+          '<strong>Complétez votre demande :</strong> Formulaire en ligne rapide et sans justificatif. Réponse de principe immédiate.',
+          '<strong>Lancez votre rénovation :</strong> Fonds virés sous 48h. Contactez vos artisans et démarrez vos travaux d\'économie d\'énergie.',
+        ],
+        outro: 'Agissez pour votre portefeuille et pour la planète. Simulez votre crédit économie d\'énergie SOrloz.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous pensez aussi à un véhicule écologique ?',
+      body: 'Complétez votre démarche éco-responsable avec le crédit véhicule vert SOrloz : voiture électrique, vélo électrique, trottinette.',
+      link_href: '/prets-personnels/credit-vehicule-vert',
+      link_text: 'Découvrir le crédit véhicule vert',
+    },
+    example: { amount: 15000, months: 60, rate: 4.90 },
+    faq_title: 'Vos questions sur le crédit économie d\'énergie',
+    faq: [
+      { q: 'Quels travaux sont éligibles au taux préférentiel ?', a: 'Tous les travaux qui réduisent la consommation d\'énergie de votre logement : isolation, pompe à chaleur, panneaux solaires, chaudière à condensation, VMC double flux, fenêtres performantes, ballon thermodynamique.' },
+      { q: 'Pourquoi le taux est-il plus bas que le taux standard ?', a: 'SOrloz applique un taux de 4,90 % au lieu du taux standard pour encourager les projets de rénovation énergétique et accompagner la transition écologique.' },
+      { q: 'Le crédit est-il cumulable avec les aides de l\'État ?', a: 'Oui, le crédit économie d\'énergie SOrloz est cumulable avec MaPrimeRénov\', les CEE, l\'éco-PTZ, la TVA à 5,5 % et les aides des collectivités locales.' },
+      { q: 'Faut-il un artisan certifié RGE ?', a: 'Pour bénéficier des aides publiques, un artisan RGE est souvent requis. Pour le crédit SOrloz, aucune contrainte : vous choisissez librement votre prestataire.' },
+    ],
+    features_name: 'Économie d\'énergie',
   },
 
   '/prets-personnels/credit-vehicule-vert': {
     icon: '🌿', bg: 'var(--green-bg)',
     title_fr: 'Crédit véhicule vert',
+    title_hero: 'Crédit véhicule vert : roulez propre, financez malin',
     hero_fr: 'Financez votre véhicule écologique',
     desc_fr: 'Vélo électrique, trottinette, voiture électrique ou hybride… Le crédit véhicule vert SOrloz vous propose un financement avantageux pour une mobilité plus propre.',
     parent: { href: '/prets-personnels', label_fr: 'Prêts personnels' },
+    breadcrumbs: [
+      { href: '/prets-personnels', label: 'Prêts personnels' },
+    ],
+    testimonial: {
+      monthly: '275,81', months: 48, names: 'Damien &amp; Claire',
+      amount: '12 000', rate: '4,90', total_due: '13 238,80',
+      purpose: 'achat d\'un vélo cargo électrique et d\'une trottinette',
+    },
+    content: {
+      heading: 'Crédit véhicule vert : financez votre mobilité écologique',
+      subheading: 'Vélo électrique, trottinette, voiture hybride ou 100 % électrique',
+      body: 'La mobilité de demain se construit aujourd\'hui. Le crédit véhicule vert SOrloz finance l\'acquisition de tous les véhicules à faible impact environnemental : vélo électrique (VAE), vélo cargo, trottinette électrique, voiture électrique, voiture hybride rechargeable, scooter électrique. Empruntez de 5 500 € à 60 000 € à un taux préférentiel de 4,90 % sur 12 à 84 mois.\n\nSOrloz encourage la mobilité propre en proposant un taux réduit pour tous les véhicules écologiques. Les fonds sont versés sous 48 heures sur votre compte bancaire, vous permettant de saisir rapidement une bonne affaire ou de profiter d\'un bonus écologique en cours de validité.',
+    },
+    why: {
+      heading: 'Pourquoi choisir le crédit véhicule vert SOrloz ?',
+      intro: 'Passer à un véhicule écologique est un choix gagnant pour votre budget, votre santé et la planète. SOrloz vous y aide avec un taux préférentiel.',
+      sections: [
+        { icon: '💰', title: 'Un taux préférentiel à 4,90 %', body: 'SOrloz valorise votre choix écologique avec un taux de 4,90 %, nettement inférieur au taux standard. Cette réduction s\'applique à tous les véhicules propres : du vélo électrique à la voiture 100 % électrique. Combiné aux économies de carburant (un véhicule électrique coûte 2 à 3 € aux 100 km contre 8 à 12 € pour un véhicule thermique), votre investissement vert devient rapidement rentable.' },
+        { icon: '🌍', title: 'Un geste concret pour l\'environnement', body: 'En choisissant un véhicule vert, vous réduisez significativement vos émissions de CO2. Un vélo électrique n\'émet que 6 g de CO2 par kilomètre contre 120 g pour une voiture thermique moyenne. Une voiture électrique réduit les émissions de 50 à 70 % par rapport à un modèle essence. SOrloz accompagne cette transition avec un financement responsable qui fait du bien à la planète et à votre portefeuille.' },
+        { icon: '🏛️', title: 'Cumulable avec les aides à l\'achat', body: 'Votre crédit véhicule vert SOrloz est cumulable avec le bonus écologique, la prime à la conversion, les aides régionales et les subventions communales pour l\'achat de vélos électriques. Ces aides peuvent réduire significativement le coût de votre véhicule vert. Le cumul du taux préférentiel SOrloz et des aides publiques rend la mobilité écologique plus accessible que jamais.' },
+      ],
+    },
+    custom_sections: [
+      {
+        heading: 'Un crédit vert pour tous les véhicules écologiques',
+        subheading: 'Du vélo électrique à la voiture hybride',
+        body: 'Le crédit véhicule vert SOrloz finance une large gamme de mobilités propres.',
+        bullets: [
+          '<strong>Vélos et trottinettes :</strong> Vélo électrique (VAE), vélo cargo électrique, trottinette électrique, speed bike. Des solutions idéales pour les trajets quotidiens en ville et péri-urbain.',
+          '<strong>Voitures et scooters :</strong> Voiture 100 % électrique, voiture hybride rechargeable, scooter électrique. Financez votre nouveau véhicule propre au taux préférentiel de 4,90 %.',
+          '<strong>Accessoires inclus :</strong> Financez aussi la borne de recharge à domicile, le casque, les accessoires de sécurité et l\'équipement de transport (porte-vélo, remorque).',
+        ],
+        outro: 'Deux roues ou quatre roues, SOrloz finance votre transition vers une mobilité plus propre.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit véhicule vert SOrloz ?',
+        body: 'Passez au vert en quelques étapes simples :',
+        bullets: [
+          '<strong>Simulez votre mobilité verte :</strong> Indiquez le montant de votre véhicule écologique et la durée souhaitée. Le taux préférentiel de 4,90 % est appliqué automatiquement.',
+          '<strong>Déposez votre demande :</strong> Formulaire rapide et sans justificatif. Réponse de principe immédiate pour avancer sereinement.',
+          '<strong>Roulez propre :</strong> Fonds virés sous 48h après signature. Rendez-vous chez votre revendeur et repartez avec votre véhicule vert.',
+        ],
+        outro: 'La mobilité écologique est à portée de financement. Simulez votre crédit véhicule vert SOrloz.',
+      },
+    ],
+    crosssell: {
+      question: 'Vous rénovez aussi votre logement ?',
+      body: 'Combinez mobilité verte et rénovation énergétique. Le crédit économie d\'énergie SOrloz finance isolation, chauffage et panneaux solaires à taux préférentiel.',
+      link_href: '/prets-personnels/credit-economie-energie',
+      link_text: 'Découvrir le crédit économie d\'énergie',
+    },
+    example: { amount: 12000, months: 48, rate: 4.90 },
+    faq_title: 'Vos questions sur le crédit véhicule vert',
+    faq: [
+      { q: 'Quels véhicules sont éligibles au taux préférentiel ?', a: 'Tous les véhicules à faible impact environnemental : vélo électrique, vélo cargo, trottinette électrique, voiture 100 % électrique, voiture hybride rechargeable, scooter électrique.' },
+      { q: 'Le crédit véhicule vert est-il cumulable avec le bonus écologique ?', a: 'Oui, le crédit SOrloz est cumulable avec le bonus écologique, la prime à la conversion et toutes les aides locales à l\'achat de véhicules propres.' },
+      { q: 'Peut-on financer une borne de recharge avec ce crédit ?', a: 'Oui, le crédit véhicule vert SOrloz est un prêt personnel non affecté. Vous pouvez financer le véhicule, la borne de recharge, les accessoires et l\'équipement.' },
+      { q: 'Faut-il fournir une facture du véhicule ?', a: 'Non, le crédit véhicule vert SOrloz est un prêt personnel non affecté. Aucun justificatif d\'achat n\'est requis pour votre demande.' },
+    ],
+    features_name: 'Véhicule vert',
   },
 
   // ── Assurance / Conseils / Contact / FAQ / Infos

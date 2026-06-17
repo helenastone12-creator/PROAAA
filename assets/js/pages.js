@@ -77,19 +77,42 @@ const PAGE_CONFIG = {
       purpose: 'voyage à Bali',
     },
     content: {
-      heading: 'Crédit vacances : qu\'est-ce que c\'est ?',
-      subheading: 'Un financement souple pour tous vos voyages',
-      body: 'Le crédit vacances est un prêt personnel non affecté qui vous permet de financer vos vacances sans justificatif de dépense. Billets d\'avion, hôtel, location de voiture, activités… Avec SOrloz, vous empruntez entre 5 500 € et 60 000 € et choisissez librement votre durée de remboursement de 12 à 84 mois. Votre taux est fixe, vos mensualités ne changent pas.',
+      heading: 'Faites vos valises !',
+      subheading: 'Préparez votre évasion avec SOrloz',
+      body: 'Rêvez-vous de séjours inoubliables en famille, entre amis ou en amoureux ? Grâce au prêt personnel de SOrloz, votre rêve peut devenir réalité ! Vous pouvez financer la pause dont vous avez besoin, que ce soit un séjour détente dans une résidence de rêve en bord de mer, une aventure en croisière ou un voyage à l\'étranger. Nous vous offrons une solution de prêt personnel simple et rapide, pour que vous puissiez profiter de chaque moment sans vous soucier des finances.\n\nPour en savoir plus sur nos options, n\'hésitez pas à visiter notre page sur les <a href="/prets-personnels" style="color:var(--red);font-weight:600">prêts personnels</a>.',
     },
     why: {
-      heading: 'Pourquoi choisir le crédit vacances SOrloz ?',
-      intro: 'Parce que vos projets méritent mieux qu\'une attente. Le crédit vacances SOrloz vous donne les moyens de partir sans rogner sur votre qualité de vie.',
+      heading: 'Pourquoi choisir un crédit vacances SOrloz pour financer votre prochain voyage ?',
+      intro: 'Le crédit vacances chez SOrloz présente de nombreux avantages. Il vous permet de planifier vos futurs congés sans sacrifier votre budget quotidien. Voici quelques-uns des bénéfices que vous pouvez en tirer :',
       sections: [
-        { icon: '🏄', title: 'Souplesse', body: 'Partez quand vous le souhaitez et remboursez à votre rythme. Vous choisissez librement la durée et le montant, de 12 à 84 mois.' },
-        { icon: '🔍', title: 'Conditions transparentes', body: 'Aucun frais caché. Votre taux est fixe pour toute la durée du crédit — des mensualités stables et prévisibles du premier au dernier mois.' },
-        { icon: '🤝', title: 'Accompagnement personnalisé', body: 'Nos conseillers sont disponibles pour répondre à toutes vos questions et vous aider à trouver la solution de financement la plus adaptée.' },
+        { title: 'Souplesse dans l\'utilisation des fonds', body: 'Avec notre crédit vacances, vous avez la liberté d\'utiliser les fonds comme bon vous semble. Que vous souhaitiez financer un achat de matériel pour votre séjour, la réservation d\'un hôtel, le transport, ou même des activités sur place, vous pouvez le faire sans avoir à justifier vos dépenses. Par exemple, si vous partez plusieurs semaines en camping all inclusive avec des enfants, le crédit peut couvrir non seulement l\'hébergement, mais aussi les équipements nécessaires pour votre séjour.' },
+        { title: 'Conditions transparentes et flexibles', body: 'Chez SOrloz, vous profitez de conditions transparentes, de taux compétitifs et de modalités de remboursement adaptées. Nous faisons tout pour vous permettre un financement accessible pour préparer votre future évasion en toute sérénité. Le monde vous attend !' },
+        { title: 'Accompagnement personnalisé', body: 'Chez SOrloz, nous croyons en l\'importance d\'un service client de qualité. Nos conseillers sont à votre disposition pour vous aider à préparer votre demande et vous guider tout au long du processus. Que vous ayez des questions sur le montant, la durée ou les modalités de remboursement, nous sommes là pour vous assister.' },
       ],
     },
+    custom_sections: [
+      {
+        heading: 'Un crédit vacances sur mesure pour votre projet',
+        subheading: 'Options de personnalisation',
+        body: 'Lorsque vous choisissez un crédit vacances avec SOrloz, vous pouvez adapter le prêt à vos besoins précis.',
+        bullets: [
+          '<strong>Montant :</strong> Déterminez la somme dont vous avez besoin pour couvrir toutes vos dépenses. Que vous cherchiez à financer un week-end prolongé ou un voyage de plusieurs semaines, le montant peut varier en fonction de vos projets.',
+          '<strong>Durée :</strong> Choisissez la période de remboursement qui correspond le mieux à vos capacités financières. Vous pouvez également opter pour une durée plus longue pour un reste à vivre plus confortable.',
+          '<strong>Mensualités :</strong> Ajustez le prélèvement mensuel de remboursement de votre emprunt selon votre budget personnel pour garantir que votre prêt ne pèse pas sur vos finances.',
+        ],
+        outro: 'Vous pouvez ainsi utiliser votre crédit pour divers types de vacances, que ce soit un simple voyage de quelques nuits ou un grand projet comme un tour du monde.',
+      },
+      {
+        heading: 'Comment obtenir votre crédit vacances avec SOrloz ?',
+        body: 'Obtenir un prêt personnel chez SOrloz n\'a jamais été aussi simple. Voici les étapes à suivre :',
+        bullets: [
+          '<strong>Accédez à notre outil de simulation de crédit :</strong> Renseignez le montant envisagé pour vos vacances et choisissez l\'offre la plus adaptée à votre capacité de remboursement.',
+          '<strong>Remplissez le formulaire de demande :</strong> Indiquez les informations nécessaires à l\'étude de votre dossier par nos services. Cela ne prend que quelques minutes.',
+          '<strong>Signez et recevez les fonds :</strong> Connectez-vous à votre Espace Personnel Sécurisé afin de finaliser votre demande. Après acceptation par nos services, vous recevez les fonds sur votre compte bancaire sous 48h.',
+        ],
+        outro: 'Avec le crédit vacances de SOrloz, partez l\'esprit tranquille et réalisez le voyage de vos rêves. Grâce à nos solutions personnalisées, à notre accompagnement et à nos taux compétitifs, ce sont des vacances réussies qui vous attendent. N\'attendez plus pour démarrer votre projet, la destination de vos rêves vous tend les bras !',
+      },
+    ],
     crosssell: {
       question: 'Vous préparez votre voyage de noces ?',
       body: 'Profitez également de notre crédit mariage pour financer la totalité de votre grand jour, de la cérémonie au voyage de noces inclus.',
@@ -1139,36 +1162,64 @@ function _heroSection(page) {
     + '</section>';
 }
 
-// Content intro section (heading + red subheading + body) — leaf pages only
+// Content intro section — rich editorial text like Meia
 function _contentSection(page) {
   var c = page.content;
   if (!c) return '';
+  var bodyHtml = (c.body || '').split('\n\n').map(function(p) {
+    return '<p style="font-size:16px;color:var(--text-light);line-height:1.85;margin-bottom:20px">' + p + '</p>';
+  }).join('');
   return '<section style="background:#fff;padding:56px 0">'
     + '<div class="container" style="max-width:760px">'
-    + '<h2 style="font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--dark);margin-bottom:10px">' + c.heading + '</h2>'
-    + '<p style="color:var(--red);font-weight:700;font-size:15px;margin-bottom:18px">' + c.subheading + '</p>'
-    + '<p style="font-size:16px;color:var(--text-light);line-height:1.85">' + c.body + '</p>'
+    + '<h2 style="font-size:clamp(24px,3vw,32px);font-weight:900;color:var(--dark);margin-bottom:8px">' + c.heading + '</h2>'
+    + (c.subheading ? '<p style="color:var(--red);font-weight:600;font-size:16px;margin-bottom:24px">' + c.subheading + '</p>' : '')
+    + bodyHtml
     + '</div></section>';
 }
 
-// Why / features section (3 cards on pink bg) — leaf pages only
+// Why section — editorial text with sub-section headings like Meia (not cards)
 function _whySection(page) {
   var w = page.why;
   if (!w || !w.sections) return '';
-  var cards = w.sections.map(function(s) {
-    return '<div class="feature-card">'
-      + '<div class="feature-icon-wrap" style="background:var(--yellow-bg);font-size:28px">' + (s.icon || '✦') + '</div>'
-      + '<h3 class="feature-title">' + s.title + '</h3>'
-      + '<p style="font-size:14px;color:var(--text-light);line-height:1.7">' + s.body + '</p>'
-      + '</div>';
+  var sectionsHtml = w.sections.map(function(s) {
+    return '<h3 style="font-size:20px;font-weight:800;color:var(--dark);margin:32px 0 12px">' + s.title + '</h3>'
+      + '<p style="font-size:16px;color:var(--text-light);line-height:1.85">' + s.body + '</p>';
   }).join('');
-  return '<section class="features" style="background:var(--pink-bg)">'
-    + '<div class="container">'
-    + '<p class="section-label" style="margin-bottom:6px">Nos avantages</p>'
-    + '<h2 style="font-size:clamp(22px,3vw,28px);font-weight:800;color:var(--dark);margin-bottom:8px">' + w.heading + '</h2>'
-    + '<p style="font-size:15px;color:var(--text-light);margin-bottom:40px;max-width:620px">' + w.intro + '</p>'
-    + '<div class="features-grid">' + cards + '</div>'
+  return '<section style="background:#fff;padding:0 0 56px">'
+    + '<div class="container" style="max-width:760px">'
+    + '<h2 style="font-size:clamp(24px,3vw,32px);font-weight:900;color:var(--dark);margin-bottom:12px">' + w.heading + '</h2>'
+    + '<p style="font-size:16px;color:var(--text-light);line-height:1.85;margin-bottom:8px">' + w.intro + '</p>'
+    + sectionsHtml
     + '</div></section>';
+}
+
+// Custom editorial sections with bullet lists — like Meia product pages
+function _customSections(page) {
+  var sections = page.custom_sections;
+  if (!sections || !sections.length) return '';
+  return sections.map(function(s) {
+    var html = '<section style="background:#fff;padding:0 0 48px">'
+      + '<div class="container" style="max-width:760px">'
+      + '<h2 style="font-size:clamp(24px,3vw,32px);font-weight:900;color:var(--dark);margin-bottom:12px">' + s.heading + '</h2>';
+    if (s.subheading) {
+      html += '<h3 style="font-size:18px;font-weight:700;color:var(--dark);margin-bottom:12px">' + s.subheading + '</h3>';
+    }
+    if (s.body) {
+      html += '<p style="font-size:16px;color:var(--text-light);line-height:1.85;margin-bottom:20px">' + s.body + '</p>';
+    }
+    if (s.bullets && s.bullets.length) {
+      html += '<ul style="list-style:disc;padding-left:24px;margin-bottom:20px">';
+      html += s.bullets.map(function(b) {
+        return '<li style="font-size:16px;color:var(--text-light);line-height:1.85;margin-bottom:12px">' + b + '</li>';
+      }).join('');
+      html += '</ul>';
+    }
+    if (s.outro) {
+      html += '<p style="font-size:16px;color:var(--text-light);line-height:1.85">' + s.outro + '</p>';
+    }
+    html += '</div></section>';
+    return html;
+  }).join('');
 }
 
 // Insurance green card (reused in 2-column section)
@@ -1403,9 +1454,10 @@ function renderPage(tFn) {
       html += _processSection();
       html += _faqSection(page);
     } else {
-      // LEAF page: content, why, insurance+checklist, crosssell, example, process, FAQ, articles
+      // LEAF page: content, why, custom sections, insurance+checklist, crosssell, example, process, FAQ, articles
       html += _contentSection(page);
       html += _whySection(page);
+      html += _customSections(page);
       html += _insuranceAndChecklist(page);
       html += _crosssellCard(page);
       html += _exampleSection(page);
